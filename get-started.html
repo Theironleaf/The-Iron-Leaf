@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Get Started — The Iron Leaf | Find Your Path to Sustainable Performance</title>
+<meta name="description" content="Not sure where to begin? Answer five questions and The Iron Leaf will build your personal learning path — nutrition, strength, mobility, recovery, and longevity education tailored to you." />
+<meta property="og:title" content="Get Started — The Iron Leaf" />
+<meta property="og:description" content="Five questions. A personalised path into the world's best educational platform for sustainable human performance." />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://theironleaf.com/get-started" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+<style>
+/* ═══════════════════════════════════════
+   DESIGN TOKENS — shared with homepage
+═══════════════════════════════════════ */
+:root {
+  --iron:   #1a1a18;
+  --bark:   #2c2a24;
+  --moss:   #4a5240;
+  --leaf:   #7a8c5e;
+  --sage:   #a8b89a;
+  --limestone: #e8e4dc;
+  --cream:  #f4f1eb;
+  --gold:   #c9a84c;
+  --amber:  #d4882a;
+  --white:  #fafaf8;
+  --rust:   #b85c3a;
+
+  --serif:   'Cormorant Garamond', Georgia, serif;
+  --mono:    'DM Mono', monospace;
+  --display: 'Bebas Neue', sans-serif;
+  --body:    'DM Sans', sans-serif;
+
+  --nav-h: 68px;
+  --gutter: clamp(24px, 6vw, 96px);
+  --max-w: 1200px;
+}
+
+/* ═══════════════════════════════════════
+   RESET
+═══════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: var(--iron);
+  color: var(--cream);
+  font-family: var(--body);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
+
+/* ═══════════════════════════════════════
+   NAVIGATION
+═══════════════════════════════════════ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--gutter);
+  background: rgba(26,26,24,0.92);
+  border-bottom: 1px solid rgba(122,140,94,0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.nav-logo { display: flex; flex-direction: column; gap: 2px; }
+.nav-logo-mark { font-family: var(--display); font-size: 22px; letter-spacing: 0.14em; color: var(--cream); line-height: 1; }
+.nav-logo-mark span { color: var(--leaf); }
+.nav-logo-sub { font-family: var(--mono); font-size: 8px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--moss); }
+.nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+.nav-links a { font-family: var(--body); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; color: rgba(244,241,235,0.65); transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--cream); }
+.nav-cta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 10px 22px; transition: background 0.2s; }
+.nav-cta:hover { background: var(--sage); }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+.nav-hamburger span { display: block; width: 22px; height: 1px; background: var(--cream); }
+
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .nav-hamburger { display: flex; }
+}
+
+/* ═══════════════════════════════════════
+   PAGE HERO — SPLIT LAYOUT
+═══════════════════════════════════════ */
+.page-hero {
+  padding-top: var(--nav-h);
+  min-height: 52vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(122,140,94,0.3), transparent);
+}
+.hero-left {
+  background: var(--bark);
+  padding: clamp(60px, 8vw, 100px) var(--gutter) clamp(60px, 8vw, 100px) var(--gutter);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.hero-left::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 1px; height: 100%;
+  background: rgba(122,140,94,0.15);
+}
+.hero-right {
+  background: var(--iron);
+  padding: clamp(60px, 8vw, 100px) var(--gutter);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-right::before {
+  content: '';
+  position: absolute;
+  top: -20%; right: -10%;
+  width: 70%; height: 140%;
+  background: radial-gradient(ellipse at 70% 50%, rgba(122,140,94,0.09) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.page-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--leaf);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.page-eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px; height: 1px;
+  background: var(--leaf);
+}
+
+.page-title {
+  font-family: var(--display);
+  font-size: clamp(52px, 8vw, 110px);
+  line-height: 0.88;
+  letter-spacing: 0.02em;
+  color: var(--cream);
+  margin-bottom: 28px;
+}
+.page-title em { color: var(--leaf); font-style: normal; }
+
+.page-lead {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(16px, 1.9vw, 22px);
+  color: var(--sage);
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+/* Stats cluster on right side of hero */
+.hero-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+}
+.stat-item { border-left: 2px solid rgba(122,140,94,0.3); padding-left: 24px; }
+.stat-num {
+  font-family: var(--display);
+  font-size: clamp(40px, 6vw, 72px);
+  letter-spacing: 0.02em;
+  color: var(--cream);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-num span { color: var(--leaf); }
+.stat-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--moss);
+}
+.stat-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(168,184,154,0.8);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .page-hero { grid-template-columns: 1fr; }
+  .hero-left::before { display: none; }
+  .hero-right { padding-top: 48px; padding-bottom: 64px; }
+}
+
+/* ═══════════════════════════════════════
+   ASSESSMENT ENGINE
+═══════════════════════════════════════ */
+.assessment-wrap {
+  padding: clamp(72px, 10vw, 120px) var(--gutter);
+  background: var(--iron);
+  position: relative;
+}
+.assessment-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 30%, rgba(122,140,94,0.05) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Progress bar */
+.progress-track {
+  max-width: 680px;
+  margin: 0 auto 56px;
+  position: relative;
+  z-index: 1;
+}
+.progress-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.progress-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--leaf);
+}
+.progress-count {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--moss);
+}
+.progress-bar-bg {
+  height: 2px;
+  background: rgba(122,140,94,0.15);
+  position: relative;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: var(--leaf);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0%;
+}
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.progress-step-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: rgba(122,140,94,0.2);
+  border: 1px solid rgba(122,140,94,0.3);
+  transition: background 0.3s, border-color 0.3s;
+}
+.progress-step-dot.done { background: var(--leaf); border-color: var(--leaf); }
+.progress-step-dot.active { background: var(--gold); border-color: var(--gold); }
+
+/* Question cards */
+.question-stage {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.q-card {
+  display: none;
+  animation: qFadeIn 0.4s ease;
+}
+.q-card.active { display: block; }
+@keyframes qFadeIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+
+.q-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.q-text {
+  font-family: var(--display);
+  font-size: clamp(32px, 5vw, 56px);
+  letter-spacing: 0.03em;
+  line-height: 0.95;
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+.q-text em { color: var(--leaf); font-style: normal; }
+.q-sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(15px, 1.6vw, 18px);
+  color: var(--sage);
+  margin-bottom: 44px;
+  font-weight: 300;
+}
+
+.q-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.q-option {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 28px;
+  border: 1px solid rgba(122,140,94,0.15);
+  background: rgba(122,140,94,0.03);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.18s;
+  text-align: left;
+  width: 100%;
+  position: relative;
+}
+.q-option:hover {
+  border-color: rgba(122,140,94,0.38);
+  background: rgba(122,140,94,0.07);
+  transform: translateX(4px);
+}
+.q-option.selected {
+  border-color: var(--leaf);
+  background: rgba(122,140,94,0.12);
+}
+.q-option.selected::after {
+  content: '✓';
+  position: absolute;
+  right: 24px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--leaf);
+}
+
+.opt-icon {
+  font-size: 22px;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 36px;
+  text-align: center;
+}
+.opt-body { flex: 1; }
+.opt-title {
+  font-family: var(--display);
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+.opt-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--sage);
+  line-height: 1.55;
+}
+
+/* Multi-select hint */
+.q-hint {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 20px;
+}
+
+/* Navigation buttons */
+.q-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(122,140,94,0.12);
+}
+.q-nav-back {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--moss);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+  padding: 10px 0;
+}
+.q-nav-back::before { content: '←'; }
+.q-nav-back:hover { color: var(--sage); }
+.q-nav-back:disabled { opacity: 0.2; pointer-events: none; }
+
+.q-nav-next {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--iron);
+  background: var(--leaf);
+  padding: 14px 36px;
+  transition: background 0.2s, opacity 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.q-nav-next::after { content: '→'; }
+.q-nav-next:hover { background: var(--sage); }
+.q-nav-next:disabled { opacity: 0.3; pointer-events: none; }
+
+/* ═══════════════════════════════════════
+   RESULTS PANEL
+═══════════════════════════════════════ */
+.results-panel {
+  display: none;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  animation: qFadeIn 0.6s ease;
+}
+.results-panel.active { display: block; }
+
+.results-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.results-header .q-num { justify-content: center; }
+.results-header h2 {
+  font-family: var(--display);
+  font-size: clamp(42px, 7vw, 84px);
+  letter-spacing: 0.03em;
+  line-height: 0.9;
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+.results-header h2 em { color: var(--leaf); font-style: normal; }
+.results-header p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(16px, 1.8vw, 21px);
+  color: var(--sage);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Profile banner */
+.profile-banner {
+  background: rgba(122,140,94,0.07);
+  border: 1px solid rgba(122,140,94,0.22);
+  padding: 36px 40px;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.profile-icon {
+  font-size: 48px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.profile-text {}
+.profile-type {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.profile-name {
+  font-family: var(--display);
+  font-size: clamp(26px, 4vw, 44px);
+  letter-spacing: 0.04em;
+  color: var(--cream);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.profile-desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--sage);
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+/* Result recommendations grid */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-bottom: 48px;
+}
+.result-card {
+  background: rgba(122,140,94,0.04);
+  border: 1px solid rgba(122,140,94,0.12);
+  padding: 32px 28px;
+  transition: border-color 0.22s, background 0.22s;
+}
+.result-card:hover {
+  border-color: rgba(122,140,94,0.32);
+  background: rgba(122,140,94,0.08);
+}
+.result-type {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.result-title {
+  font-family: var(--display);
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+.result-body {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--sage);
+  line-height: 1.68;
+  margin-bottom: 20px;
+}
+.result-link {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--leaf);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.2s;
+}
+.result-card:hover .result-link { gap: 14px; }
+.result-link::after { content: '→'; }
+
+/* Restart */
+.results-footer {
+  text-align: center;
+  padding-top: 48px;
+  border-top: 1px solid rgba(122,140,94,0.12);
+}
+.results-footer p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--sage);
+  margin-bottom: 20px;
+}
+.btn-restart {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sage);
+  border-bottom: 1px solid rgba(168,184,154,0.3);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.btn-restart:hover { color: var(--cream); }
+
+/* ═══════════════════════════════════════
+   DIRECT PATH SECTION
+   (for people who already know what they want)
+═══════════════════════════════════════ */
+.direct-paths {
+  padding: clamp(72px, 10vw, 120px) var(--gutter);
+  background: var(--bark);
+  border-top: 1px solid rgba(122,140,94,0.12);
+}
+.section-kicker {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--leaf);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.section-kicker::after {
+  content: '';
+  display: block;
+  width: 36px; height: 1px;
+  background: var(--leaf);
+  opacity: 0.5;
+}
+.section-heading {
+  font-family: var(--display);
+  font-size: clamp(36px, 6vw, 68px);
+  line-height: 0.93;
+  letter-spacing: 0.03em;
+  color: var(--cream);
+  margin-bottom: 16px;
+}
+.section-heading em { color: var(--leaf); font-style: normal; }
+.section-sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(15px, 1.7vw, 19px);
+  color: var(--sage);
+  margin-bottom: 52px;
+  max-width: 520px;
+  line-height: 1.65;
+}
+
+.paths-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.path-card {
+  border: 1px solid rgba(122,140,94,0.12);
+  background: rgba(255,255,255,0.01);
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.22s, background 0.22s, transform 0.22s;
+  position: relative;
+  overflow: hidden;
+}
+.path-card::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%; height: 2px;
+  background: var(--leaf);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.path-card:hover { border-color: rgba(122,140,94,0.3); background: rgba(122,140,94,0.05); transform: translateY(-3px); }
+.path-card:hover::after { transform: scaleX(1); }
+.path-icon { font-size: 24px; line-height: 1; }
+.path-cat {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.path-name {
+  font-family: var(--display);
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  color: var(--cream);
+  line-height: 1.1;
+}
+.path-desc {
+  font-size: 12.5px;
+  font-weight: 300;
+  color: var(--sage);
+  line-height: 1.65;
+  flex: 1;
+}
+.path-link {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--leaf);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s;
+  margin-top: 4px;
+}
+.path-card:hover .path-link { gap: 12px; }
+.path-link::after { content: '→'; }
+
+/* ═══════════════════════════════════════
+   FREE RESOURCES STRIP
+═══════════════════════════════════════ */
+.resources-strip {
+  padding: clamp(64px, 8vw, 100px) var(--gutter);
+  background: var(--iron);
+  border-top: 1px solid rgba(122,140,94,0.1);
+}
+.resources-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.resources-text h2 {
+  font-family: var(--display);
+  font-size: clamp(36px, 5.5vw, 64px);
+  letter-spacing: 0.03em;
+  line-height: 0.92;
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+.resources-text h2 em { color: var(--leaf); font-style: normal; }
+.resources-text p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(15px, 1.7vw, 19px);
+  color: var(--sage);
+  line-height: 1.65;
+  margin-bottom: 36px;
+}
+.btn-primary {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--iron);
+  background: var(--leaf);
+  padding: 14px 32px;
+  transition: background 0.22s;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--sage); }
+
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.resource-row {
+  display: grid;
+  grid-template-columns: 32px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(122,140,94,0.09);
+}
+.resource-num { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; color: var(--moss); }
+.resource-name { font-size: 13.5px; font-weight: 300; color: var(--cream); }
+.resource-tag {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid rgba(122,140,94,0.28);
+  color: var(--leaf);
+}
+
+/* ═══════════════════════════════════════
+   CONSULTING CTA
+═══════════════════════════════════════ */
+.consulting-cta {
+  padding: clamp(72px, 10vw, 120px) var(--gutter);
+  background: var(--bark);
+  border-top: 1px solid rgba(122,140,94,0.1);
+  position: relative;
+  overflow: hidden;
+}
+.consulting-cta::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 55%; height: 100%;
+  background: radial-gradient(ellipse at 70% 50%, rgba(122,140,94,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+.consulting-inner {
+  max-width: 680px;
+  position: relative;
+  z-index: 1;
+}
+.consulting-inner .section-kicker { margin-bottom: 24px; }
+.consulting-inner h2 {
+  font-family: var(--display);
+  font-size: clamp(42px, 6.5vw, 80px);
+  letter-spacing: 0.03em;
+  line-height: 0.9;
+  color: var(--cream);
+  margin-bottom: 24px;
+}
+.consulting-inner h2 em { color: var(--leaf); font-style: normal; }
+.consulting-inner p {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--sage);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.cta-pair {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.btn-ghost {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sage);
+  border-bottom: 1px solid rgba(168,184,154,0.35);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+  display: inline-block;
+}
+.btn-ghost:hover { color: var(--cream); border-color: var(--cream); }
+
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
+.footer {
+  background: var(--iron);
+  padding: 72px var(--gutter) 40px;
+  border-top: 1px solid rgba(122,140,94,0.14);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 64px;
+}
+.footer-brand-mark { font-family: var(--display); font-size: 26px; letter-spacing: 0.14em; color: var(--cream); }
+.footer-brand-mark span { color: var(--leaf); }
+.footer-brand p { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--moss); margin-top: 14px; line-height: 1.7; }
+.footer-col-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--leaf); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(122,140,94,0.18); }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13.5px; font-weight: 300; color: rgba(244,241,235,0.45); transition: color 0.18s; }
+.footer-links a:hover { color: var(--cream); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 32px; border-top: 1px solid rgba(122,140,94,0.1); flex-wrap: wrap; gap: 16px; }
+.footer-bottom p { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; color: var(--moss); text-transform: uppercase; }
+.footer-tagline { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--moss); }
+
+@media (max-width: 1024px) {
+  .results-grid { grid-template-columns: 1fr 1fr; }
+  .paths-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+@media (max-width: 768px) {
+  .resources-inner { grid-template-columns: 1fr; gap: 48px; }
+  .results-grid { grid-template-columns: 1fr; }
+  .profile-banner { flex-direction: column; gap: 20px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 520px) {
+  .paths-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="The Iron Leaf home">
+    <div class="nav-logo-mark">THE IRON <span>LEAF</span></div>
+    <div class="nav-logo-sub">Sustainable Human Performance</div>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="learn.html">Learn</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="get-started.html" class="nav-cta active" aria-current="page">Get Started</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     PAGE HERO
+═══════════════════════════════════════ -->
+<header class="page-hero" role="banner">
+  <div class="hero-left">
+    <div class="page-eyebrow">Your Personal Pathway</div>
+    <h1 class="page-title">FIND<br />YOUR<br /><em>PATH.</em></h1>
+    <p class="page-lead">Five questions. No email required. A personalised learning path built around what you actually need — not what we want to sell you.</p>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">10<span>+</span></div>
+        <div class="stat-label">Content Pillars</div>
+        <div class="stat-desc">Nutrition, strength, mobility, recovery, longevity, trail running and more</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">19</div>
+        <div class="stat-label">Free Guides</div>
+        <div class="stat-desc">Downloadable resources across every discipline — no paywall on the fundamentals</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">10</div>
+        <div class="stat-label">Signature Frameworks</div>
+        <div class="stat-desc">Proprietary educational systems built for decade-long capability — not seasonal results</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════
+     ASSESSMENT ENGINE
+═══════════════════════════════════════ -->
+<section class="assessment-wrap" aria-labelledby="assessment-heading">
+  <div class="progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5" aria-label="Assessment progress">
+    <div class="progress-top">
+      <span class="progress-label">Your Assessment</span>
+      <span class="progress-count" id="progressCount">Question 1 of 5</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-steps">
+      <div class="progress-step-dot active" data-step="0"></div>
+      <div class="progress-step-dot" data-step="1"></div>
+      <div class="progress-step-dot" data-step="2"></div>
+      <div class="progress-step-dot" data-step="3"></div>
+      <div class="progress-step-dot" data-step="4"></div>
+    </div>
+  </div>
+
+  <div class="question-stage" id="questionStage">
+
+    <!-- QUESTION 1 — WHAT BRINGS YOU HERE -->
+    <div class="q-card active" data-q="0" id="q0">
+      <div class="q-num">Question 01 / 05</div>
+      <h2 class="q-text" id="assessment-heading">WHAT BRINGS<br />YOU <em>HERE?</em></h2>
+      <p class="q-sub">Choose the answer that feels most true right now.</p>
+      <div class="q-options" role="radiogroup" aria-labelledby="assessment-heading">
+        <button class="q-option" data-value="performance" role="radio" aria-checked="false">
+          <span class="opt-icon">🏋️</span>
+          <span class="opt-body">
+            <span class="opt-title">I WANT TO PERFORM BETTER</span>
+            <span class="opt-desc">Build strength, improve athleticism, or take my training to the next level</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="nutrition" role="radio" aria-checked="false">
+          <span class="opt-icon">🌱</span>
+          <span class="opt-body">
+            <span class="opt-title">I WANT TO EAT BETTER</span>
+            <span class="opt-desc">Understand nutrition properly — whole foods, plant-based eating, cutting through the noise</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="longevity" role="radio" aria-checked="false">
+          <span class="opt-icon">⏳</span>
+          <span class="opt-body">
+            <span class="opt-title">I WANT TO AGE WELL</span>
+            <span class="opt-desc">Build health systems that make me capable, independent, and strong for decades</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="injury" role="radio" aria-checked="false">
+          <span class="opt-icon">🔄</span>
+          <span class="opt-body">
+            <span class="opt-title">I WANT TO MOVE WITHOUT PAIN</span>
+            <span class="opt-desc">Recover from injury, improve mobility, or understand why my body keeps breaking down</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="education" role="radio" aria-checked="false">
+          <span class="opt-icon">🔬</span>
+          <span class="opt-body">
+            <span class="opt-title">I WANT TO UNDERSTAND THE SCIENCE</span>
+            <span class="opt-desc">Cut through fitness and nutrition misinformation with evidence-based education</span>
+          </span>
+        </button>
+      </div>
+      <div class="q-nav">
+        <button class="q-nav-back" disabled aria-label="Previous question">Previous</button>
+        <button class="q-nav-next" id="next0" disabled aria-label="Next question">Next</button>
+      </div>
+    </div>
+
+    <!-- QUESTION 2 — EXPERIENCE LEVEL -->
+    <div class="q-card" data-q="1" id="q1">
+      <div class="q-num">Question 02 / 05</div>
+      <h2 class="q-text">WHERE ARE YOU<br /><em>RIGHT NOW?</em></h2>
+      <p class="q-sub">Be honest — there are no wrong answers here.</p>
+      <div class="q-options" role="radiogroup">
+        <button class="q-option" data-value="beginner" role="radio" aria-checked="false">
+          <span class="opt-icon">🌱</span>
+          <span class="opt-body">
+            <span class="opt-title">JUST STARTING OUT</span>
+            <span class="opt-desc">New to structured training or plant-based eating. Looking for a solid foundation.</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="intermediate" role="radio" aria-checked="false">
+          <span class="opt-icon">🌿</span>
+          <span class="opt-body">
+            <span class="opt-title">SOME EXPERIENCE</span>
+            <span class="opt-desc">Been training or eating well for a while, but want to go deeper and fill the gaps.</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="advanced" role="radio" aria-checked="false">
+          <span class="opt-icon">🌳</span>
+          <span class="opt-body">
+            <span class="opt-title">WELL ESTABLISHED</span>
+            <span class="opt-desc">Experienced, consistent, and looking to optimise or find the nuanced edge.</span>
+          </span>
+        </button>
+      </div>
+      <div class="q-nav">
+        <button class="q-nav-back" aria-label="Previous question" data-prev="0">Previous</button>
+        <button class="q-nav-next" id="next1" disabled aria-label="Next question">Next</button>
+      </div>
+    </div>
+
+    <!-- QUESTION 3 — LIFESTYLE -->
+    <div class="q-card" data-q="2" id="q2">
+      <div class="q-num">Question 03 / 05</div>
+      <h2 class="q-text">WHAT DOES YOUR<br /><em>LIFE LOOK LIKE?</em></h2>
+      <p class="q-sub">Choose the option closest to your current reality.</p>
+      <div class="q-options" role="radiogroup">
+        <button class="q-option" data-value="desk" role="radio" aria-checked="false">
+          <span class="opt-icon">💻</span>
+          <span class="opt-body">
+            <span class="opt-title">DESK WORKER</span>
+            <span class="opt-desc">Mostly sedentary during the day. Training is a deliberate practice around work.</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="active" role="radio" aria-checked="false">
+          <span class="opt-icon">🚶</span>
+          <span class="opt-body">
+            <span class="opt-title">NATURALLY ACTIVE</span>
+            <span class="opt-desc">Movement is already part of my daily life — I want to optimise what I already do.</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="athlete" role="radio" aria-checked="false">
+          <span class="opt-icon">🏃</span>
+          <span class="opt-body">
+            <span class="opt-title">TRAINING CONSISTENTLY</span>
+            <span class="opt-desc">I train multiple times per week and want to support that with better education.</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="recovering" role="radio" aria-checked="false">
+          <span class="opt-icon">🌅</span>
+          <span class="opt-body">
+            <span class="opt-title">GETTING BACK TO IT</span>
+            <span class="opt-desc">Returning from injury, illness, or a long break. Need to rebuild carefully.</span>
+          </span>
+        </button>
+      </div>
+      <div class="q-nav">
+        <button class="q-nav-back" aria-label="Previous question" data-prev="1">Previous</button>
+        <button class="q-nav-next" id="next2" disabled aria-label="Next question">Next</button>
+      </div>
+    </div>
+
+    <!-- QUESTION 4 — DIET APPROACH -->
+    <div class="q-card" data-q="3" id="q3">
+      <div class="q-num">Question 04 / 05</div>
+      <h2 class="q-text">HOW DO YOU<br /><em>CURRENTLY EAT?</em></h2>
+      <p class="q-sub">No judgment. Just helps us point you to the right content.</p>
+      <div class="q-options" role="radiogroup">
+        <button class="q-option" data-value="omnivore" role="radio" aria-checked="false">
+          <span class="opt-icon">🍽️</span>
+          <span class="opt-body">
+            <span class="opt-title">MIXED / OMNIVORE</span>
+            <span class="opt-desc">Eat everything. Open to learning more about plant-based nutrition, but not committed to it yet.</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="reducingmeat" role="radio" aria-checked="false">
+          <span class="opt-icon">🥗</span>
+          <span class="opt-body">
+            <span class="opt-title">REDUCING ANIMAL PRODUCTS</span>
+            <span class="opt-desc">Actively moving toward a more plant-based approach and want guidance doing it right.</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="plantbased" role="radio" aria-checked="false">
+          <span class="opt-icon">🌿</span>
+          <span class="opt-body">
+            <span class="opt-title">PLANT-BASED / VEGAN</span>
+            <span class="opt-desc">Already plant-based and want to optimise for performance, strength, or longevity.</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="unsure" role="radio" aria-checked="false">
+          <span class="opt-icon">🤔</span>
+          <span class="opt-body">
+            <span class="opt-title">NOT SURE WHAT'S RIGHT FOR ME</span>
+            <span class="opt-desc">Confused by conflicting advice. Want to understand what the evidence actually says.</span>
+          </span>
+        </button>
+      </div>
+      <div class="q-nav">
+        <button class="q-nav-back" aria-label="Previous question" data-prev="2">Previous</button>
+        <button class="q-nav-next" id="next3" disabled aria-label="Next question">Next</button>
+      </div>
+    </div>
+
+    <!-- QUESTION 5 — BIGGEST CHALLENGE -->
+    <div class="q-card" data-q="4" id="q4">
+      <div class="q-num">Question 05 / 05</div>
+      <h2 class="q-text">WHAT'S YOUR<br /><em>BIGGEST BLOCK?</em></h2>
+      <p class="q-sub">The one thing standing between you and where you want to be.</p>
+      <div class="q-options" role="radiogroup">
+        <button class="q-option" data-value="info" role="radio" aria-checked="false">
+          <span class="opt-icon">🌊</span>
+          <span class="opt-body">
+            <span class="opt-title">INFORMATION OVERLOAD</span>
+            <span class="opt-desc">Too much conflicting advice. Don't know what to believe or where to start.</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="consistency" role="radio" aria-checked="false">
+          <span class="opt-icon">📅</span>
+          <span class="opt-body">
+            <span class="opt-title">CONSISTENCY</span>
+            <span class="opt-desc">I know what to do but struggle to stay consistent over time.</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="pain" role="radio" aria-checked="false">
+          <span class="opt-icon">⚡</span>
+          <span class="opt-body">
+            <span class="opt-title">PAIN OR INJURY</span>
+            <span class="opt-desc">Physical limitations are stopping me from training the way I want to.</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="time" role="radio" aria-checked="false">
+          <span class="opt-icon">⏱️</span>
+          <span class="opt-body">
+            <span class="opt-title">TIME AND COMPLEXITY</span>
+            <span class="opt-desc">I want results but don't have hours to spend on training or meal prep.</span>
+          </span>
+        </button>
+        <button class="q-option" data-value="knowledge" role="radio" aria-checked="false">
+          <span class="opt-icon">📖</span>
+          <span class="opt-body">
+            <span class="opt-title">LACK OF KNOWLEDGE</span>
+            <span class="opt-desc">I don't understand the fundamentals well enough to make good decisions.</span>
+          </span>
+        </button>
+      </div>
+      <div class="q-nav">
+        <button class="q-nav-back" aria-label="Previous question" data-prev="3">Previous</button>
+        <button class="q-nav-next q-nav-submit" id="next4" disabled aria-label="See your results">See My Path</button>
+      </div>
+    </div>
+
+  </div><!-- /question-stage -->
+
+  <!-- ═══════════════════════════════════
+       RESULTS PANEL
+  ═══════════════════════════════════ -->
+  <div class="results-panel" id="resultsPanel" aria-live="polite">
+    <div class="results-header">
+      <div class="q-num" style="text-align:center; display:block; margin-bottom:12px;">Your Personalised Path</div>
+      <h2>YOUR PATH<br />IS <em>READY.</em></h2>
+      <p>Based on your answers, here's where we recommend you begin. Everything links to free educational content — no purchase required.</p>
+    </div>
+
+    <div class="profile-banner" id="profileBanner">
+      <div class="profile-icon" id="profileIcon">🌱</div>
+      <div class="profile-text">
+        <div class="profile-type">Your Iron Leaf Profile</div>
+        <div class="profile-name" id="profileName">The Curious Builder</div>
+        <p class="profile-desc" id="profileDesc">You're motivated, open, and ready to learn. The best place to start is understanding the fundamentals — not through another 12-week programme, but through building genuine knowledge that compounds over time.</p>
+      </div>
+    </div>
+
+    <div class="results-grid" id="resultsGrid">
+      <!-- Populated by JS -->
+    </div>
+
+    <div class="results-footer">
+      <p>These are starting points, not limits. The entire platform is open to you — always.</p>
+      <button class="btn-restart" id="restartBtn" aria-label="Restart assessment">Retake the assessment</button>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════
+     DIRECT PATHS — for people who know
+═══════════════════════════════════════ -->
+<section class="direct-paths" aria-labelledby="paths-heading">
+  <div class="section-kicker">Already Know Where You're Headed?</div>
+  <h2 class="section-heading" id="paths-heading">GO DIRECTLY<br /><em>TO YOUR TOPIC.</em></h2>
+  <p class="section-sub">Skip the assessment and go straight to the content that matters most to you.</p>
+
+  <div class="paths-grid">
+    <a href="nutrition.html" class="path-card">
+      <div class="path-icon">🌿</div>
+      <div class="path-cat">Pillar 01</div>
+      <div class="path-name">NUTRITION</div>
+      <p class="path-desc">Whole-food plant-based eating, protein, gut health, micronutrients, and Indian food culture.</p>
+      <span class="path-link">Explore Nutrition</span>
+    </a>
+    <a href="strength.html" class="path-card">
+      <div class="path-icon">🏋️</div>
+      <div class="path-cat">Pillar 02</div>
+      <div class="path-name">STRENGTH</div>
+      <p class="path-desc">Strength as a lifelong practice. Progressive overload, hypertrophy, Olympic lifting, programming.</p>
+      <span class="path-link">Explore Strength</span>
+    </a>
+    <a href="mobility.html" class="path-card">
+      <div class="path-icon">🌊</div>
+      <div class="path-cat">Pillar 03</div>
+      <div class="path-name">MOBILITY</div>
+      <p class="path-desc">Joint health, movement fluency, daily practice systems, and tissue longevity.</p>
+      <span class="path-link">Explore Mobility</span>
+    </a>
+    <a href="recovery.html" class="path-card">
+      <div class="path-icon">🌙</div>
+      <div class="path-cat">Pillar 04</div>
+      <div class="path-name">RECOVERY</div>
+      <p class="path-desc">Sleep science, training load, tissue repair, and stress recovery — evidence-based and practical.</p>
+      <span class="path-link">Explore Recovery</span>
+    </a>
+    <a href="longevity.html" class="path-card">
+      <div class="path-icon">⏳</div>
+      <div class="path-cat">Pillar 05</div>
+      <div class="path-name">LONGEVITY</div>
+      <p class="path-desc">VO2 max, muscle mass, metabolic health, and movement quality — building capability for decades.</p>
+      <span class="path-link">Explore Longevity</span>
+    </a>
+    <a href="plant-based.html" class="path-card">
+      <div class="path-icon">🌱</div>
+      <div class="path-cat">Pillar 06</div>
+      <div class="path-name">PLANT-BASED LIVING</div>
+      <p class="path-desc">The transition guide, the science, the practical system — eating plants and performing at your best.</p>
+      <span class="path-link">Explore Plant-Based</span>
+    </a>
+    <a href="trail-running.html" class="path-card">
+      <div class="path-icon">🏃</div>
+      <div class="path-cat">Pillar 07</div>
+      <div class="path-name">TRAIL RUNNING</div>
+      <p class="path-desc">From first trail to mountain ultra. Training, fuelling, terrain, and the meditative case for moving through nature.</p>
+      <span class="path-link">Explore Trail Running</span>
+    </a>
+    <a href="learn.html" class="path-card">
+      <div class="path-icon">🔬</div>
+      <div class="path-cat">Research</div>
+      <div class="path-name">THE SCIENCE</div>
+      <p class="path-desc">Research library, evidence summaries, myth-busting, and the evidence hierarchy behind every recommendation.</p>
+      <span class="path-link">Explore Research</span>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FREE RESOURCES
+═══════════════════════════════════════ -->
+<section class="resources-strip" aria-labelledby="resources-heading">
+  <div class="resources-inner">
+    <div class="resources-text">
+      <div class="section-kicker">Free Educational Library</div>
+      <h2 id="resources-heading">19 FREE<br /><em>GUIDES.</em></h2>
+      <p>Every major topic has a companion guide — downloadable, printable, and built to the same standard as the platform itself. No email required for most.</p>
+      <a href="guides.html" class="btn-primary">Browse All Guides</a>
+    </div>
+    <div class="resources-list">
+      <div class="resource-row"><span class="resource-num">01</span><span class="resource-name">Whole-Food Plant-Based Starter Guide</span><span class="resource-tag">Free</span></div>
+      <div class="resource-row"><span class="resource-num">02</span><span class="resource-name">Strength Training Bible</span><span class="resource-tag">Free</span></div>
+      <div class="resource-row"><span class="resource-num">03</span><span class="resource-name">Protein Myths — The Real Science</span><span class="resource-tag">Free</span></div>
+      <div class="resource-row"><span class="resource-num">04</span><span class="resource-name">Mobility Guide — Joints for Life</span><span class="resource-tag">Free</span></div>
+      <div class="resource-row"><span class="resource-num">05</span><span class="resource-name">Gut Health Guide</span><span class="resource-tag">Free</span></div>
+      <div class="resource-row"><span class="resource-num">06</span><span class="resource-name">Recovery Blueprint</span><span class="resource-tag">Free</span></div>
+      <div class="resource-row"><span class="resource-num">07</span><span class="resource-name">Seasonal Indian Foods Guide</span><span class="resource-tag">Free</span></div>
+      <div class="resource-row"><span class="resource-num">08</span><span class="resource-name">Trail Runner Blueprint</span><span class="resource-tag">Free</span></div>
+      <div class="resource-row"><span class="resource-num">09</span><span class="resource-name">10-Week Transformation Guide</span><span class="resource-tag">Free</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CONSULTING CTA
+═══════════════════════════════════════ -->
+<section class="consulting-cta" aria-labelledby="consulting-heading">
+  <div class="consulting-inner">
+    <div class="section-kicker">Ready for Personal Guidance?</div>
+    <h2 id="consulting-heading">WORK WITH<br /><em>IRON LEAF.</em></h2>
+    <p>If you want to go deeper than self-directed learning — 1:1 coaching, group programmes, corporate wellness, or a structured course — we build systems you can sustain independently for the rest of your life. Not a programme. An education.</p>
+    <div class="cta-pair">
+      <a href="programs.html" class="btn-primary">Explore Programs</a>
+      <a href="about.html" class="btn-ghost">Learn Who We Are</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-mark">THE IRON <span>LEAF</span></div>
+      <p>Grounded in Nature.<br />Forged in Grit.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Learn</div>
+      <ul class="footer-links">
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="strength.html">Strength</a></li>
+        <li><a href="mobility.html">Mobility</a></li>
+        <li><a href="recovery.html">Recovery</a></li>
+        <li><a href="longevity.html">Longevity</a></li>
+        <li><a href="trail-running.html">Trail Running</a></li>
+        <li><a href="plant-based.html">Plant-Based Living</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Resources</div>
+      <ul class="footer-links">
+        <li><a href="guides.html">Free Guides</a></li>
+        <li><a href="learn.html">Research Library</a></li>
+        <li><a href="frameworks.html">The Frameworks</a></li>
+        <li><a href="learn.html#books">Books</a></li>
+        <li><a href="learn.html#podcasts">Podcasts</a></li>
+        <li><a href="learn.html#experts">Experts</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Work Together</div>
+      <ul class="footer-links">
+        <li><a href="programs.html#coaching">1:1 Coaching</a></li>
+        <li><a href="programs.html#group">Group Coaching</a></li>
+        <li><a href="programs.html#corporate">Corporate Wellness</a></li>
+        <li><a href="programs.html#courses">Courses</a></li>
+        <li><a href="programs.html#membership">Membership</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 The Iron Leaf · All rights reserved</p>
+    <span class="footer-tagline">Grounded in Nature. Forged in Grit.</span>
+    <p><a href="privacy.html" style="color:var(--moss)">Privacy</a> · <a href="terms.html" style="color:var(--moss)">Terms</a></p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     JAVASCRIPT — ASSESSMENT ENGINE
+═══════════════════════════════════════ -->
+<script>
+// ─── State ───────────────────────────────────────────
+const answers = {};
+let currentQ = 0;
+const totalQ = 5;
+
+// ─── Profile definitions ──────────────────────────────
+const profiles = {
+  performance_advanced_athlete: {
+    icon: '🏔️',
+    name: 'The Performance Athlete',
+    desc: 'You have the experience and the drive. The missing piece is likely depth — understanding the mechanisms behind what works, so you can optimise intelligently rather than by feel.'
+  },
+  nutrition_beginner_desk: {
+    icon: '🌱',
+    name: 'The Curious Starter',
+    desc: 'You\'re beginning a journey that compounds over decades. The best starting point is building genuine nutritional literacy — understanding why, not just what, so every future decision is informed.'
+  },
+  longevity_intermediate: {
+    icon: '🌳',
+    name: 'The Long-Game Builder',
+    desc: 'You\'re thinking in decades, not seasons. That\'s exactly the right frame. Your path combines strength, nutrition, and movement quality — systems that compound and protect what matters most.'
+  },
+  injury_recovering: {
+    icon: '🌊',
+    name: 'The Careful Rebuilder',
+    desc: 'Recovery and return require patience, intelligence, and the right education. Your path prioritises mobility, joint health, and load management — building back smarter, not just harder.'
+  },
+  default: {
+    icon: '🌿',
+    name: 'The Grounded Learner',
+    desc: 'You\'re here to understand, not just follow. The Iron Leaf is built for exactly this — deep, practical, evidence-informed education that builds capability you own for life.'
+  }
+};
+
+// ─── Result card templates per goal ──────────────────
+const resultsByGoal = {
+  performance: [
+    { type: 'Start Here', title: 'STRENGTH FOUNDATIONS', body: 'The Iron Root System — a five-pillar approach to building sustainable, functional strength that compounds over decades.', link: 'strength.html', linkText: 'Explore Strength' },
+    { type: 'Deep Dive', title: 'PLANT MUSCLE PROTOCOL™', body: 'The complete evidence-based guide to building muscle on a plant-based diet — protein timing, leucine thresholds, and training synergy.', link: 'nutrition.html', linkText: 'Explore Nutrition' },
+    { type: 'Free Guide', title: 'STRENGTH TRAINING BIBLE', body: 'Downloadable. Comprehensive. Built for long-term capability — programming, periodisation, and the principles that never go out of date.', link: 'guides.html', linkText: 'Download Free' }
+  ],
+  nutrition: [
+    { type: 'Start Here', title: 'PLANT-BASED FOUNDATIONS', body: 'The Leaf Plate System — a practical whole-food eating architecture rooted in Indian food culture and backed by the evidence.', link: 'plant-based.html', linkText: 'Explore Plant-Based' },
+    { type: 'Deep Dive', title: 'GUT HEALTH & FIBRE', body: 'The gut microbiome is the most underrated performance and longevity tool available. Start here to understand it.', link: 'nutrition.html', linkText: 'Explore Nutrition' },
+    { type: 'Free Guide', title: 'PROTEIN MYTHS GUIDE', body: 'Everything the fitness industry gets wrong about plant protein — and the evidence that corrects it. Clear, practical, referenced.', link: 'guides.html', linkText: 'Download Free' }
+  ],
+  longevity: [
+    { type: 'Start Here', title: 'THE DEEP ROOTS PROTOCOL™', body: 'Every decision evaluated through a 10, 20, 30-year lens. VO2 max, muscle mass, metabolic health, and movement quality.', link: 'longevity.html', linkText: 'Explore Longevity' },
+    { type: 'Deep Dive', title: 'RECOVERY SCIENCE', body: 'Sleep, training load, tissue repair, and stress — the four recovery drivers that determine your healthspan as much as your training does.', link: 'recovery.html', linkText: 'Explore Recovery' },
+    { type: 'Free Guide', title: '10-WEEK TRANSFORMATION GUIDE', body: 'A structured, sustainable system for building the habits that compound over a lifetime. Free. No gimmicks.', link: 'guides.html', linkText: 'Download Free' }
+  ],
+  injury: [
+    { type: 'Start Here', title: 'MOBILITY ARCHITECTURE', body: 'The Living Joint Method — daily practice systems that restore range, reduce pain, and protect you for decades. Not yoga. Not stretching. Movement intelligence.', link: 'mobility.html', linkText: 'Explore Mobility' },
+    { type: 'Deep Dive', title: 'RECOVERY SCIENCE', body: 'Understanding tissue repair, load management, and the evidence-based approach to returning from injury without rushing.', link: 'recovery.html', linkText: 'Explore Recovery' },
+    { type: 'Free Guide', title: 'MOBILITY GUIDE', body: 'The complete Iron Leaf mobility guide — joints, fascia, breath, and daily practice. Downloadable. Referenced. Practical.', link: 'guides.html', linkText: 'Download Free' }
+  ],
+  education: [
+    { type: 'Start Here', title: 'THE RESEARCH LIBRARY', body: 'Peer-reviewed evidence summarised and explained. Systematic reviews, meta-analyses, and the evidence hierarchy behind every Iron Leaf recommendation.', link: 'learn.html', linkText: 'Explore Research' },
+    { type: 'Deep Dive', title: 'NUTRITION SCIENCE', body: 'From protein quality to gut microbiome — the deep dive into what the evidence actually says, stripped of supplement marketing and fitness mythology.', link: 'nutrition.html', linkText: 'Explore Nutrition' },
+    { type: 'Free Guide', title: 'ALL 19 FREE GUIDES', body: 'Every major topic has a companion guide — downloadable, referenced, and built to the same standard as the platform. Start with the one most relevant to you.', link: 'guides.html', linkText: 'Browse Guides' }
+  ]
+};
+
+// ─── DOM refs ─────────────────────────────────────────
+const progressFill  = document.getElementById('progressFill');
+const progressCount = document.getElementById('progressCount');
+const dots          = document.querySelectorAll('.progress-step-dot');
+const questionStage = document.getElementById('questionStage');
+const resultsPanel  = document.getElementById('resultsPanel');
+const profileBanner = document.getElementById('profileBanner');
+const profileIcon   = document.getElementById('profileIcon');
+const profileName   = document.getElementById('profileName');
+const profileDesc   = document.getElementById('profileDesc');
+const resultsGrid   = document.getElementById('resultsGrid');
+const restartBtn    = document.getElementById('restartBtn');
+
+// ─── Update progress ──────────────────────────────────
+function updateProgress(qIndex) {
+  const pct = (qIndex / totalQ) * 100;
+  progressFill.style.width = pct + '%';
+  progressCount.textContent = qIndex < totalQ
+    ? `Question ${qIndex + 1} of ${totalQ}`
+    : 'Complete';
+  progressFill.parentElement.parentElement.setAttribute('aria-valuenow', qIndex);
+  dots.forEach((dot, i) => {
+    dot.classList.remove('done', 'active');
+    if (i < qIndex) dot.classList.add('done');
+    if (i === qIndex) dot.classList.add('active');
+  });
+}
+
+// ─── Option selection ─────────────────────────────────
+document.querySelectorAll('.q-options').forEach(group => {
+  group.querySelectorAll('.q-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const qCard = btn.closest('.q-card');
+      const qIdx  = parseInt(qCard.dataset.q);
+      // Clear selection in this group
+      group.querySelectorAll('.q-option').forEach(b => {
+        b.classList.remove('selected');
+        b.setAttribute('aria-checked', 'false');
+      });
+      btn.classList.add('selected');
+      btn.setAttribute('aria-checked', 'true');
+      answers[qIdx] = btn.dataset.value;
+      // Enable next button
+      const nextBtn = qCard.querySelector('.q-nav-next');
+      if (nextBtn) nextBtn.disabled = false;
+    });
+  });
+});
+
+// ─── Navigation ───────────────────────────────────────
+function showQuestion(idx) {
+  document.querySelectorAll('.q-card').forEach(c => c.classList.remove('active'));
+  const target = document.getElementById('q' + idx);
+  if (target) {
+    target.classList.add('active');
+    currentQ = idx;
+    updateProgress(idx);
+  }
+}
+
+// Next buttons
+for (let i = 0; i < totalQ - 1; i++) {
+  const btn = document.getElementById('next' + i);
+  if (btn) {
+    btn.addEventListener('click', () => {
+      if (!btn.disabled) showQuestion(i + 1);
+    });
+  }
+}
+
+// Final submit
+const submitBtn = document.getElementById('next4');
+if (submitBtn) {
+  submitBtn.addEventListener('click', () => {
+    if (!submitBtn.disabled) showResults();
+  });
+}
+
+// Back buttons
+document.querySelectorAll('.q-nav-back').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const prevIdx = parseInt(btn.dataset.prev);
+    if (!isNaN(prevIdx)) showQuestion(prevIdx);
+  });
+});
+
+// ─── Build & show results ─────────────────────────────
+function showResults() {
+  // Determine profile
+  const goal  = answers[0] || 'education';
+  const level = answers[1] || 'beginner';
+  const life  = answers[2] || 'desk';
+
+  // Pick profile
+  let profileKey = 'default';
+  if (goal === 'performance' && level === 'advanced') profileKey = 'performance_advanced_athlete';
+  else if (goal === 'nutrition' && level === 'beginner') profileKey = 'nutrition_beginner_desk';
+  else if (goal === 'longevity') profileKey = 'longevity_intermediate';
+  else if (goal === 'injury' || life === 'recovering') profileKey = 'injury_recovering';
+
+  const p = profiles[profileKey] || profiles.default;
+  profileIcon.textContent = p.icon;
+  profileName.textContent = p.name;
+  profileDesc.textContent = p.desc;
+
+  // Build result cards
+  const cards = resultsByGoal[goal] || resultsByGoal.education;
+  resultsGrid.innerHTML = cards.map(c => `
+    <a href="${c.link}" class="result-card">
+      <div class="result-type">${c.type}</div>
+      <div class="result-title">${c.title}</div>
+      <p class="result-body">${c.body}</p>
+      <span class="result-link">${c.linkText}</span>
+    </a>
+  `).join('');
+
+  // Show results
+  questionStage.style.display = 'none';
+  document.querySelector('.progress-track').style.display = 'none';
+  resultsPanel.classList.add('active');
+  progressFill.style.width = '100%';
+  progressCount.textContent = 'Complete';
+  dots.forEach(d => d.classList.remove('active'));
+  dots[dots.length - 1].classList.add('done');
+  resultsPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ─── Restart ──────────────────────────────────────────
+restartBtn.addEventListener('click', () => {
+  Object.keys(answers).forEach(k => delete answers[k]);
+  document.querySelectorAll('.q-option').forEach(b => {
+    b.classList.remove('selected');
+    b.setAttribute('aria-checked', 'false');
+  });
+  document.querySelectorAll('.q-nav-next').forEach(b => b.disabled = true);
+  resultsPanel.classList.remove('active');
+  questionStage.style.display = '';
+  document.querySelector('.progress-track').style.display = '';
+  showQuestion(0);
+  window.scrollTo({ top: document.querySelector('.assessment-wrap').offsetTop - 80, behavior: 'smooth' });
+});
+
+// ─── Mobile nav ───────────────────────────────────────
+const hamburger = document.querySelector('.nav-hamburger');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+  });
+}
+
+// ─── Init ─────────────────────────────────────────────
+updateProgress(0);
+</script>
+
+</body>
+</html>

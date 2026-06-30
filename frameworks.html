@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Frameworks — The Iron Leaf | 10 Signature Educational Systems</title>
+<meta name="description" content="The ten proprietary frameworks behind The Iron Leaf — the intellectual spine of every piece of education on the platform. The Iron Root System, Living Joint Method, Leaf Plate System, and more." />
+<meta property="og:title" content="The Frameworks — The Iron Leaf" />
+<meta property="og:description" content="Not marketing language. The actual educational systems that govern how every topic is taught and connected." />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://theironleaf.com/frameworks" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "The Iron Leaf Frameworks",
+  "description": "Ten proprietary educational frameworks for sustainable human performance"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --iron: #1a1a18; --bark: #2c2a24; --moss: #4a5240; --leaf: #7a8c5e; --sage: #a8b89a;
+  --cream: #f4f1eb; --gold: #c9a84c; --amber: #d4882a; --white: #fafaf8;
+  --serif: 'Cormorant Garamond', Georgia, serif; --mono: 'DM Mono', monospace;
+  --display: 'Bebas Neue', sans-serif; --body: 'DM Sans', sans-serif;
+  --nav-h: 68px; --gutter: clamp(24px, 6vw, 96px); --section-pad: clamp(80px, 10vw, 130px);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { background: var(--iron); color: var(--cream); font-family: var(--body); font-weight: 300; line-height: 1.7; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 var(--gutter); background: rgba(26,26,24,0.92); border-bottom: 1px solid rgba(122,140,94,0.14); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.nav-logo { display: flex; flex-direction: column; gap: 2px; }
+.nav-logo-mark { font-family: var(--display); font-size: 22px; letter-spacing: 0.14em; color: var(--cream); line-height: 1; }
+.nav-logo-mark span { color: var(--leaf); }
+.nav-logo-sub { font-family: var(--mono); font-size: 8px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--moss); }
+.nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+.nav-links a { font-size: 13px; font-weight: 400; letter-spacing: 0.06em; color: rgba(244,241,235,0.65); transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--cream); }
+.nav-cta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 10px 22px; transition: background 0.2s; }
+.nav-cta:hover { background: var(--sage); }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+.nav-hamburger span { display: block; width: 22px; height: 1px; background: var(--cream); }
+@media (max-width: 768px) { .nav-links, .nav-cta { display: none; } .nav-hamburger { display: flex; } }
+
+.breadcrumb { padding: calc(var(--nav-h) + 20px) var(--gutter) 0; background: var(--bark); display: flex; align-items: center; gap: 10px; }
+.breadcrumb a, .breadcrumb span { font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); transition: color 0.18s; }
+.breadcrumb a:hover { color: var(--leaf); }
+.breadcrumb .sep { opacity: 0.4; }
+.breadcrumb .current { color: var(--leaf); }
+
+.kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--leaf); margin-bottom: 16px; display: flex; align-items: center; gap: 14px; }
+.kicker::after { content: ''; display: block; width: 32px; height: 1px; background: var(--leaf); opacity: 0.5; }
+.display-h { font-family: var(--display); font-size: clamp(36px, 6vw, 72px); line-height: 0.92; letter-spacing: 0.03em; color: var(--cream); }
+.display-h em { color: var(--leaf); font-style: normal; }
+.editorial { font-family: var(--serif); font-style: italic; font-size: clamp(15px, 1.7vw, 20px); color: var(--sage); font-weight: 300; line-height: 1.65; }
+.body-text { font-size: 15px; font-weight: 300; color: rgba(244,241,235,0.82); line-height: 1.85; }
+.btn-primary { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 13px 30px; transition: background 0.2s; display: inline-block; }
+.btn-primary:hover { background: var(--sage); }
+.btn-ghost { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage); border-bottom: 1px solid rgba(168,184,154,0.35); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; display: inline-block; }
+.btn-ghost:hover { color: var(--cream); border-color: var(--cream); }
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+/* HERO */
+.hero { background: var(--bark); position: relative; overflow: hidden; padding: clamp(48px, 7vw, 80px) var(--gutter) clamp(64px, 8vw, 96px); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(122,140,94,0.3), transparent); }
+.hero::before { content: ''; position: absolute; top: -10%; right: -5%; width: 55%; height: 130%; background: radial-gradient(ellipse at 70% 50%, rgba(122,140,94,0.08) 0%, transparent 62%); pointer-events: none; }
+.hero-inner { max-width: 900px; position: relative; z-index: 1; }
+.hero-title { font-family: var(--display); font-size: clamp(56px, 10vw, 130px); line-height: 0.86; letter-spacing: 0.02em; color: var(--cream); margin: 24px 0 28px; }
+.hero-title em { color: var(--leaf); font-style: normal; }
+.hero-lead { font-family: var(--serif); font-style: italic; font-size: clamp(17px, 2vw, 23px); color: var(--sage); font-weight: 300; line-height: 1.6; max-width: 600px; }
+
+/* QUICK NAV — 10 framework jump links */
+.fw-quick-nav { position: sticky; top: var(--nav-h); z-index: 100; background: rgba(26,26,24,0.95); border-bottom: 1px solid rgba(122,140,94,0.14); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 0 var(--gutter); overflow-x: auto; }
+.fw-quick-nav-inner { display: flex; gap: 0; min-width: max-content; }
+.fw-quick-link { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--moss); padding: 14px 16px; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; white-space: nowrap; cursor: pointer; }
+.fw-quick-link:hover { color: var(--leaf); }
+.fw-quick-link.active { color: var(--leaf); border-bottom-color: var(--leaf); }
+
+/* OVERVIEW INTRO */
+.intro { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 100px); align-items: start; }
+.intro-right .body-text { margin-bottom: 20px; }
+
+/* FRAMEWORK SECTIONS — full editorial treatment, alternating */
+.fw-section { padding: var(--section-pad) var(--gutter); border-bottom: 1px solid rgba(122,140,94,0.1); position: relative; overflow: hidden; }
+.fw-section.bg-iron { background: var(--iron); }
+.fw-section.bg-bark { background: var(--bark); }
+.fw-section::before {
+  content: attr(data-num);
+  position: absolute; top: -4%; right: 2%;
+  font-family: var(--display); font-size: clamp(180px, 24vw, 360px);
+  line-height: 1; color: var(--leaf); opacity: 0.035; pointer-events: none; user-select: none;
+}
+.fw-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 6vw, 80px); align-items: start; position: relative; z-index: 1; }
+.fw-category { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: inline-block; padding: 4px 10px; border: 1px solid rgba(201,168,76,0.25); background: rgba(201,168,76,0.05); }
+.fw-title { font-family: var(--display); font-size: clamp(38px, 5.5vw, 68px); line-height: 0.92; letter-spacing: 0.03em; color: var(--cream); margin-bottom: 16px; }
+.fw-title span { color: var(--leaf); }
+.fw-tagline { font-family: var(--serif); font-style: italic; font-size: clamp(16px, 1.8vw, 21px); color: var(--sage); margin-bottom: 28px; line-height: 1.6; }
+.fw-desc { font-size: 14.5px; font-weight: 300; color: rgba(244,241,235,0.78); line-height: 1.85; margin-bottom: 24px; }
+
+.fw-pillars-list { display: flex; flex-direction: column; gap: 2px; margin: 28px 0; }
+.fwp-item { display: grid; grid-template-columns: 30px 1fr; gap: 14px; padding: 16px 0; border-bottom: 1px solid rgba(122,140,94,0.09); }
+.fwp-num { font-family: var(--display); font-size: 20px; color: var(--leaf); opacity: 0.4; line-height: 1.2; }
+.fwp-title { font-family: var(--display); font-size: 15px; letter-spacing: 0.04em; color: var(--cream); margin-bottom: 4px; }
+.fwp-desc { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.6; }
+
+.fw-applies-to { margin: 24px 0; }
+.fw-applies-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); margin-bottom: 10px; }
+.fw-applies-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.fw-applies-tag { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; color: var(--leaf); padding: 4px 10px; border: 1px solid rgba(122,140,94,0.28); }
+
+.fw-buttons { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 28px; }
+
+/* Right-side visual */
+.fw-visual { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.16); padding: 36px 30px; }
+.fwv-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--leaf); padding-bottom: 16px; margin-bottom: 20px; border-bottom: 1px solid rgba(122,140,94,0.18); }
+.fwv-quote { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--cream); line-height: 1.6; margin-bottom: 24px; }
+.fwv-detail { padding: 14px 0; border-bottom: 1px solid rgba(122,140,94,0.08); }
+.fwv-detail:last-child { border-bottom: none; }
+.fwvd-label { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin-bottom: 4px; }
+.fwvd-value { font-size: 13px; font-weight: 300; color: var(--sage); line-height: 1.55; }
+
+@media (max-width: 900px) { .fw-layout, .intro-grid { grid-template-columns: 1fr; gap: 40px; } .fw-section::before { display: none; } }
+
+/* MASTER FRAMEWORK CALLOUT (Body Literacy - the meta one) */
+.master-fw { padding: var(--section-pad) var(--gutter); background: var(--bark); position: relative; overflow: hidden; text-align: center; }
+.master-fw::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 70% at 50% 50%, rgba(122,140,94,0.1) 0%, transparent 65%); pointer-events: none; }
+.master-fw-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+.master-fw-inner .kicker { justify-content: center; }
+.master-fw-inner .kicker::after { display: none; }
+.master-fw-quote { font-family: var(--serif); font-size: clamp(20px, 3vw, 32px); font-weight: 300; line-height: 1.5; color: var(--cream); margin: 28px 0; }
+.master-fw-quote strong { font-weight: 600; color: var(--white); }
+
+/* FOOTER */
+.footer { background: var(--iron); padding: 72px var(--gutter) 40px; border-top: 1px solid rgba(122,140,94,0.14); }
+.footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; gap: 60px; margin-bottom: 64px; }
+.footer-brand-mark { font-family: var(--display); font-size: 26px; letter-spacing: 0.14em; color: var(--cream); }
+.footer-brand-mark span { color: var(--leaf); }
+.footer-brand p { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--moss); margin-top: 14px; line-height: 1.7; }
+.footer-col-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--leaf); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(122,140,94,0.18); }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13.5px; font-weight: 300; color: rgba(244,241,235,0.45); transition: color 0.18s; }
+.footer-links a:hover { color: var(--cream); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 32px; border-top: 1px solid rgba(122,140,94,0.1); flex-wrap: wrap; gap: 16px; }
+.footer-bottom p { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; color: var(--moss); text-transform: uppercase; }
+.footer-tagline { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--moss); }
+@media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="The Iron Leaf home">
+    <div class="nav-logo-mark">THE IRON <span>LEAF</span></div>
+    <div class="nav-logo-sub">Sustainable Human Performance</div>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="learn.html" class="active">Learn</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="get-started.html" class="nav-cta">Get Started</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span class="sep" aria-hidden="true">·</span>
+  <a href="learn.html">Learn</a><span class="sep" aria-hidden="true">·</span>
+  <span class="current" aria-current="page">The Frameworks</span>
+</nav>
+
+<header class="hero" role="banner">
+  <div class="hero-inner">
+    <div class="kicker">Proprietary IP · Signature Systems</div>
+    <h1 class="hero-title">THE TEN<br /><em>FRAMEWORKS.</em></h1>
+    <p class="hero-lead">Not marketing language. The actual intellectual spine of everything taught at The Iron Leaf — ten structured systems, each governing a specific dimension of sustainable human performance.</p>
+  </div>
+</header>
+
+<nav class="fw-quick-nav" aria-label="Framework jump links">
+  <div class="fw-quick-nav-inner">
+    <a href="#iron-root" class="fw-quick-link active" data-section="iron-root">01 Iron Root</a>
+    <a href="#living-joint" class="fw-quick-link" data-section="living-joint">02 Living Joint</a>
+    <a href="#deep-roots" class="fw-quick-link" data-section="deep-roots">03 Deep Roots</a>
+    <a href="#leaf-plate" class="fw-quick-link" data-section="leaf-plate">04 Leaf Plate</a>
+    <a href="#plant-muscle" class="fw-quick-link" data-section="plant-muscle">05 Plant Muscle</a>
+    <a href="#recovery-triad" class="fw-quick-link" data-section="recovery-triad">06 Recovery Triad</a>
+    <a href="#gut-performance" class="fw-quick-link" data-section="gut-performance">07 Gut Performance</a>
+    <a href="#trail-method" class="fw-quick-link" data-section="trail-method">08 Trail Method</a>
+    <a href="#movement-literacy" class="fw-quick-link" data-section="movement-literacy">09 Movement Literacy</a>
+    <a href="#body-literacy" class="fw-quick-link" data-section="body-literacy">10 Body Literacy</a>
+  </div>
+</nav>
+
+<!-- INTRO -->
+<section class="intro" aria-labelledby="intro-heading">
+  <div class="intro-grid">
+    <div>
+      <div class="kicker">Why Frameworks</div>
+      <h2 class="display-h reveal" id="intro-heading">SYSTEMS,<br />NOT <em>RULES.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0;">Every recommendation on this platform traces back to one of these ten frameworks. They are how we ensure that whether one article exists or ten thousand, everything feels like it belongs to one coherent educational philosophy.</p>
+    </div>
+    <div class="intro-right">
+      <p class="body-text reveal">A framework is different from a rule or a tip. Rules tell you what to do. Frameworks teach you how to think about a domain — so that when circumstances change, you can adapt intelligently rather than following instructions blindly.</p>
+      <p class="body-text reveal">Each framework below governs a specific pillar of the platform — strength, mobility, longevity, nutrition, and beyond — while the tenth, the Body Literacy Framework, sits above all of them as the master philosophy unifying everything we teach.</p>
+      <p class="body-text reveal">These are living systems. They are refined as evidence evolves, but their structure remains stable — which is precisely what allows the platform to grow into thousands of pieces of content without losing coherence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 01 IRON ROOT SYSTEM -->
+<section class="fw-section bg-bark" id="iron-root" data-num="01" aria-labelledby="iron-root-heading">
+  <div class="fw-layout">
+    <div>
+      <span class="fw-category">Strength Foundation</span>
+      <h2 class="fw-title reveal" id="iron-root-heading">THE IRON ROOT<br /><span>SYSTEM™</span></h2>
+      <p class="fw-tagline reveal">"Strength is not a season. It is a lifelong practice."</p>
+      <p class="fw-desc reveal">A five-pillar approach to building functional, sustainable strength — integrating movement quality, progressive loading, recovery, and nutritional support into a system that compounds over decades rather than burns out in months.</p>
+
+      <div class="fw-pillars-list reveal">
+        <div class="fwp-item"><div class="fwp-num">1</div><div><div class="fwp-title">MOVEMENT QUALITY FIRST</div><p class="fwp-desc">No load is added until the movement pattern is sound and controlled.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">2</div><div><div class="fwp-title">PROGRESSIVE LOADING</div><p class="fwp-desc">Gradual, sustainable increases in training stress over time — never rushed.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">3</div><div><div class="fwp-title">RECOVERY INTEGRATION</div><p class="fwp-desc">Recovery is programmed as deliberately as training, not treated as an afterthought.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">4</div><div><div class="fwp-title">NUTRITIONAL SUPPORT</div><p class="fwp-desc">Training and nutrition decisions made in coordination, never in isolation.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">5</div><div><div class="fwp-title">LONGEVITY INTEGRATION</div><p class="fwp-desc">Every decision filtered through a 20-year time horizon, not a 12-week one.</p></div></div>
+      </div>
+
+      <div class="fw-applies-to reveal">
+        <div class="fw-applies-label">Applies To</div>
+        <div class="fw-applies-tags">
+          <span class="fw-applies-tag">Hypertrophy</span>
+          <span class="fw-applies-tag">Periodisation</span>
+          <span class="fw-applies-tag">Olympic Lifting</span>
+          <span class="fw-applies-tag">Programming</span>
+        </div>
+      </div>
+      <div class="fw-buttons reveal">
+        <a href="strength.html" class="btn-primary">Explore Strength Pillar</a>
+        <a href="guides.html#strength" class="btn-ghost">Download the Strength Bible</a>
+      </div>
+    </div>
+    <div class="fw-visual reveal">
+      <div class="fwv-title">Framework Detail</div>
+      <p class="fwv-quote">"We train to become more capable — not to look a certain way."</p>
+      <div class="fwv-detail"><div class="fwvd-label">Governs</div><div class="fwvd-value">All strength, hypertrophy, and conditioning content</div></div>
+      <div class="fwvd-detail"></div>
+      <div class="fwv-detail"><div class="fwvd-label">Time Horizon</div><div class="fwvd-value">20 years — every decision tested against decade-long relevance</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Companion Frameworks</div><div class="fwvd-value">Living Joint Method, Plant Muscle Protocol, Recovery Triad</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 LIVING JOINT METHOD -->
+<section class="fw-section bg-iron" id="living-joint" data-num="02" aria-labelledby="living-joint-heading">
+  <div class="fw-layout">
+    <div>
+      <span class="fw-category">Mobility Architecture</span>
+      <h2 class="fw-title reveal" id="living-joint-heading">LIVING JOINT<br /><span>METHOD™</span></h2>
+      <p class="fw-tagline reveal">"Mobility is not stretching. It is the ability to create and control range."</p>
+      <p class="fw-desc reveal">A daily mobility system built around joint health, tissue longevity, and movement fluency. Integrates into training without adding significant time — and pays dividends for thirty years.</p>
+
+      <div class="fw-pillars-list reveal">
+        <div class="fwp-item"><div class="fwp-num">1</div><div><div class="fwp-title">JOINT-BY-JOINT ASSESSMENT</div><p class="fwp-desc">Identify which joints need mobility vs. stability before prescribing work.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">2</div><div><div class="fwp-title">DAILY PRACTICE STRUCTURE</div><p class="fwp-desc">Ten minutes daily — controlled articular rotations, targeted work, loaded end-range.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">3</div><div><div class="fwp-title">ACTIVE OVER PASSIVE</div><p class="fwp-desc">Building control of range, not just length — the difference between mobility and flexibility.</p></div></div>
+      </div>
+
+      <div class="fw-applies-to reveal">
+        <div class="fw-applies-label">Applies To</div>
+        <div class="fw-applies-tags"><span class="fw-applies-tag">Joint Health</span><span class="fw-applies-tag">Fascia</span><span class="fw-applies-tag">Breathwork</span><span class="fw-applies-tag">Injury Prevention</span></div>
+      </div>
+      <div class="fw-buttons reveal">
+        <a href="mobility.html" class="btn-primary">Explore Mobility Pillar</a>
+        <a href="guides.html#mobility" class="btn-ghost">Download the Mobility Guide</a>
+      </div>
+    </div>
+    <div class="fw-visual reveal">
+      <div class="fwv-title">Framework Detail</div>
+      <p class="fwv-quote">"Ten minutes a day, compounding for decades."</p>
+      <div class="fwv-detail"><div class="fwvd-label">Governs</div><div class="fwvd-value">All mobility, joint health, and movement fluency content</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Daily Dose</div><div class="fwvd-value">10–15 minutes, structured into three phases</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Companion Frameworks</div><div class="fwvd-value">Iron Root System, Movement Literacy System</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 DEEP ROOTS PROTOCOL -->
+<section class="fw-section bg-bark" id="deep-roots" data-num="03" aria-labelledby="deep-roots-heading">
+  <div class="fw-layout">
+    <div>
+      <span class="fw-category">Longevity System</span>
+      <h2 class="fw-title reveal" id="deep-roots-heading">DEEP ROOTS<br /><span>PROTOCOL™</span></h2>
+      <p class="fw-tagline reveal">"The decisions you make at 30 are the infrastructure of who you are at 60."</p>
+      <p class="fw-desc reveal">The longevity system governing VO2 max development, muscle mass preservation, metabolic health, and cognitive function across decades. Every recommendation evaluated by its impact on healthspan, not just lifespan.</p>
+
+      <div class="fw-pillars-list reveal">
+        <div class="fwp-item"><div class="fwp-num">1</div><div><div class="fwp-title">CARDIORESPIRATORY FITNESS</div><p class="fwp-desc">VO2 max as the single strongest modifiable predictor of all-cause mortality.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">2</div><div><div class="fwp-title">MUSCLE MASS PRESERVATION</div><p class="fwp-desc">Resistance training as the primary defence against age-related sarcopenia.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">3</div><div><div class="fwp-title">METABOLIC HEALTH</div><p class="fwp-desc">Insulin sensitivity and metabolic flexibility as foundational longevity markers.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">4</div><div><div class="fwp-title">COGNITIVE & EMOTIONAL HEALTH</div><p class="fwp-desc">Movement, nutrition, and sleep as direct levers on long-term brain health.</p></div></div>
+      </div>
+
+      <div class="fw-applies-to reveal">
+        <div class="fw-applies-label">Applies To</div>
+        <div class="fw-applies-tags"><span class="fw-applies-tag">VO2 Max</span><span class="fw-applies-tag">Muscle Mass</span><span class="fw-applies-tag">Healthy Ageing</span><span class="fw-applies-tag">Blue Zones</span></div>
+      </div>
+      <div class="fw-buttons reveal">
+        <a href="longevity.html" class="btn-primary">Explore Longevity Pillar</a>
+        <a href="guides.html" class="btn-ghost">Browse Free Guides</a>
+      </div>
+    </div>
+    <div class="fw-visual reveal">
+      <div class="fwv-title">Framework Detail</div>
+      <p class="fwv-quote">"We do not teach anything we would not teach to a 60-year-old who wants to remain capable forever."</p>
+      <div class="fwv-detail"><div class="fwvd-label">Governs</div><div class="fwvd-value">All longevity, healthy ageing, and healthspan content</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Core Metric</div><div class="fwvd-value">VO2 max, grip strength, and muscle mass as primary trackers</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Companion Frameworks</div><div class="fwvd-value">Iron Root System, Recovery Triad, Gut Performance Matrix</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 LEAF PLATE SYSTEM -->
+<section class="fw-section bg-iron" id="leaf-plate" data-num="04" aria-labelledby="leaf-plate-heading">
+  <div class="fw-layout">
+    <div>
+      <span class="fw-category">Plant-Based Nutrition</span>
+      <h2 class="fw-title reveal" id="leaf-plate-heading">THE LEAF PLATE<br /><span>SYSTEM™</span></h2>
+      <p class="fw-tagline reveal">"Plants are enough. Let us show you the evidence."</p>
+      <p class="fw-desc reveal">A practical whole-food plant-based eating architecture rooted in Indian food culture. No supplements required beyond B12. Deep nutritional literacy built through understanding, not tracking.</p>
+
+      <div class="fw-pillars-list reveal">
+        <div class="fwp-item"><div class="fwp-num">1</div><div><div class="fwp-title">WHOLE FOODS FIRST</div><p class="fwp-desc">Building meals around minimally processed plants — legumes, grains, vegetables, fruits.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">2</div><div><div class="fwp-title">VARIETY OVER TRACKING</div><p class="fwp-desc">30+ plant species weekly as the practical target, replacing macro tracking.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">3</div><div><div class="fwp-title">CULTURAL ROOTING</div><p class="fwp-desc">Built on Indian food traditions — not Westernised substitution.</p></div></div>
+      </div>
+
+      <div class="fw-applies-to reveal">
+        <div class="fw-applies-label">Applies To</div>
+        <div class="fw-applies-tags"><span class="fw-applies-tag">Protein</span><span class="fw-applies-tag">Gut Health</span><span class="fw-applies-tag">Micronutrients</span><span class="fw-applies-tag">Indian Foods</span></div>
+      </div>
+      <div class="fw-buttons reveal">
+        <a href="nutrition.html" class="btn-primary">Explore Nutrition Pillar</a>
+        <a href="guides.html#wfpb" class="btn-ghost">Download the Starter Guide</a>
+      </div>
+    </div>
+    <div class="fw-visual reveal">
+      <div class="fwv-title">Framework Detail</div>
+      <p class="fwv-quote">"We do not ask anyone to abandon Indian food culture. We teach you to optimise it."</p>
+      <div class="fwv-detail"><div class="fwvd-label">Governs</div><div class="fwvd-value">All nutrition, food science, and plant-based living content</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Practical Target</div><div class="fwvd-value">30+ plant species weekly, whole foods first</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Companion Frameworks</div><div class="fwvd-value">Plant Muscle Protocol, Gut Performance Matrix</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 PLANT MUSCLE PROTOCOL -->
+<section class="fw-section bg-bark" id="plant-muscle" data-num="05" aria-labelledby="plant-muscle-heading">
+  <div class="fw-layout">
+    <div>
+      <span class="fw-category">Performance Nutrition</span>
+      <h2 class="fw-title reveal" id="plant-muscle-heading">PLANT MUSCLE<br /><span>PROTOCOL™</span></h2>
+      <p class="fw-tagline reveal">"Building strength on plants is not a compromise. It's a documented, evidence-based reality."</p>
+      <p class="fw-desc reveal">Evidence-based hypertrophy on a plant-based diet — protein timing, leucine threshold strategy, and the precise training-nutrition synergy required to build muscle without animal products.</p>
+
+      <div class="fw-pillars-list reveal">
+        <div class="fwp-item"><div class="fwp-num">1</div><div><div class="fwp-title">LEUCINE THRESHOLD TARGETING</div><p class="fwp-desc">Combining plant proteins strategically to hit the 2–3g leucine trigger per meal.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">2</div><div><div class="fwp-title">PROTEIN DISTRIBUTION</div><p class="fwp-desc">Spreading total daily protein across 3–4 meals rather than back-loading.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">3</div><div><div class="fwp-title">TRAINING-NUTRITION SYNERGY</div><p class="fwp-desc">Aligning carbohydrate and protein timing with training demands and recovery windows.</p></div></div>
+      </div>
+
+      <div class="fw-applies-to reveal">
+        <div class="fw-applies-label">Applies To</div>
+        <div class="fw-applies-tags"><span class="fw-applies-tag">Hypertrophy</span><span class="fw-applies-tag">Sports Nutrition</span><span class="fw-applies-tag">Leucine</span></div>
+      </div>
+      <div class="fw-buttons reveal">
+        <a href="nutrition.html#protein" class="btn-primary">Explore Protein Science</a>
+        <a href="guides.html#protein" class="btn-ghost">Download Protein Myths Guide</a>
+      </div>
+    </div>
+    <div class="fw-visual reveal">
+      <div class="fwv-title">Framework Detail</div>
+      <p class="fwv-quote">"World record holders train on plant protein alone. The evidence and the anecdote agree."</p>
+      <div class="fwv-detail"><div class="fwvd-label">Governs</div><div class="fwvd-value">The intersection of nutrition and strength training content</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Core Target</div><div class="fwvd-value">1.6–2.2g protein/kg bodyweight, leucine-optimised</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Companion Frameworks</div><div class="fwvd-value">Iron Root System, Leaf Plate System</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 RECOVERY TRIAD -->
+<section class="fw-section bg-iron" id="recovery-triad" data-num="06" aria-labelledby="recovery-triad-heading">
+  <div class="fw-layout">
+    <div>
+      <span class="fw-category">Regeneration System</span>
+      <h2 class="fw-title reveal" id="recovery-triad-heading">RECOVERY<br /><span>TRIAD™</span></h2>
+      <p class="fw-tagline reveal">"Recovery is training. The adaptation happens in the rest, not the rep."</p>
+      <p class="fw-desc reveal">Sleep, nutrition, and load management as the three non-negotiable pillars of sustainable performance — evidence-based, free of gadget-theatre, and built for genuine recovery rather than the appearance of optimisation.</p>
+
+      <div class="fw-pillars-list reveal">
+        <div class="fwp-item"><div class="fwp-num">1</div><div><div class="fwp-title">SLEEP ARCHITECTURE</div><p class="fwp-desc">7–9 hours, consistent timing, and the conditions that protect deep and REM sleep.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">2</div><div><div class="fwp-title">RECOVERY NUTRITION</div><p class="fwp-desc">Anti-inflammatory whole foods and adequate caloric and protein intake to support repair.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">3</div><div><div class="fwp-title">TRAINING LOAD MANAGEMENT</div><p class="fwp-desc">Structured deloads and fatigue monitoring to prevent overreaching and injury.</p></div></div>
+      </div>
+
+      <div class="fw-applies-to reveal">
+        <div class="fw-applies-label">Applies To</div>
+        <div class="fw-applies-tags"><span class="fw-applies-tag">Sleep</span><span class="fw-applies-tag">HRV</span><span class="fw-applies-tag">Deload</span><span class="fw-applies-tag">Stress</span></div>
+      </div>
+      <div class="fw-buttons reveal">
+        <a href="recovery.html" class="btn-primary">Explore Recovery Pillar</a>
+        <a href="guides.html#recovery" class="btn-ghost">Download the Recovery Blueprint</a>
+      </div>
+    </div>
+    <div class="fw-visual reveal">
+      <div class="fwv-title">Framework Detail</div>
+      <p class="fwv-quote">"No amount of training optimisation compensates for chronically poor recovery."</p>
+      <div class="fwv-detail"><div class="fwvd-label">Governs</div><div class="fwvd-value">All recovery, sleep, and regeneration content</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Core Pillars</div><div class="fwvd-value">Sleep, recovery nutrition, training load</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Companion Frameworks</div><div class="fwvd-value">Iron Root System, Deep Roots Protocol</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 GUT PERFORMANCE MATRIX -->
+<section class="fw-section bg-bark" id="gut-performance" data-num="07" aria-labelledby="gut-performance-heading">
+  <div class="fw-layout">
+    <div>
+      <span class="fw-category">Microbiome Science</span>
+      <h2 class="fw-title reveal" id="gut-performance-heading">GUT PERFORMANCE<br /><span>MATRIX™</span></h2>
+      <p class="fw-tagline reveal">"The gut is not a side issue. It is a performance and longevity organ."</p>
+      <p class="fw-desc reveal">The microbiome's role in athletic performance, recovery, systemic inflammation, and long-term health — translated from emerging gut science into practical, food-first daily habits.</p>
+
+      <div class="fw-pillars-list reveal">
+        <div class="fwp-item"><div class="fwp-num">1</div><div><div class="fwp-title">FIBRE DIVERSITY</div><p class="fwp-desc">30+ plant species weekly to maximise microbial diversity and short-chain fatty acid production.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">2</div><div><div class="fwp-title">FERMENTED FOOD INTEGRATION</div><p class="fwp-desc">Regular intake of naturally fermented foods to support probiotic diversity.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">3</div><div><div class="fwp-title">INFLAMMATION MONITORING</div><p class="fwp-desc">Using gut health as an early signal for systemic inflammation affecting recovery and performance.</p></div></div>
+      </div>
+
+      <div class="fw-applies-to reveal">
+        <div class="fw-applies-label">Applies To</div>
+        <div class="fw-applies-tags"><span class="fw-applies-tag">Fibre</span><span class="fw-applies-tag">Fermented Foods</span><span class="fw-applies-tag">Inflammation</span></div>
+      </div>
+      <div class="fw-buttons reveal">
+        <a href="nutrition.html#gut" class="btn-primary">Explore Gut Health</a>
+        <a href="guides.html#gut" class="btn-ghost">Download the Gut Health Guide</a>
+      </div>
+    </div>
+    <div class="fw-visual reveal">
+      <div class="fwv-title">Framework Detail</div>
+      <p class="fwv-quote">"38 trillion microbial cells, all responding to what you eat today."</p>
+      <div class="fwv-detail"><div class="fwvd-label">Governs</div><div class="fwvd-value">Gut health, fibre, and digestive wellness content</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Core Target</div><div class="fwvd-value">30+ plant species weekly, 40g+ daily fibre</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Companion Frameworks</div><div class="fwvd-value">Leaf Plate System, Recovery Triad</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 TRAIL METHOD -->
+<section class="fw-section bg-iron" id="trail-method" data-num="08" aria-labelledby="trail-method-heading">
+  <div class="fw-layout">
+    <div>
+      <span class="fw-category">Endurance System</span>
+      <h2 class="fw-title reveal" id="trail-method-heading">TRAIL<br /><span>METHOD™</span></h2>
+      <p class="fw-tagline reveal">"From first kilometre to mountain ultra — one coherent educational system."</p>
+      <p class="fw-desc reveal">A complete trail running educational system covering training progression, terrain-specific skill development, endurance fuelling, and the injury prevention work that keeps trail runners on the trail for decades.</p>
+
+      <div class="fw-pillars-list reveal">
+        <div class="fwp-item"><div class="fwp-num">1</div><div><div class="fwp-title">PROGRESSIVE DISTANCE BUILDING</div><p class="fwp-desc">Conservative weekly mileage progression to build durability without overuse injury.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">2</div><div><div class="fwp-title">TERRAIN-SPECIFIC SKILL</div><p class="fwp-desc">Technical descending, elevation management, and footwork developed deliberately.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">3</div><div><div class="fwp-title">ENDURANCE FUELLING</div><p class="fwp-desc">Plant-based fuelling strategies for ultra-distance events and long training blocks.</p></div></div>
+      </div>
+
+      <div class="fw-applies-to reveal">
+        <div class="fw-applies-label">Applies To</div>
+        <div class="fw-applies-tags"><span class="fw-applies-tag">Training Plans</span><span class="fw-applies-tag">Fuelling</span><span class="fw-applies-tag">Elevation</span></div>
+      </div>
+      <div class="fw-buttons reveal">
+        <a href="trail-running.html" class="btn-primary">Explore Trail Running</a>
+        <a href="guides.html#trail" class="btn-ghost">Download the Trail Blueprint</a>
+      </div>
+    </div>
+    <div class="fw-visual reveal">
+      <div class="fwv-title">Framework Detail</div>
+      <p class="fwv-quote">"Scott Jurek won Western States seven times on plant-based fuelling alone."</p>
+      <div class="fwv-detail"><div class="fwvd-label">Governs</div><div class="fwvd-value">All trail running and endurance content</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Time Horizon</div><div class="fwvd-value">Multi-year progression — durability over speed in early years</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Companion Frameworks</div><div class="fwvd-value">Recovery Triad, Living Joint Method, Leaf Plate System</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 MOVEMENT LITERACY SYSTEM -->
+<section class="fw-section bg-bark" id="movement-literacy" data-num="09" aria-labelledby="movement-literacy-heading">
+  <div class="fw-layout">
+    <div>
+      <span class="fw-category">Movement Education</span>
+      <h2 class="fw-title reveal" id="movement-literacy-heading">MOVEMENT LITERACY<br /><span>SYSTEM™</span></h2>
+      <p class="fw-tagline reveal">"The complete language of human movement — patterns, quality, capacity, and intelligence."</p>
+      <p class="fw-desc reveal">The unifying system connecting strength, mobility, and conditioning into a single coherent understanding of how the human body is meant to move — across all seven foundational movement patterns.</p>
+
+      <div class="fw-pillars-list reveal">
+        <div class="fwp-item"><div class="fwp-num">1</div><div><div class="fwp-title">SEVEN FOUNDATIONAL PATTERNS</div><p class="fwp-desc">Squat, hinge, lunge, push, pull, carry, rotate — the complete movement vocabulary.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">2</div><div><div class="fwp-title">PATTERN BEFORE LOAD</div><p class="fwp-desc">Establishing movement competency before adding external resistance.</p></div></div>
+        <div class="fwp-item"><div class="fwp-num">3</div><div><div class="fwp-title">CROSS-DOMAIN INTEGRATION</div><p class="fwp-desc">Connecting movement quality across strength, mobility, and sport-specific skill.</p></div></div>
+      </div>
+
+      <div class="fw-applies-to reveal">
+        <div class="fw-applies-label">Applies To</div>
+        <div class="fw-applies-tags"><span class="fw-applies-tag">Exercise Technique</span><span class="fw-applies-tag">Functional Movement</span></div>
+      </div>
+      <div class="fw-buttons reveal">
+        <a href="strength.html#movement" class="btn-primary">Explore Movement Quality</a>
+        <a href="learn.html#exercises" class="btn-ghost">Browse Exercise Library</a>
+      </div>
+    </div>
+    <div class="fw-visual reveal">
+      <div class="fwv-title">Framework Detail</div>
+      <p class="fwv-quote">"Movement quality is the language. Strength and conditioning are the vocabulary built on top."</p>
+      <div class="fwv-detail"><div class="fwvd-label">Governs</div><div class="fwvd-value">Exercise technique, movement screening, and pattern development</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Core Patterns</div><div class="fwvd-value">Squat, hinge, lunge, push, pull, carry, rotate</div></div>
+      <div class="fwv-detail"><div class="fwvd-label">Companion Frameworks</div><div class="fwvd-value">Iron Root System, Living Joint Method</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 BODY LITERACY FRAMEWORK — MASTER -->
+<section class="master-fw" id="body-literacy" aria-labelledby="body-literacy-heading">
+  <div class="master-fw-inner">
+    <div class="kicker">Framework 10 · The Master System</div>
+    <h2 class="display-h reveal" id="body-literacy-heading">BODY LITERACY<br /><em>FRAMEWORK™</em></h2>
+    <p class="master-fw-quote reveal">"The goal: a person who no longer needs to ask the industry for answers. <strong>Movement literacy, nutritional literacy, lifestyle literacy</strong> — the three domains of genuine human capability."</p>
+    <p class="body-text reveal" style="max-width: 640px; margin: 0 auto 36px;">This is the master educational philosophy governing everything at The Iron Leaf — the framework that sits above all nine others. Every piece of content, every programme, and every framework on this page ultimately serves this single goal: building people who understand their bodies well enough to navigate independently, for the rest of their lives.</p>
+    <div class="fw-buttons reveal" style="justify-content: center;">
+      <a href="about.html" class="btn-primary">Read Our Full Philosophy</a>
+      <a href="get-started.html" class="btn-ghost">Begin Your Learning Path</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-mark">THE IRON <span>LEAF</span></div>
+      <p>Grounded in Nature.<br />Forged in Grit.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Learn</div>
+      <ul class="footer-links">
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="strength.html">Strength</a></li>
+        <li><a href="mobility.html">Mobility</a></li>
+        <li><a href="learn.html">All Pillars</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Resources</div>
+      <ul class="footer-links">
+        <li><a href="guides.html">Free Guides</a></li>
+        <li><a href="research.html">Research Library</a></li>
+        <li><a href="frameworks.html" aria-current="page">The Frameworks</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Work Together</div>
+      <ul class="footer-links">
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 The Iron Leaf · All rights reserved</p>
+    <span class="footer-tagline">Grounded in Nature. Forged in Grit.</span>
+    <p><a href="privacy.html" style="color:var(--moss)">Privacy</a> · <a href="terms.html" style="color:var(--moss)">Terms</a></p>
+  </div>
+</footer>
+
+<script>
+const revealEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((el, i) => {
+    if (el.isIntersecting) { setTimeout(() => el.target.classList.add('visible'), (i % 4) * 80); obs.unobserve(el.target); }
+  });
+}, { threshold: 0.07 });
+revealEls.forEach(el => obs.observe(el));
+
+const sections = document.querySelectorAll('.fw-section[id]');
+const navLinks = document.querySelectorAll('.fw-quick-link');
+const sectionObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) navLinks.forEach(link => link.classList.toggle('active', link.dataset.section === entry.target.id));
+  });
+}, { rootMargin: `-${68 + 40}px 0px -60% 0px` });
+sections.forEach(s => sectionObs.observe(s));
+
+const hamburger = document.querySelector('.nav-hamburger');
+if (hamburger) hamburger.addEventListener('click', () => {
+  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+  hamburger.setAttribute('aria-expanded', !expanded);
+});
+</script>
+
+</body>
+</html>
