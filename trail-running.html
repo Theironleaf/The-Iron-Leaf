@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trail Running — The Iron Leaf | Training, Fuelling & Endurance Science</title>
+<meta name="description" content="From first trail to mountain ultra. Training progression, terrain-specific skill, plant-based endurance fuelling, and injury prevention — the complete Trail Method." />
+<meta property="og:title" content="Trail Running — The Iron Leaf" />
+<meta property="og:description" content="One coherent educational system, from first kilometre to mountain ultra." />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://theironleaf.com/trail-running" />
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "EducationalOrganization", "name": "The Iron Leaf — Trail Running", "description": "Trail running education covering training progression, terrain skill, fuelling, and injury prevention.", "url": "https://theironleaf.com/trail-running" }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --iron: #1a1a18; --bark: #2c2a24; --moss: #4a5240; --leaf: #7a8c5e; --sage: #a8b89a;
+  --cream: #f4f1eb; --gold: #c9a84c; --amber: #d4882a; --white: #fafaf8; --rust: #b85c3a;
+  --serif: 'Cormorant Garamond', Georgia, serif; --mono: 'DM Mono', monospace;
+  --display: 'Bebas Neue', sans-serif; --body: 'DM Sans', sans-serif;
+  --nav-h: 68px; --gutter: clamp(24px, 6vw, 96px); --section-pad: clamp(80px, 10vw, 130px); --col-read: 720px;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { background: var(--iron); color: var(--cream); font-family: var(--body); font-weight: 300; line-height: 1.7; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 var(--gutter); background: rgba(26,26,24,0.92); border-bottom: 1px solid rgba(122,140,94,0.14); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.nav-logo { display: flex; flex-direction: column; gap: 2px; }
+.nav-logo-mark { font-family: var(--display); font-size: 22px; letter-spacing: 0.14em; color: var(--cream); line-height: 1; }
+.nav-logo-mark span { color: var(--leaf); }
+.nav-logo-sub { font-family: var(--mono); font-size: 8px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--moss); }
+.nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+.nav-links a { font-size: 13px; font-weight: 400; letter-spacing: 0.06em; color: rgba(244,241,235,0.65); transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--cream); }
+.nav-cta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 10px 22px; transition: background 0.2s; }
+.nav-cta:hover { background: var(--sage); }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+.nav-hamburger span { display: block; width: 22px; height: 1px; background: var(--cream); }
+@media (max-width: 768px) { .nav-links, .nav-cta { display: none; } .nav-hamburger { display: flex; } }
+
+.breadcrumb { padding: calc(var(--nav-h) + 20px) var(--gutter) 0; background: var(--bark); display: flex; align-items: center; gap: 10px; }
+.breadcrumb a, .breadcrumb span { font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); transition: color 0.18s; }
+.breadcrumb a:hover { color: var(--leaf); }
+.breadcrumb .sep { opacity: 0.4; }
+.breadcrumb .current { color: var(--leaf); }
+
+.hero { background: var(--bark); position: relative; overflow: hidden; padding: clamp(48px, 7vw, 80px) var(--gutter) 0; }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(122,140,94,0.3), transparent); }
+.hero-deco { position: absolute; top: 0; right: 0; width: 45%; height: 100%; pointer-events: none; overflow: hidden; }
+.hero-deco svg { width: 100%; height: 100%; opacity: 0.05; }
+.hero-inner { display: grid; grid-template-columns: 1fr 360px; gap: clamp(48px, 6vw, 80px); align-items: end; padding-bottom: clamp(48px, 7vw, 80px); position: relative; z-index: 1; }
+.hero-kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--leaf); margin-bottom: 20px; display: flex; align-items: center; gap: 14px; }
+.hero-kicker::before { content: ''; display: block; width: 28px; height: 1px; background: var(--leaf); }
+.hero-title { font-family: var(--display); font-size: clamp(64px, 11.5vw, 165px); line-height: 0.84; letter-spacing: 0.01em; color: var(--cream); margin-bottom: 32px; }
+.hero-title em { color: var(--leaf); font-style: normal; }
+.hero-lead { font-family: var(--serif); font-style: italic; font-size: clamp(17px, 2vw, 24px); color: var(--sage); font-weight: 300; line-height: 1.6; max-width: 560px; border-left: 2px solid var(--gold); padding-left: 24px; }
+.hero-panel { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.16); padding: 36px 28px; display: flex; flex-direction: column; gap: 28px; align-self: start; margin-top: 20px; }
+.hero-panel-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--leaf); padding-bottom: 14px; border-bottom: 1px solid rgba(122,140,94,0.18); }
+.panel-stat-num { font-family: var(--display); font-size: 38px; letter-spacing: 0.03em; color: var(--cream); line-height: 1; margin-bottom: 4px; }
+.panel-stat-num span { color: var(--leaf); }
+.panel-stat-label { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); margin-bottom: 4px; }
+.panel-stat-note { font-size: 11.5px; font-weight: 300; color: var(--sage); line-height: 1.5; }
+.panel-cta { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 12px 20px; text-align: center; transition: background 0.2s; display: block; margin-top: 8px; }
+.panel-cta:hover { background: var(--sage); }
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } .hero-panel { display: none; } }
+
+.pillar-nav { position: sticky; top: var(--nav-h); z-index: 100; background: rgba(26,26,24,0.95); border-bottom: 1px solid rgba(122,140,94,0.14); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 0 var(--gutter); overflow-x: auto; }
+.pillar-nav-inner { display: flex; gap: 0; min-width: max-content; }
+.pillar-nav-link { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); padding: 16px 22px; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; white-space: nowrap; cursor: pointer; }
+.pillar-nav-link:hover { color: var(--leaf); }
+.pillar-nav-link.active { color: var(--leaf); border-bottom-color: var(--leaf); }
+
+.kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--leaf); margin-bottom: 16px; display: flex; align-items: center; gap: 14px; }
+.kicker::after { content: ''; display: block; width: 32px; height: 1px; background: var(--leaf); opacity: 0.5; }
+.display-h { font-family: var(--display); font-size: clamp(36px, 6vw, 72px); line-height: 0.92; letter-spacing: 0.03em; color: var(--cream); }
+.display-h em { color: var(--leaf); font-style: normal; }
+.editorial { font-family: var(--serif); font-style: italic; font-size: clamp(15px, 1.7vw, 20px); color: var(--sage); font-weight: 300; line-height: 1.65; }
+.body-text { font-size: 15px; font-weight: 300; color: rgba(244,241,235,0.82); line-height: 1.85; }
+.btn-primary { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 13px 30px; transition: background 0.2s; display: inline-block; }
+.btn-primary:hover { background: var(--sage); }
+.btn-ghost { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage); border-bottom: 1px solid rgba(168,184,154,0.35); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; display: inline-block; }
+.btn-ghost:hover { color: var(--cream); border-color: var(--cream); }
+.evidence-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); padding: 4px 10px; }
+.evidence-badge .stars { font-size: 9px; letter-spacing: 1px; }
+.callout { border-left: 3px solid var(--gold); padding: 24px 28px; background: rgba(201,168,76,0.05); margin: 36px 0; }
+.callout-kicker { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.callout p { font-size: 14.5px; font-weight: 300; color: var(--cream); line-height: 1.75; }
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+.intro { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 100px); align-items: start; }
+.intro-right .body-text { margin-bottom: 24px; }
+.intro-pillars { display: flex; flex-direction: column; gap: 2px; margin-top: 40px; }
+.intro-pillar { display: flex; align-items: center; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(122,140,94,0.1); cursor: pointer; }
+.ip-num { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; color: var(--moss); flex-shrink: 0; width: 28px; }
+.ip-name { font-family: var(--display); font-size: 18px; letter-spacing: 0.05em; color: var(--cream); flex: 1; }
+.ip-arrow { font-size: 13px; color: var(--leaf); opacity: 0.5; transition: opacity 0.2s, transform 0.2s; }
+.intro-pillar:hover .ip-arrow { opacity: 1; transform: translateX(4px); }
+.intro-pillar:hover .ip-name { color: var(--sage); }
+@media (max-width: 800px) { .intro-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+/* PROGRESSION PATH */
+.section-progression { padding: var(--section-pad) var(--gutter); background: var(--bark); position: relative; overflow: hidden; }
+.section-progression::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: radial-gradient(ellipse at 70% 50%, rgba(122,140,94,0.07) 0%, transparent 65%); pointer-events: none; }
+.progression-intro { max-width: var(--col-read); margin-bottom: 52px; position: relative; z-index: 1; }
+.progression-path { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 2px; max-width: var(--col-read); }
+.prog-stage { display: grid; grid-template-columns: 90px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid rgba(122,140,94,0.1); align-items: start; }
+.prog-distance { font-family: var(--display); font-size: 22px; letter-spacing: 0.03em; color: var(--leaf); line-height: 1.1; }
+.prog-title { font-family: var(--display); font-size: 20px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 8px; }
+.prog-desc { font-size: 13px; font-weight: 300; color: var(--sage); line-height: 1.65; }
+@media (max-width: 600px) { .prog-stage { grid-template-columns: 1fr; gap: 8px; } }
+
+/* TERRAIN SKILL */
+.section-terrain { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.terrain-layout { display: grid; grid-template-columns: var(--col-read) 1fr; gap: clamp(48px, 6vw, 80px); }
+.section-sidebar { padding-top: 60px; }
+.sidebar-card { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.16); padding: 28px 24px; margin-bottom: 2px; display: block; text-decoration: none; color: inherit; }
+.sidebar-card-title { font-family: var(--display); font-size: 18px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 10px; }
+.sidebar-card-title span { color: var(--leaf); }
+.sidebar-card p { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.65; margin-bottom: 16px; }
+.sidebar-link { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--leaf); display: flex; align-items: center; gap: 6px; transition: gap 0.18s; }
+.sidebar-link:hover { gap: 12px; }
+.sidebar-link::after { content: '→'; }
+@media (max-width: 1100px) { .terrain-layout { grid-template-columns: 1fr; } .section-sidebar { padding-top: 0; } }
+
+.skill-grid { display: flex; flex-direction: column; gap: 2px; margin: 28px 0; }
+.skill-card { background: rgba(26,26,24,0.4); border: 1px solid rgba(122,140,94,0.12); padding: 22px 24px; transition: border-color 0.2s, background 0.2s; }
+.skill-card:hover { border-color: rgba(122,140,94,0.3); background: rgba(122,140,94,0.06); }
+.skill-name { font-family: var(--display); font-size: 17px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 6px; }
+.skill-desc { font-size: 12px; font-weight: 300; color: var(--sage); line-height: 1.55; }
+
+/* FUELLING SECTION */
+.section-fuelling { padding: var(--section-pad) var(--gutter); background: var(--bark); }
+.fuelling-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 6vw, 80px); align-items: start; }
+.data-table { width: 100%; border-collapse: collapse; margin: 36px 0; font-size: 13.5px; }
+.data-table thead th { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--moss); padding: 14px 16px; text-align: left; border-bottom: 1px solid rgba(122,140,94,0.22); }
+.data-table tbody tr { border-bottom: 1px solid rgba(122,140,94,0.08); transition: background 0.16s; }
+.data-table tbody tr:hover { background: rgba(122,140,94,0.04); }
+.data-table tbody td { padding: 14px 16px; font-weight: 300; color: rgba(244,241,235,0.8); vertical-align: top; line-height: 1.55; }
+.data-table tbody td:first-child { color: var(--cream); font-weight: 400; }
+.data-table .highlight td { color: var(--cream); }
+.data-table .highlight td:first-child { color: var(--leaf); }
+
+.fuel-timeline { position: relative; padding-left: 28px; }
+.fuel-timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: rgba(122,140,94,0.2); }
+.fuel-item { position: relative; margin-bottom: 32px; }
+.fuel-item::before { content: ''; position: absolute; left: -32px; top: 6px; width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--leaf); background: var(--iron); }
+.fuel-time { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.fuel-title { font-family: var(--display); font-size: 20px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 8px; }
+.fuel-body { font-size: 13px; font-weight: 300; color: var(--sage); line-height: 1.68; }
+@media (max-width: 900px) { .fuelling-layout { grid-template-columns: 1fr; } }
+
+/* INJURY PREVENTION */
+.section-injury { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.injury-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; }
+.injury-card { background: rgba(122,140,94,0.04); border: 1px solid rgba(122,140,94,0.12); padding: 32px 26px; transition: border-color 0.22s, background 0.22s; }
+.injury-card:hover { border-color: rgba(122,140,94,0.3); background: rgba(122,140,94,0.07); }
+.injury-icon { font-size: 24px; margin-bottom: 16px; }
+.injury-title { font-family: var(--display); font-size: 19px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 10px; }
+.injury-desc { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.65; }
+@media (max-width: 800px) { .injury-grid { grid-template-columns: 1fr; } }
+
+/* FRAMEWORK CTA */
+.framework-cta { padding: var(--section-pad) var(--gutter); background: var(--bark); position: relative; overflow: hidden; }
+.framework-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(122,140,94,0.08) 0%, transparent 65%); pointer-events: none; }
+.fw-cta-inner { max-width: 800px; position: relative; z-index: 1; }
+.fw-cta-buttons { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 40px; }
+
+/* FAQ */
+.section-faq { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.faq-layout { display: grid; grid-template-columns: 320px 1fr; gap: 80px; align-items: start; }
+.faq-left { position: sticky; top: calc(var(--nav-h) + 60px); }
+.faq-list { display: flex; flex-direction: column; gap: 2px; }
+.faq-item { border-bottom: 1px solid rgba(122,140,94,0.1); }
+.faq-q { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; cursor: pointer; gap: 20px; }
+.faq-q-text { font-size: 14.5px; font-weight: 300; color: var(--cream); line-height: 1.5; flex: 1; }
+.faq-icon { color: var(--leaf); opacity: 0.6; font-size: 18px; transition: transform 0.25s, opacity 0.2s; flex-shrink: 0; }
+.faq-item.open .faq-icon { transform: rotate(45deg); opacity: 1; }
+.faq-a { display: none; padding: 0 0 22px; }
+.faq-item.open .faq-a { display: block; }
+.faq-a p { font-size: 13.5px; font-weight: 300; color: var(--sage); line-height: 1.8; }
+@media (max-width: 900px) { .faq-layout { grid-template-columns: 1fr; } .faq-left { position: static; } }
+
+/* DOWNLOAD */
+.download-band { padding: clamp(64px, 8vw, 96px) var(--gutter); background: var(--bark); border-top: 1px solid rgba(122,140,94,0.12); }
+.download-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.dl-card { background: rgba(122,140,94,0.04); border: 1px solid rgba(122,140,94,0.12); padding: 36px 28px; display: flex; flex-direction: column; gap: 12px; transition: border-color 0.22s, background 0.22s; text-decoration: none; color: inherit; }
+.dl-card:hover { border-color: rgba(122,140,94,0.32); background: rgba(122,140,94,0.08); }
+.dl-icon { font-size: 28px; }
+.dl-cat { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+.dl-title { font-family: var(--display); font-size: 22px; letter-spacing: 0.05em; color: var(--cream); line-height: 1.1; }
+.dl-desc { font-size: 13px; font-weight: 300; color: var(--sage); line-height: 1.65; flex: 1; }
+.dl-cta { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--leaf); display: flex; align-items: center; gap: 7px; transition: gap 0.2s; margin-top: 4px; }
+.dl-card:hover .dl-cta { gap: 13px; }
+.dl-cta::after { content: '↓'; }
+@media (max-width: 800px) { .download-grid { grid-template-columns: 1fr; } }
+
+/* RELATED */
+.related { padding: var(--section-pad) var(--gutter); background: var(--iron); border-top: 1px solid rgba(122,140,94,0.1); }
+.related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 48px; }
+.related-card { border: 1px solid rgba(122,140,94,0.1); padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; transition: border-color 0.2s, background 0.2s; text-decoration: none; color: inherit; }
+.related-card:hover { border-color: rgba(122,140,94,0.28); background: rgba(122,140,94,0.05); }
+.related-type { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+.related-title { font-family: var(--display); font-size: 19px; letter-spacing: 0.04em; color: var(--cream); line-height: 1.1; }
+.related-desc { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.6; flex: 1; }
+.related-link { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--leaf); display: flex; align-items: center; gap: 6px; transition: gap 0.18s; }
+.related-card:hover .related-link { gap: 12px; }
+.related-link::after { content: '→'; }
+@media (max-width: 900px) { .related-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .related-grid { grid-template-columns: 1fr; } }
+
+/* NEWSLETTER */
+.newsletter { padding: clamp(72px, 9vw, 112px) var(--gutter); background: var(--bark); border-top: 1px solid rgba(122,140,94,0.12); }
+.newsletter-inner { max-width: 580px; margin: 0 auto; text-align: center; }
+.newsletter-inner .kicker { justify-content: center; }
+.newsletter-inner .kicker::after { display: none; }
+.nl-form { display: flex; border: 1px solid rgba(122,140,94,0.22); background: rgba(26,26,24,0.5); margin-top: 36px; transition: border-color 0.2s; }
+.nl-form:focus-within { border-color: rgba(122,140,94,0.5); }
+.nl-form input { flex: 1; background: none; border: none; outline: none; color: var(--cream); font-family: var(--body); font-size: 14px; font-weight: 300; padding: 15px 20px; }
+.nl-form input::placeholder { color: var(--moss); }
+.nl-form button { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 0 26px; transition: background 0.2s; flex-shrink: 0; }
+.nl-form button:hover { background: var(--sage); }
+.nl-note { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin-top: 14px; }
+
+/* FOOTER */
+.footer { background: var(--iron); padding: 72px var(--gutter) 40px; border-top: 1px solid rgba(122,140,94,0.14); }
+.footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; gap: 60px; margin-bottom: 64px; }
+.footer-brand-mark { font-family: var(--display); font-size: 26px; letter-spacing: 0.14em; color: var(--cream); }
+.footer-brand-mark span { color: var(--leaf); }
+.footer-brand p { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--moss); margin-top: 14px; line-height: 1.7; }
+.footer-col-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--leaf); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(122,140,94,0.18); }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13.5px; font-weight: 300; color: rgba(244,241,235,0.45); transition: color 0.18s; }
+.footer-links a:hover { color: var(--cream); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 32px; border-top: 1px solid rgba(122,140,94,0.1); flex-wrap: wrap; gap: 16px; }
+.footer-bottom p { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; color: var(--moss); text-transform: uppercase; }
+.footer-tagline { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--moss); }
+@media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="The Iron Leaf home">
+    <div class="nav-logo-mark">THE IRON <span>LEAF</span></div>
+    <div class="nav-logo-sub">Sustainable Human Performance</div>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="learn.html" class="active">Learn</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="get-started.html" class="nav-cta">Get Started</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span class="sep" aria-hidden="true">·</span>
+  <a href="learn.html">Learn</a><span class="sep" aria-hidden="true">·</span>
+  <span class="current" aria-current="page">Trail Running</span>
+</nav>
+
+<header class="hero" role="banner">
+  <div class="hero-deco" aria-hidden="true">
+    <svg viewBox="0 0 500 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 650 L150 450 L220 550 L300 300 L380 500 L450 650" stroke="#7a8c5e" stroke-width="1.5" fill="none"/>
+      <path d="M50 700 L150 500 L220 600 L300 350 L380 550 L450 700" stroke="#7a8c5e" stroke-width="0.5" fill="none"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-kicker">Pillar 06 · Performance</div>
+      <h1 class="hero-title">TRAIL<br /><em>RUNNING.</em></h1>
+      <p class="hero-lead">From first kilometre to mountain ultra — one coherent educational system. Training, terrain, fuelling, and the meditative case for moving through nature on foot.</p>
+    </div>
+    <div class="hero-panel" aria-label="Key trail running facts">
+      <div class="hero-panel-title">At a Glance</div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">10<span>%</span></div>
+        <div class="panel-stat-label">Maximum weekly mileage increase</div>
+        <div class="panel-stat-note">The conservative progression rate that minimises overuse injury risk for trail runners.</div>
+      </div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">60<span>–90g</span></div>
+        <div class="panel-stat-label">Carbohydrate per hour, ultra distance</div>
+        <div class="panel-stat-note">The evidence-supported intra-event fuelling rate for sustained endurance performance.</div>
+      </div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">7×</div>
+        <div class="panel-stat-label">Scott Jurek's Western States wins</div>
+        <div class="panel-stat-note">Plant-based fuelling at the highest level of ultramarathon competition.</div>
+      </div>
+      <a href="guides.html#trail" class="panel-cta">Download Trail Blueprint</a>
+    </div>
+  </div>
+</header>
+
+<nav class="pillar-nav" aria-label="Trail running sections">
+  <div class="pillar-nav-inner">
+    <a href="#intro" class="pillar-nav-link active" data-section="intro">Overview</a>
+    <a href="#progression" class="pillar-nav-link" data-section="progression">Progression Path</a>
+    <a href="#terrain" class="pillar-nav-link" data-section="terrain">Terrain Skill</a>
+    <a href="#fuelling" class="pillar-nav-link" data-section="fuelling">Endurance Fuelling</a>
+    <a href="#injury" class="pillar-nav-link" data-section="injury">Injury Prevention</a>
+    <a href="#faq" class="pillar-nav-link" data-section="faq">FAQ</a>
+  </div>
+</nav>
+
+<section class="intro" id="intro" aria-labelledby="intro-heading">
+  <div class="intro-grid">
+    <div>
+      <div class="kicker">Where to Begin</div>
+      <h2 class="display-h reveal" id="intro-heading">MOVEMENT<br />THROUGH <em>NATURE.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 32px;">Trail running connects every Iron Leaf pillar — strength for technical terrain, mobility for uneven ground, nutrition for sustained effort, and a meditative quality found nowhere else in training.</p>
+      <div class="callout reveal">
+        <div class="callout-kicker">The Iron Leaf Position</div>
+        <p>Trail running is not just road running on dirt. It demands a distinct skill set — terrain reading, technical descending, and pacing intelligence — built deliberately, not assumed from road running fitness alone.</p>
+      </div>
+    </div>
+    <div class="intro-right">
+      <p class="body-text reveal">Trail running culture in India is young but growing rapidly — from city trail groups to Himalayan ultras. This section is built for that full spectrum, from someone considering their first off-road run to athletes training for 100-mile mountain races.</p>
+      <p class="body-text reveal">Unlike road running, trail running rewards patience over speed. Conservative progression, technical skill development, and respect for variable terrain prevent the injuries that derail most new trail runners in their first year.</p>
+      <p class="body-text reveal">This section covers the complete Trail Method — progressive distance building, terrain-specific skill, plant-based endurance fuelling, and the injury prevention work that keeps you on the trail for decades.</p>
+      <div class="intro-pillars reveal" role="navigation" aria-label="Trail running topics">
+        <a href="#progression" class="intro-pillar"><span class="ip-num">01</span><span class="ip-name">THE PROGRESSION PATH</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#terrain" class="intro-pillar"><span class="ip-num">02</span><span class="ip-name">TERRAIN-SPECIFIC SKILL</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#fuelling" class="intro-pillar"><span class="ip-num">03</span><span class="ip-name">ENDURANCE FUELLING</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#injury" class="intro-pillar"><span class="ip-num">04</span><span class="ip-name">INJURY PREVENTION</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-progression" id="progression" aria-labelledby="progression-heading">
+  <div class="progression-intro">
+    <div class="kicker">Topic 01</div>
+    <h2 class="display-h reveal" id="progression-heading">THE PROGRESSION<br /><em>PATH.</em></h2>
+    <p class="editorial reveal" style="margin: 20px 0 0;">From first trail kilometre to mountain ultra — a deliberate, conservative progression that builds durability before speed.</p>
+  </div>
+  <div class="progression-path">
+    <div class="prog-stage reveal">
+      <div class="prog-distance">0–5K</div>
+      <div><div class="prog-title">FIRST TRAILS</div><p class="prog-desc">Building comfort with uneven terrain, basic footwork, and the different muscular demands of trail versus road running. Walk hills without hesitation.</p></div>
+    </div>
+    <div class="prog-stage reveal">
+      <div class="prog-distance">5–15K</div>
+      <div><div class="prog-title">CONSISTENT TRAIL RUNNER</div><p class="prog-desc">Regular weekly trail mileage with introduction to technical sections — rocks, roots, moderate elevation gain and loss.</p></div>
+    </div>
+    <div class="prog-stage reveal">
+      <div class="prog-distance">15–30K</div>
+      <div><div class="prog-title">HALF-MARATHON DISTANCE</div><p class="prog-desc">Building aerobic base for longer efforts. Introduction to basic fuelling strategy and pacing for sustained multi-hour exertion.</p></div>
+    </div>
+    <div class="prog-stage reveal">
+      <div class="prog-distance">30–50K</div>
+      <div><div class="prog-title">ULTRA-CURIOUS</div><p class="prog-desc">First ultra-distance events. Comprehensive fuelling strategy becomes essential. Back-to-back long run training introduced.</p></div>
+    </div>
+    <div class="prog-stage reveal">
+      <div class="prog-distance">50–100K+</div>
+      <div><div class="prog-title">ULTRAMARATHON ATHLETE</div><p class="prog-desc">Multi-day training blocks, night running practice, comprehensive gear and nutrition systems, and mental endurance training.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-terrain" id="terrain" aria-labelledby="terrain-heading">
+  <div class="terrain-layout">
+    <div class="section-main">
+      <div class="kicker">Topic 02</div>
+      <h2 class="display-h reveal" id="terrain-heading">TERRAIN-SPECIFIC<br /><em>SKILL.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">The technical capability that separates confident trail runners from injured ones — built deliberately, not assumed from road fitness.</p>
+      <div class="evidence-badge reveal" style="margin-bottom: 28px;"><span class="stars">★★★</span><span>Moderate Evidence — Biomechanics & injury literature</span></div>
+      <p class="body-text reveal">Technical descending is the single highest-risk skill in trail running and the one most commonly under-trained. Poor descending technique — overstriding, excessive braking, poor foot placement — accounts for a disproportionate share of trail running falls and acute injuries.</p>
+      <p class="body-text reveal" style="margin-top: 20px;">Effective descending relies on a quick cadence, slight forward lean, and looking several steps ahead rather than directly at your feet — allowing your nervous system to pre-plan foot placement rather than react to each individual step.</p>
+
+      <div class="skill-grid reveal">
+        <div class="skill-card"><div class="skill-name">TECHNICAL DESCENDING</div><p class="skill-desc">Quick cadence, forward lean, eyes scanning ahead — the foundational skill for confident, injury-free downhill running.</p></div>
+        <div class="skill-card"><div class="skill-name">UPHILL POWER HIKING</div><p class="skill-desc">For steep gradients, hiking is often faster and more energy-efficient than running — a skill elite ultrarunners deploy strategically.</p></div>
+        <div class="skill-card"><div class="skill-name">ROCK & ROOT NAVIGATION</div><p class="skill-desc">Reading terrain several strides ahead to plan foot placement before reaching technical sections, rather than reacting in the moment.</p></div>
+        <div class="skill-card"><div class="skill-name">RIVER & STREAM CROSSING</div><p class="skill-desc">Assessing depth, current, and footing before committing — a skill specific to mountain and monsoon-season trail running in India.</p></div>
+      </div>
+
+      <div class="callout reveal">
+        <div class="callout-kicker">The Iron Leaf Recommendation</div>
+        <p>Practice technical terrain deliberately at slow speeds before attempting it at race pace. Most trail running falls happen not because terrain is too difficult, but because it's approached at a speed beyond current technical capability.</p>
+      </div>
+    </div>
+
+    <div class="section-sidebar">
+      <a href="guides.html#trail" class="sidebar-card reveal">
+        <div class="sidebar-card-title">TRAIL RUNNER<br /><span>BLUEPRINT™</span></div>
+        <p>The complete trail running guide — progression, technical skill, fuelling, and injury prevention. Free download.</p>
+        <span class="sidebar-link">Download Free</span>
+      </a>
+      <a href="mobility.html" class="sidebar-card reveal">
+        <div class="sidebar-card-title">THE LIVING JOINT<br /><span>METHOD™</span></div>
+        <p>Ankle and hip mobility critical for confident, injury-free movement over variable terrain.</p>
+        <span class="sidebar-link">Explore Mobility</span>
+      </a>
+      <a href="longevity.html#vo2max" class="sidebar-card reveal">
+        <div class="sidebar-card-title">VO2 MAX &<br /><span>LONGEVITY</span></div>
+        <p>How trail running builds the cardiorespiratory fitness that is the single strongest longevity predictor known.</p>
+        <span class="sidebar-link">Explore Longevity</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section-fuelling" id="fuelling" aria-labelledby="fuelling-heading">
+  <div class="fuelling-layout">
+    <div>
+      <div class="kicker">Topic 03</div>
+      <h2 class="display-h reveal" id="fuelling-heading">ENDURANCE<br /><em>FUELLING.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">Plant-based fuelling strategies for ultra-distance events — proven at the highest level by athletes like Scott Jurek over decades of elite competition.</p>
+      <p class="body-text reveal">Endurance fuelling at distance is governed primarily by carbohydrate availability — the body's glycogen stores are finite and depleting them without replenishment leads to the dreaded "bonk." Whole plant foods provide excellent fuelling options, often better tolerated than processed sports nutrition products during long efforts.</p>
+      <p class="body-text reveal" style="margin-top: 20px;">Dates, dried figs, rice cakes, and homemade energy balls made from oats and nut butter are staples among elite plant-based ultrarunners — easily digestible, calorie-dense, and far gentler on the gut than many commercial gel products over many hours of effort.</p>
+
+      <div style="overflow-x: auto; margin-top: 36px;" class="reveal">
+        <table class="data-table" role="table" aria-label="Endurance fuelling targets by distance">
+          <thead><tr><th scope="col">Distance</th><th scope="col">Carb/Hour Target</th><th scope="col">Key Focus</th></tr></thead>
+          <tbody>
+            <tr><td>10–21K</td><td>30–45g</td><td>Minimal intra-run fuelling required</td></tr>
+            <tr class="highlight"><td>21–42K</td><td>45–60g</td><td>Begin structured carbohydrate intake</td></tr>
+            <tr><td>50K Ultra</td><td>60–75g</td><td>Solid + liquid carbohydrate combination</td></tr>
+            <tr><td>100K+ Ultra</td><td>75–90g</td><td>Whole food variety to prevent flavour fatigue</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <div class="kicker" style="margin-bottom: 28px;">A Race-Day Fuelling Timeline</div>
+      <div class="fuel-timeline reveal">
+        <div class="fuel-item">
+          <div class="fuel-time">2–3 hours before</div>
+          <div class="fuel-title">PRE-RACE MEAL</div>
+          <p class="fuel-body">Familiar, easily digestible carbohydrates — oats, rice, banana. Nothing new on race day.</p>
+        </div>
+        <div class="fuel-item">
+          <div class="fuel-time">Every 30–45 min</div>
+          <div class="fuel-title">REGULAR FUELLING</div>
+          <p class="fuel-body">Small, consistent carbohydrate intake rather than large infrequent meals — easier on digestion during sustained effort.</p>
+        </div>
+        <div class="fuel-item">
+          <div class="fuel-time">Every aid station</div>
+          <div class="fuel-title">HYDRATION & ELECTROLYTES</div>
+          <p class="fuel-body">Consistent fluid intake with electrolyte replacement, especially critical in hot or humid Indian trail conditions.</p>
+        </div>
+        <div class="fuel-item">
+          <div class="fuel-time">Post-race</div>
+          <div class="fuel-title">RECOVERY NUTRITION</div>
+          <p class="fuel-body">Carbohydrate and protein combination within the first hour to begin glycogen replenishment and tissue repair.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-injury" id="injury" aria-labelledby="injury-heading">
+  <div class="kicker">Topic 04</div>
+  <h2 class="display-h reveal" id="injury-heading">INJURY<br /><em>PREVENTION.</em></h2>
+  <p class="editorial reveal" style="margin: 20px 0 0; max-width: 600px;">The training and recovery practices that keep trail runners on the trail for decades, not sidelined by preventable overuse injuries.</p>
+  <div class="injury-grid">
+    <div class="injury-card reveal">
+      <div class="injury-icon">📈</div>
+      <div class="injury-title">CONSERVATIVE PROGRESSION</div>
+      <p class="injury-desc">No more than 10% weekly mileage increase. The single highest-leverage injury prevention strategy in distance running.</p>
+    </div>
+    <div class="injury-card reveal">
+      <div class="injury-icon">🦵</div>
+      <div class="injury-title">STRENGTH FOR RUNNERS</div>
+      <p class="injury-desc">Single-leg strength work — step-ups, lunges, calf raises — addresses the asymmetries trail running's varied terrain exposes.</p>
+    </div>
+    <div class="injury-card reveal">
+      <div class="injury-icon">🌊</div>
+      <div class="injury-title">ANKLE & HIP MOBILITY</div>
+      <p class="injury-desc">The two joints most stressed by uneven terrain — daily mobility practice directly reduces rolled ankle and IT band injury risk.</p>
+    </div>
+  </div>
+</section>
+
+<section class="framework-cta" aria-labelledby="fw-cta-heading">
+  <div class="fw-cta-inner">
+    <div class="kicker">The Trail Method™</div>
+    <h2 class="display-h reveal" id="fw-cta-heading">THE<br /><em>FRAMEWORK.</em></h2>
+    <p class="editorial reveal" style="margin: 20px 0 20px;">Everything on this page is governed by The Trail Method™ — a complete trail running educational system from first kilometre to mountain ultra.</p>
+    <p class="body-text reveal">Scott Jurek won Western States seven times on plant-based fuelling alone. The Trail Method brings that same evidence-based, sustainable approach to every level of trail running.</p>
+    <div class="fw-cta-buttons reveal">
+      <a href="frameworks.html#trail-method" class="btn-primary">Explore The Trail Method™</a>
+      <a href="programs.html" class="btn-ghost">Work With Iron Leaf</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-faq" id="faq" aria-labelledby="faq-heading">
+  <div class="faq-layout">
+    <div class="faq-left">
+      <div class="kicker">Common Questions</div>
+      <h2 class="display-h reveal" id="faq-heading">FREQUENTLY<br /><em>ASKED.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 0;">What people ask about getting started and progressing in trail running.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Do I need trail-specific shoes?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>For technical, rocky, or muddy terrain, yes — trail shoes provide grip and protection road shoes lack. For smoother, well-maintained trails, road shoes can work adequately when starting out. As your trail mileage and terrain difficulty increase, invest in proper trail-specific footwear with appropriate lug depth for your typical conditions.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">How is trail running different from road running fitness-wise?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Trail running demands greater stabiliser muscle strength (ankles, hips, core) due to constantly varying terrain, more aerobic capacity per kilometre due to elevation change, and entirely different technical skills (descending, navigation, terrain reading). Strong road runners often find trail running humbling initially — the transferable fitness is real but incomplete.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">What's the biggest beginner mistake in trail running?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Progressing mileage and technical difficulty too quickly, driven by enthusiasm. The 10% weekly mileage rule exists because trail running's varied terrain creates novel stresses your body needs time to adapt to — even if your cardiovascular fitness from road running feels ready for more.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Can I train for an ultramarathon on a plant-based diet?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Yes — comprehensively demonstrated by elite athletes including seven-time Western States champion Scott Jurek and Ironman triathlete Brendan Brazier. Whole plant foods provide excellent endurance fuelling, often with better gastrointestinal tolerance during long efforts than many processed sports nutrition products.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="download-band" aria-labelledby="downloads-heading">
+  <div class="kicker">Free Downloads</div>
+  <h2 class="display-h reveal" id="downloads-heading" style="margin-bottom: 44px;">TAKE THESE<br /><em>WITH YOU.</em></h2>
+  <div class="download-grid">
+    <a href="guides.html#trail" class="dl-card reveal">
+      <div class="dl-icon">🏃</div>
+      <div class="dl-cat">Foundational Guide</div>
+      <div class="dl-title">TRAIL RUNNER BLUEPRINT</div>
+      <p class="dl-desc">Beginner to advanced — training progression, terrain skill, fuelling, and injury prevention. 34 pages.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+    <a href="guides.html#mobility" class="dl-card reveal">
+      <div class="dl-icon">🌊</div>
+      <div class="dl-cat">Companion Guide</div>
+      <div class="dl-title">MOBILITY GUIDE — JOINTS FOR LIFE</div>
+      <p class="dl-desc">Ankle and hip mobility work essential for confident, injury-free trail running.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+    <a href="guides.html#indian" class="dl-card reveal">
+      <div class="dl-icon">🍛</div>
+      <div class="dl-cat">Fuelling Guide</div>
+      <div class="dl-title">SEASONAL INDIAN FOODS GUIDE</div>
+      <p class="dl-desc">Whole foods for endurance fuelling rooted in Indian kitchen staples — dates, rice, dal.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+  </div>
+</section>
+
+<section class="related" aria-labelledby="related-heading">
+  <div class="kicker">Keep Learning</div>
+  <h2 class="display-h reveal" id="related-heading" style="margin-bottom: 0;">WHERE TO<br /><em>GO NEXT.</em></h2>
+  <div class="related-grid">
+    <a href="longevity.html" class="related-card reveal"><div class="related-type">Pillar 05 · Longevity</div><div class="related-title">LONGEVITY & HEALTHSPAN</div><p class="related-desc">Why cardiorespiratory fitness from trail running is the strongest known longevity predictor.</p><span class="related-link">Explore Longevity</span></a>
+    <a href="mobility.html" class="related-card reveal"><div class="related-type">Pillar 03 · Movement</div><div class="related-title">MOBILITY & MOVEMENT</div><p class="related-desc">Ankle and hip mobility work essential for technical trail terrain.</p><span class="related-link">Explore Mobility</span></a>
+    <a href="nutrition.html" class="related-card reveal"><div class="related-type">Pillar 01 · Foundation</div><div class="related-title">NUTRITION & FOOD SCIENCE</div><p class="related-desc">The evidence base behind plant-based endurance fuelling.</p><span class="related-link">Explore Nutrition</span></a>
+    <a href="plant-based.html" class="related-card reveal"><div class="related-type">Pillar 07 · Lifestyle</div><div class="related-title">PLANT-BASED LIVING</div><p class="related-desc">Athlete case studies including Scott Jurek's plant-based ultramarathon career.</p><span class="related-link">Explore Plant-Based Living</span></a>
+  </div>
+</section>
+
+<section class="newsletter" aria-labelledby="nl-heading">
+  <div class="newsletter-inner">
+    <div class="kicker" style="justify-content:center;">The Weekly Letter</div>
+    <h2 class="display-h reveal" id="nl-heading">EVIDENCE.<br /><em>PRACTICE.</em><br />DEPTH.</h2>
+    <p class="editorial reveal" style="margin-top: 16px;">One email per week. Trail running education, training insights, and long-form thinking.</p>
+    <div class="nl-form"><input type="email" placeholder="Your email address" aria-label="Email address" /><button type="button">Join</button></div>
+    <p class="nl-note">No spam. No product pushes. Unsubscribe any time.</p>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-mark">THE IRON <span>LEAF</span></div>
+      <p>Grounded in Nature.<br />Forged in Grit.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Learn</div>
+      <ul class="footer-links">
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="strength.html">Strength</a></li>
+        <li><a href="mobility.html">Mobility</a></li>
+        <li><a href="recovery.html">Recovery</a></li>
+        <li><a href="longevity.html">Longevity</a></li>
+        <li><a href="trail-running.html" aria-current="page">Trail Running</a></li>
+        <li><a href="plant-based.html">Plant-Based Living</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Resources</div>
+      <ul class="footer-links">
+        <li><a href="guides.html">Free Guides</a></li>
+        <li><a href="research.html">Research Library</a></li>
+        <li><a href="frameworks.html">The Frameworks</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Work Together</div>
+      <ul class="footer-links">
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 The Iron Leaf · All rights reserved</p>
+    <span class="footer-tagline">Grounded in Nature. Forged in Grit.</span>
+    <p><a href="privacy.html" style="color:var(--moss)">Privacy</a> · <a href="terms.html" style="color:var(--moss)">Terms</a></p>
+  </div>
+</footer>
+
+<script>
+const revealEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((el, i) => { if (el.isIntersecting) { setTimeout(() => el.target.classList.add('visible'), (i % 4) * 80); obs.unobserve(el.target); } });
+}, { threshold: 0.07 });
+revealEls.forEach(el => obs.observe(el));
+
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.pillar-nav-link');
+const sectionObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) navLinks.forEach(link => link.classList.toggle('active', link.dataset.section === entry.target.id)); });
+}, { rootMargin: `-${68 + 44}px 0px -60% 0px` });
+sections.forEach(s => sectionObs.observe(s));
+
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+  });
+});
+
+const nlForm = document.querySelector('.nl-form');
+if (nlForm) {
+  const btn = nlForm.querySelector('button');
+  const input = nlForm.querySelector('input');
+  btn.addEventListener('click', () => {
+    if (input.value && input.value.includes('@')) { btn.textContent = 'Welcome.'; btn.style.background = 'var(--moss)'; input.disabled = true; }
+    else { input.style.outline = '1px solid var(--amber)'; setTimeout(() => { input.style.outline = ''; }, 1800); }
+  });
+}
+
+const hamburger = document.querySelector('.nav-hamburger');
+if (hamburger) hamburger.addEventListener('click', () => {
+  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+  hamburger.setAttribute('aria-expanded', !expanded);
+});
+</script>
+
+</body>
+</html>

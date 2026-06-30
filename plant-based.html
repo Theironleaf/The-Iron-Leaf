@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Plant-Based Living — The Iron Leaf | Practical Transition & Lifestyle Guide</title>
+<meta name="description" content="The practical guide to living plant-based — transitioning, eating out, travelling, cooking for family, and navigating social situations. Rooted in Indian food culture." />
+<meta property="og:title" content="Plant-Based Living — The Iron Leaf" />
+<meta property="og:description" content="The bridge between nutrition science and daily life. Practical, cultural, and built to last." />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://theironleaf.com/plant-based" />
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "EducationalOrganization", "name": "The Iron Leaf — Plant-Based Living", "description": "Practical plant-based lifestyle education covering transition, cooking, eating out, and social situations.", "url": "https://theironleaf.com/plant-based" }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --iron: #1a1a18; --bark: #2c2a24; --moss: #4a5240; --leaf: #7a8c5e; --sage: #a8b89a;
+  --cream: #f4f1eb; --gold: #c9a84c; --amber: #d4882a; --white: #fafaf8; --rust: #b85c3a;
+  --serif: 'Cormorant Garamond', Georgia, serif; --mono: 'DM Mono', monospace;
+  --display: 'Bebas Neue', sans-serif; --body: 'DM Sans', sans-serif;
+  --nav-h: 68px; --gutter: clamp(24px, 6vw, 96px); --section-pad: clamp(80px, 10vw, 130px); --col-read: 720px;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { background: var(--iron); color: var(--cream); font-family: var(--body); font-weight: 300; line-height: 1.7; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 var(--gutter); background: rgba(26,26,24,0.92); border-bottom: 1px solid rgba(122,140,94,0.14); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.nav-logo { display: flex; flex-direction: column; gap: 2px; }
+.nav-logo-mark { font-family: var(--display); font-size: 22px; letter-spacing: 0.14em; color: var(--cream); line-height: 1; }
+.nav-logo-mark span { color: var(--leaf); }
+.nav-logo-sub { font-family: var(--mono); font-size: 8px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--moss); }
+.nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+.nav-links a { font-size: 13px; font-weight: 400; letter-spacing: 0.06em; color: rgba(244,241,235,0.65); transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--cream); }
+.nav-cta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 10px 22px; transition: background 0.2s; }
+.nav-cta:hover { background: var(--sage); }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+.nav-hamburger span { display: block; width: 22px; height: 1px; background: var(--cream); }
+@media (max-width: 768px) { .nav-links, .nav-cta { display: none; } .nav-hamburger { display: flex; } }
+
+.breadcrumb { padding: calc(var(--nav-h) + 20px) var(--gutter) 0; background: var(--bark); display: flex; align-items: center; gap: 10px; }
+.breadcrumb a, .breadcrumb span { font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); transition: color 0.18s; }
+.breadcrumb a:hover { color: var(--leaf); }
+.breadcrumb .sep { opacity: 0.4; }
+.breadcrumb .current { color: var(--leaf); }
+
+.hero { background: var(--bark); position: relative; overflow: hidden; padding: clamp(48px, 7vw, 80px) var(--gutter) 0; }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(122,140,94,0.3), transparent); }
+.hero-deco { position: absolute; top: 0; right: 0; width: 45%; height: 100%; pointer-events: none; overflow: hidden; }
+.hero-deco svg { width: 100%; height: 100%; opacity: 0.05; }
+.hero-inner { display: grid; grid-template-columns: 1fr 360px; gap: clamp(48px, 6vw, 80px); align-items: end; padding-bottom: clamp(48px, 7vw, 80px); position: relative; z-index: 1; }
+.hero-kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--leaf); margin-bottom: 20px; display: flex; align-items: center; gap: 14px; }
+.hero-kicker::before { content: ''; display: block; width: 28px; height: 1px; background: var(--leaf); }
+.hero-title { font-family: var(--display); font-size: clamp(60px, 10.5vw, 150px); line-height: 0.86; letter-spacing: 0.01em; color: var(--cream); margin-bottom: 32px; }
+.hero-title em { color: var(--leaf); font-style: normal; }
+.hero-lead { font-family: var(--serif); font-style: italic; font-size: clamp(17px, 2vw, 24px); color: var(--sage); font-weight: 300; line-height: 1.6; max-width: 560px; border-left: 2px solid var(--gold); padding-left: 24px; }
+.hero-panel { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.16); padding: 36px 28px; display: flex; flex-direction: column; gap: 28px; align-self: start; margin-top: 20px; }
+.hero-panel-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--leaf); padding-bottom: 14px; border-bottom: 1px solid rgba(122,140,94,0.18); }
+.panel-stat-num { font-family: var(--display); font-size: 38px; letter-spacing: 0.03em; color: var(--cream); line-height: 1; margin-bottom: 4px; }
+.panel-stat-num span { color: var(--leaf); }
+.panel-stat-label { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); margin-bottom: 4px; }
+.panel-stat-note { font-size: 11.5px; font-weight: 300; color: var(--sage); line-height: 1.5; }
+.panel-cta { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 12px 20px; text-align: center; transition: background 0.2s; display: block; margin-top: 8px; }
+.panel-cta:hover { background: var(--sage); }
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } .hero-panel { display: none; } }
+
+.pillar-nav { position: sticky; top: var(--nav-h); z-index: 100; background: rgba(26,26,24,0.95); border-bottom: 1px solid rgba(122,140,94,0.14); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 0 var(--gutter); overflow-x: auto; }
+.pillar-nav-inner { display: flex; gap: 0; min-width: max-content; }
+.pillar-nav-link { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); padding: 16px 22px; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; white-space: nowrap; cursor: pointer; }
+.pillar-nav-link:hover { color: var(--leaf); }
+.pillar-nav-link.active { color: var(--leaf); border-bottom-color: var(--leaf); }
+
+.kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--leaf); margin-bottom: 16px; display: flex; align-items: center; gap: 14px; }
+.kicker::after { content: ''; display: block; width: 32px; height: 1px; background: var(--leaf); opacity: 0.5; }
+.display-h { font-family: var(--display); font-size: clamp(36px, 6vw, 72px); line-height: 0.92; letter-spacing: 0.03em; color: var(--cream); }
+.display-h em { color: var(--leaf); font-style: normal; }
+.editorial { font-family: var(--serif); font-style: italic; font-size: clamp(15px, 1.7vw, 20px); color: var(--sage); font-weight: 300; line-height: 1.65; }
+.body-text { font-size: 15px; font-weight: 300; color: rgba(244,241,235,0.82); line-height: 1.85; }
+.btn-primary { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 13px 30px; transition: background 0.2s; display: inline-block; }
+.btn-primary:hover { background: var(--sage); }
+.btn-ghost { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage); border-bottom: 1px solid rgba(168,184,154,0.35); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; display: inline-block; }
+.btn-ghost:hover { color: var(--cream); border-color: var(--cream); }
+.callout { border-left: 3px solid var(--gold); padding: 24px 28px; background: rgba(201,168,76,0.05); margin: 36px 0; }
+.callout-kicker { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.callout p { font-size: 14.5px; font-weight: 300; color: var(--cream); line-height: 1.75; }
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+.intro { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 100px); align-items: start; }
+.intro-right .body-text { margin-bottom: 24px; }
+.intro-pillars { display: flex; flex-direction: column; gap: 2px; margin-top: 40px; }
+.intro-pillar { display: flex; align-items: center; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(122,140,94,0.1); cursor: pointer; }
+.ip-num { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; color: var(--moss); flex-shrink: 0; width: 28px; }
+.ip-name { font-family: var(--display); font-size: 18px; letter-spacing: 0.05em; color: var(--cream); flex: 1; }
+.ip-arrow { font-size: 13px; color: var(--leaf); opacity: 0.5; transition: opacity 0.2s, transform 0.2s; }
+.intro-pillar:hover .ip-arrow { opacity: 1; transform: translateX(4px); }
+.intro-pillar:hover .ip-name { color: var(--sage); }
+@media (max-width: 800px) { .intro-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+/* TRANSITION ROADMAP */
+.section-transition { padding: var(--section-pad) var(--gutter); background: var(--bark); position: relative; overflow: hidden; }
+.section-transition::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: radial-gradient(ellipse at 70% 50%, rgba(122,140,94,0.07) 0%, transparent 65%); pointer-events: none; }
+.transition-intro { max-width: var(--col-read); margin-bottom: 52px; position: relative; z-index: 1; }
+.transition-stages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; position: relative; z-index: 1; }
+.transition-stage { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.14); padding: 28px 24px; transition: border-color 0.2s, background 0.2s; }
+.transition-stage:hover { border-color: rgba(122,140,94,0.3); background: rgba(122,140,94,0.06); }
+.ts-week { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.ts-title { font-family: var(--display); font-size: 19px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 12px; line-height: 1.1; }
+.ts-desc { font-size: 12px; font-weight: 300; color: var(--sage); line-height: 1.6; }
+@media (max-width: 900px) { .transition-stages { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .transition-stages { grid-template-columns: 1fr; } }
+
+/* EATING OUT / SOCIAL SECTION */
+.section-social { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.social-layout { display: grid; grid-template-columns: var(--col-read) 1fr; gap: clamp(48px, 6vw, 80px); }
+.section-sidebar { padding-top: 60px; }
+.sidebar-card { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.16); padding: 28px 24px; margin-bottom: 2px; display: block; text-decoration: none; color: inherit; }
+.sidebar-card-title { font-family: var(--display); font-size: 18px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 10px; }
+.sidebar-card-title span { color: var(--leaf); }
+.sidebar-card p { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.65; margin-bottom: 16px; }
+.sidebar-link { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--leaf); display: flex; align-items: center; gap: 6px; transition: gap 0.18s; }
+.sidebar-link:hover { gap: 12px; }
+.sidebar-link::after { content: '→'; }
+@media (max-width: 1100px) { .social-layout { grid-template-columns: 1fr; } .section-sidebar { padding-top: 0; } }
+
+.scenario-list { display: flex; flex-direction: column; gap: 2px; margin-top: 28px; }
+.scenario-item { border-bottom: 1px solid rgba(122,140,94,0.1); }
+.scenario-toggle { display: grid; grid-template-columns: 1fr auto; align-items: center; padding: 22px 0; cursor: pointer; gap: 20px; }
+.scenario-icon { font-size: 20px; margin-right: 16px; }
+.scenario-q { font-family: var(--display); font-size: clamp(17px, 2.2vw, 22px); letter-spacing: 0.04em; color: var(--cream); display: flex; align-items: center; }
+.scenario-chevron { width: 26px; height: 26px; border: 1px solid rgba(122,140,94,0.2); display: flex; align-items: center; justify-content: center; color: var(--leaf); font-size: 12px; transition: transform 0.25s, background 0.2s; flex-shrink: 0; }
+.scenario-item.open .scenario-chevron { transform: rotate(45deg); background: rgba(122,140,94,0.1); }
+.scenario-body { display: none; padding: 0 0 24px 36px; }
+.scenario-item.open .scenario-body { display: block; }
+.scenario-body p { font-size: 13.5px; font-weight: 300; color: var(--sage); line-height: 1.75; }
+
+/* INDIAN CULTURE SECTION */
+.section-indian { padding: var(--section-pad) var(--gutter); background: var(--bark); }
+.indian-intro { max-width: var(--col-read); margin-bottom: 52px; }
+.indian-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.indian-card { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.14); padding: 30px 26px; transition: border-color 0.2s, background 0.2s; }
+.indian-card:hover { border-color: rgba(122,140,94,0.3); background: rgba(122,140,94,0.06); }
+.indian-icon { font-size: 24px; margin-bottom: 16px; }
+.indian-title { font-family: var(--display); font-size: 19px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 10px; }
+.indian-desc { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.65; }
+@media (max-width: 900px) { .indian-grid { grid-template-columns: 1fr; } }
+
+/* ATHLETE CASE STUDIES */
+.section-athletes { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.athletes-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 48px; }
+.athlete-card { background: rgba(122,140,94,0.04); border: 1px solid rgba(122,140,94,0.12); padding: 26px 22px; transition: border-color 0.22s, background 0.22s; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 8px; }
+.athlete-card:hover { border-color: rgba(122,140,94,0.3); background: rgba(122,140,94,0.07); }
+.athlete-sport { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+.athlete-name { font-family: var(--display); font-size: 18px; letter-spacing: 0.04em; color: var(--cream); }
+.athlete-desc { font-size: 11.5px; font-weight: 300; color: var(--sage); line-height: 1.55; }
+@media (max-width: 900px) { .athletes-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .athletes-grid { grid-template-columns: 1fr; } }
+
+/* FRAMEWORK CTA */
+.framework-cta { padding: var(--section-pad) var(--gutter); background: var(--bark); position: relative; overflow: hidden; }
+.framework-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(122,140,94,0.08) 0%, transparent 65%); pointer-events: none; }
+.fw-cta-inner { max-width: 800px; position: relative; z-index: 1; }
+.fw-cta-buttons { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 40px; }
+
+/* FAQ */
+.section-faq { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.faq-layout { display: grid; grid-template-columns: 320px 1fr; gap: 80px; align-items: start; }
+.faq-left { position: sticky; top: calc(var(--nav-h) + 60px); }
+.faq-list { display: flex; flex-direction: column; gap: 2px; }
+.faq-item { border-bottom: 1px solid rgba(122,140,94,0.1); }
+.faq-q { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; cursor: pointer; gap: 20px; }
+.faq-q-text { font-size: 14.5px; font-weight: 300; color: var(--cream); line-height: 1.5; flex: 1; }
+.faq-icon { color: var(--leaf); opacity: 0.6; font-size: 18px; transition: transform 0.25s, opacity 0.2s; flex-shrink: 0; }
+.faq-item.open .faq-icon { transform: rotate(45deg); opacity: 1; }
+.faq-a { display: none; padding: 0 0 22px; }
+.faq-item.open .faq-a { display: block; }
+.faq-a p { font-size: 13.5px; font-weight: 300; color: var(--sage); line-height: 1.8; }
+@media (max-width: 900px) { .faq-layout { grid-template-columns: 1fr; } .faq-left { position: static; } }
+
+/* DOWNLOAD */
+.download-band { padding: clamp(64px, 8vw, 96px) var(--gutter); background: var(--bark); border-top: 1px solid rgba(122,140,94,0.12); }
+.download-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.dl-card { background: rgba(122,140,94,0.04); border: 1px solid rgba(122,140,94,0.12); padding: 36px 28px; display: flex; flex-direction: column; gap: 12px; transition: border-color 0.22s, background 0.22s; text-decoration: none; color: inherit; }
+.dl-card:hover { border-color: rgba(122,140,94,0.32); background: rgba(122,140,94,0.08); }
+.dl-icon { font-size: 28px; }
+.dl-cat { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+.dl-title { font-family: var(--display); font-size: 22px; letter-spacing: 0.05em; color: var(--cream); line-height: 1.1; }
+.dl-desc { font-size: 13px; font-weight: 300; color: var(--sage); line-height: 1.65; flex: 1; }
+.dl-cta { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--leaf); display: flex; align-items: center; gap: 7px; transition: gap 0.2s; margin-top: 4px; }
+.dl-card:hover .dl-cta { gap: 13px; }
+.dl-cta::after { content: '↓'; }
+@media (max-width: 800px) { .download-grid { grid-template-columns: 1fr; } }
+
+/* RELATED */
+.related { padding: var(--section-pad) var(--gutter); background: var(--iron); border-top: 1px solid rgba(122,140,94,0.1); }
+.related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 48px; }
+.related-card { border: 1px solid rgba(122,140,94,0.1); padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; transition: border-color 0.2s, background 0.2s; text-decoration: none; color: inherit; }
+.related-card:hover { border-color: rgba(122,140,94,0.28); background: rgba(122,140,94,0.05); }
+.related-type { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+.related-title { font-family: var(--display); font-size: 19px; letter-spacing: 0.04em; color: var(--cream); line-height: 1.1; }
+.related-desc { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.6; flex: 1; }
+.related-link { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--leaf); display: flex; align-items: center; gap: 6px; transition: gap 0.18s; }
+.related-card:hover .related-link { gap: 12px; }
+.related-link::after { content: '→'; }
+@media (max-width: 900px) { .related-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .related-grid { grid-template-columns: 1fr; } }
+
+/* NEWSLETTER */
+.newsletter { padding: clamp(72px, 9vw, 112px) var(--gutter); background: var(--bark); border-top: 1px solid rgba(122,140,94,0.12); }
+.newsletter-inner { max-width: 580px; margin: 0 auto; text-align: center; }
+.newsletter-inner .kicker { justify-content: center; }
+.newsletter-inner .kicker::after { display: none; }
+.nl-form { display: flex; border: 1px solid rgba(122,140,94,0.22); background: rgba(26,26,24,0.5); margin-top: 36px; transition: border-color 0.2s; }
+.nl-form:focus-within { border-color: rgba(122,140,94,0.5); }
+.nl-form input { flex: 1; background: none; border: none; outline: none; color: var(--cream); font-family: var(--body); font-size: 14px; font-weight: 300; padding: 15px 20px; }
+.nl-form input::placeholder { color: var(--moss); }
+.nl-form button { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 0 26px; transition: background 0.2s; flex-shrink: 0; }
+.nl-form button:hover { background: var(--sage); }
+.nl-note { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin-top: 14px; }
+
+/* FOOTER */
+.footer { background: var(--iron); padding: 72px var(--gutter) 40px; border-top: 1px solid rgba(122,140,94,0.14); }
+.footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; gap: 60px; margin-bottom: 64px; }
+.footer-brand-mark { font-family: var(--display); font-size: 26px; letter-spacing: 0.14em; color: var(--cream); }
+.footer-brand-mark span { color: var(--leaf); }
+.footer-brand p { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--moss); margin-top: 14px; line-height: 1.7; }
+.footer-col-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--leaf); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(122,140,94,0.18); }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13.5px; font-weight: 300; color: rgba(244,241,235,0.45); transition: color 0.18s; }
+.footer-links a:hover { color: var(--cream); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 32px; border-top: 1px solid rgba(122,140,94,0.1); flex-wrap: wrap; gap: 16px; }
+.footer-bottom p { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; color: var(--moss); text-transform: uppercase; }
+.footer-tagline { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--moss); }
+@media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="The Iron Leaf home">
+    <div class="nav-logo-mark">THE IRON <span>LEAF</span></div>
+    <div class="nav-logo-sub">Sustainable Human Performance</div>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="learn.html" class="active">Learn</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="get-started.html" class="nav-cta">Get Started</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span class="sep" aria-hidden="true">·</span>
+  <a href="learn.html">Learn</a><span class="sep" aria-hidden="true">·</span>
+  <span class="current" aria-current="page">Plant-Based Living</span>
+</nav>
+
+<header class="hero" role="banner">
+  <div class="hero-deco" aria-hidden="true">
+    <svg viewBox="0 0 500 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M250 100 C150 200, 100 350, 150 500 C200 650, 350 700, 380 550" stroke="#7a8c5e" stroke-width="1" fill="none"/>
+      <path d="M250 100 C350 200, 400 350, 350 500" stroke="#7a8c5e" stroke-width="1" fill="none"/>
+      <path d="M250 150 L250 600" stroke="#7a8c5e" stroke-width="0.5" fill="none"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-kicker">Pillar 07 · Lifestyle</div>
+      <h1 class="hero-title">PLANT-BASED<br /><em>LIVING.</em></h1>
+      <p class="hero-lead">The bridge between nutrition science and daily life. Eating out, travelling, cooking for family — practical, cultural, and built to last beyond willpower.</p>
+    </div>
+    <div class="hero-panel" aria-label="Key plant-based living facts">
+      <div class="hero-panel-title">At a Glance</div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">8<span>+</span></div>
+        <div class="panel-stat-label">Plant species in a traditional thali</div>
+        <div class="panel-stat-note">A single Indian meal can naturally deliver a significant share of weekly plant diversity targets.</div>
+      </div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">4<span>wk</span></div>
+        <div class="panel-stat-label">Average transition timeline</div>
+        <div class="panel-stat-note">A gradual, structured approach reduces friction compared to abrupt, all-or-nothing transitions.</div>
+      </div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">8</div>
+        <div class="panel-stat-label">Elite athletes profiled</div>
+        <div class="panel-stat-note">Real performance case studies across strength, endurance, and combat sports.</div>
+      </div>
+      <a href="guides.html#wfpb" class="panel-cta">Download Starter Guide</a>
+    </div>
+  </div>
+</header>
+
+<nav class="pillar-nav" aria-label="Plant-based living sections">
+  <div class="pillar-nav-inner">
+    <a href="#intro" class="pillar-nav-link active" data-section="intro">Overview</a>
+    <a href="#transition" class="pillar-nav-link" data-section="transition">Transition Guide</a>
+    <a href="#social" class="pillar-nav-link" data-section="social">Real-Life Scenarios</a>
+    <a href="#indian-culture" class="pillar-nav-link" data-section="indian-culture">Indian Food Culture</a>
+    <a href="#athletes" class="pillar-nav-link" data-section="athletes">Athlete Profiles</a>
+    <a href="#faq" class="pillar-nav-link" data-section="faq">FAQ</a>
+  </div>
+</nav>
+
+<section class="intro" id="intro" aria-labelledby="intro-heading">
+  <div class="intro-grid">
+    <div>
+      <div class="kicker">Where to Begin</div>
+      <h2 class="display-h reveal" id="intro-heading">LIVING IT,<br />NOT JUST <em>EATING IT.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 32px;">Nutrition science tells you what to eat. Plant-based living teaches you how to actually do it — at family weddings, on work trips, at the office canteen, every single day.</p>
+      <div class="callout reveal">
+        <div class="callout-kicker">The Iron Leaf Position</div>
+        <p>The biggest predictor of long-term plant-based adherence isn't knowledge — it's having practical systems for the messy, social, real-world situations that knowledge alone doesn't solve.</p>
+      </div>
+    </div>
+    <div class="intro-right">
+      <p class="body-text reveal">Most plant-based content stops at the science — protein, fibre, micronutrients. This pillar exists because knowing the science isn't the hard part. Living it through Diwali dinners, work travel, well-meaning relatives, and Tuesday night takeout — that's where most people actually struggle.</p>
+      <p class="body-text reveal">We built this section specifically around Indian life — festivals, family structures, eating out culture, and travel patterns — because generic plant-based content built for a Western context often misses the specific challenges and opportunities here.</p>
+      <p class="body-text reveal">This is the practical companion to our Nutrition pillar — the lived experience layered on top of the evidence.</p>
+      <div class="intro-pillars reveal" role="navigation" aria-label="Plant-based living topics">
+        <a href="#transition" class="intro-pillar"><span class="ip-num">01</span><span class="ip-name">THE TRANSITION ROADMAP</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#social" class="intro-pillar"><span class="ip-num">02</span><span class="ip-name">REAL-LIFE SCENARIOS</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#indian-culture" class="intro-pillar"><span class="ip-num">03</span><span class="ip-name">INDIAN FOOD CULTURE</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#athletes" class="intro-pillar"><span class="ip-num">04</span><span class="ip-name">ATHLETE CASE STUDIES</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-transition" id="transition" aria-labelledby="transition-heading">
+  <div class="transition-intro">
+    <div class="kicker">Topic 01</div>
+    <h2 class="display-h reveal" id="transition-heading">THE TRANSITION<br /><em>ROADMAP.</em></h2>
+    <p class="editorial reveal" style="margin: 20px 0 0;">A gradual, structured four-week approach — not an overnight overhaul. Sustainable change beats heroic willpower every time.</p>
+  </div>
+  <div class="transition-stages">
+    <div class="transition-stage reveal">
+      <div class="ts-week">Week 1</div>
+      <div class="ts-title">ADD, DON'T SUBTRACT</div>
+      <p class="ts-desc">Focus entirely on adding more plants — legumes, whole grains, vegetables — without removing anything yet. Builds positive momentum.</p>
+    </div>
+    <div class="transition-stage reveal">
+      <div class="ts-week">Week 2</div>
+      <div class="ts-title">SWAP ONE MEAL DAILY</div>
+      <p class="ts-desc">Replace one meal per day with a fully plant-based option. Breakfast is typically the easiest starting point.</p>
+    </div>
+    <div class="transition-stage reveal">
+      <div class="ts-week">Week 3</div>
+      <div class="ts-title">BUILD YOUR ROTATION</div>
+      <p class="ts-desc">Establish 5–7 go-to plant-based meals you can prepare without thinking — the foundation of long-term sustainability.</p>
+    </div>
+    <div class="transition-stage reveal">
+      <div class="ts-week">Week 4</div>
+      <div class="ts-title">NAVIGATE SOCIAL SITUATIONS</div>
+      <p class="ts-desc">Apply your new habits to restaurants, family meals, and social events — the real test of a sustainable transition.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-social" id="social" aria-labelledby="social-heading">
+  <div class="social-layout">
+    <div>
+      <div class="kicker">Topic 02</div>
+      <h2 class="display-h reveal" id="social-heading">REAL-LIFE<br /><em>SCENARIOS.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">The specific, practical situations that determine whether plant-based eating actually sticks.</p>
+
+      <div class="scenario-list" role="list">
+        <div class="scenario-item reveal" role="listitem">
+          <button class="scenario-toggle" aria-expanded="false">
+            <span class="scenario-q"><span class="scenario-icon">🍽️</span>Eating at a Family Wedding or Festival</span>
+            <span class="scenario-chevron" aria-hidden="true">+</span>
+          </button>
+          <div class="scenario-body"><p>Indian celebrations are naturally plant-rich — focus on the dal, sabzi, rice, and roti stations before the paneer and meat dishes. Don't be afraid to ask the caterer or host directly; most are happy to point you toward the vegetarian and vegan-friendly items. Eating beforehand isn't necessary if you approach the buffet strategically.</p></div>
+        </div>
+        <div class="scenario-item reveal" role="listitem">
+          <button class="scenario-toggle" aria-expanded="false">
+            <span class="scenario-q"><span class="scenario-icon">✈️</span>Travelling for Work</span>
+            <span class="scenario-chevron" aria-hidden="true">+</span>
+          </button>
+          <div class="scenario-body"><p>Pack shelf-stable protein sources — roasted chickpeas, nuts, protein bars — for flights and gaps between meals. Most Indian cities have abundant vegetarian options; request "no dairy, no ghee" explicitly when ordering. Apps like HappyCow help locate plant-based-friendly restaurants in unfamiliar cities.</p></div>
+        </div>
+        <div class="scenario-item reveal" role="listitate">
+          <button class="scenario-toggle" aria-expanded="false">
+            <span class="scenario-q"><span class="scenario-icon">👨‍👩‍👧</span>Cooking for a Mixed-Diet Family</span>
+            <span class="scenario-chevron" aria-hidden="true">+</span>
+          </button>
+          <div class="scenario-body"><p>Build meals around a plant-based base — dal, sabzi, rice — that everyone eats, then add a protein side for family members who want it. This "build-around" approach reduces the burden of cooking two completely separate meals while respecting everyone's preferences.</p></div>
+        </div>
+        <div class="scenario-item reveal" role="listitem">
+          <button class="scenario-toggle" aria-expanded="false">
+            <span class="scenario-q"><span class="scenario-icon">💬</span>Handling Well-Meaning Relatives</span>
+            <span class="scenario-chevron" aria-hidden="true">+</span>
+          </button>
+          <div class="scenario-body"><p>"Where do you get your protein?" is rarely hostile — usually genuine curiosity rooted in outdated information. A brief, friendly response ("lentils and tofu actually have more protein than most people think") usually satisfies the question without turning dinner into a debate. You don't owe anyone an extended defence of your food choices.</p></div>
+        </div>
+        <div class="scenario-item reveal" role="listitem">
+          <button class="scenario-toggle" aria-expanded="false">
+            <span class="scenario-q"><span class="scenario-icon">🏢</span>Office Canteens and Work Lunches</span>
+            <span class="scenario-chevron" aria-hidden="true">+</span>
+          </button>
+          <div class="scenario-body"><p>Most Indian office canteens default to vegetarian, making the plant-based version usually just one small request away — ask for dal without ghee tempering, or sabzi without paneer. Keeping a stash of nuts or roasted chana at your desk handles the gaps when canteen options fall short.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-sidebar">
+      <a href="guides.html#wfpb" class="sidebar-card reveal">
+        <div class="sidebar-card-title">PLANT-BASED<br /><span>STARTER GUIDE</span></div>
+        <p>The complete transition roadmap, expanded with meal plans and shopping lists. Free download.</p>
+        <span class="sidebar-link">Download Free</span>
+      </a>
+      <a href="guides.html#indian" class="sidebar-card reveal">
+        <div class="sidebar-card-title">SEASONAL INDIAN<br /><span>FOODS GUIDE</span></div>
+        <p>Performance nutrition from the Indian kitchen — seasonal foods and traditional combinations.</p>
+        <span class="sidebar-link">Download Free</span>
+      </a>
+      <a href="nutrition.html" class="sidebar-card reveal">
+        <div class="sidebar-card-title">NUTRITION &<br /><span>FOOD SCIENCE</span></div>
+        <p>The evidence base behind plant-based eating — protein, fibre, micronutrients, and gut health.</p>
+        <span class="sidebar-link">Explore Nutrition</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section-indian" id="indian-culture" aria-labelledby="indian-heading">
+  <div class="indian-intro">
+    <div class="kicker">Topic 03</div>
+    <h2 class="display-h reveal" id="indian-heading">INDIAN FOOD<br /><em>CULTURE.</em></h2>
+    <p class="editorial reveal" style="margin: 20px 0 0;">Plant-based eating is not a foreign import to India — it is, in its whole-food form, a return to deep culinary tradition.</p>
+  </div>
+  <div class="indian-grid">
+    <div class="indian-card reveal">
+      <div class="indian-icon">🏛️</div>
+      <div class="indian-title">A CULTURAL FOUNDATION, NOT A TREND</div>
+      <p class="indian-desc">India has the world's largest vegetarian population and a millennia-deep culinary tradition built around legumes, grains, and vegetables — the infrastructure for plant-based eating already exists in daily life.</p>
+    </div>
+    <div class="indian-card reveal">
+      <div class="indian-icon">🌶️</div>
+      <div class="indian-title">REGIONAL DIVERSITY AS STRENGTH</div>
+      <p class="indian-desc">From South Indian dosa and sambar to North Indian dal and roti to Gujarati thalis, regional Indian cuisine offers extraordinary plant-based variety without ever feeling restrictive.</p>
+    </div>
+    <div class="indian-card reveal">
+      <div class="indian-icon">🎉</div>
+      <div class="indian-title">FESTIVALS & FASTING TRADITIONS</div>
+      <p class="indian-desc">Many Indian fasting and festival food traditions are already naturally plant-based or easily adapted — offering built-in cultural permission and structure for plant-forward eating.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-athletes" id="athletes" aria-labelledby="athletes-heading">
+  <div class="kicker">Topic 04</div>
+  <h2 class="display-h reveal" id="athletes-heading">ATHLETE<br /><em>CASE STUDIES.</em></h2>
+  <p class="editorial reveal" style="margin: 20px 0 0; max-width: 600px;">Elite performance, built on plants. Real athletes, real results, across every sport that matters.</p>
+  <div class="athletes-grid">
+    <a href="library.html" class="athlete-card reveal"><div class="athlete-sport">Ultramarathon</div><div class="athlete-name">SCOTT JUREK</div><p class="athlete-desc">Seven-time Western States champion, plant-based since the 1990s.</p></a>
+    <a href="library.html" class="athlete-card reveal"><div class="athlete-sport">Strength</div><div class="athlete-name">PATRIK BABOUMIAN</div><p class="athlete-desc">World's Strongest Man competitor and world record holder.</p></a>
+    <a href="library.html" class="athlete-card reveal"><div class="athlete-sport">Tennis</div><div class="athlete-name">NOVAK DJOKOVIC</div><p class="athlete-desc">24 Grand Slam titles since adopting plant-based eating in 2010.</p></a>
+    <a href="library.html" class="athlete-card reveal"><div class="athlete-sport">MMA</div><div class="athlete-name">NATE DIAZ</div><p class="athlete-desc">Long-term vegan UFC fighter at the highest level of combat sport.</p></a>
+  </div>
+  <div style="margin-top: 32px;">
+    <a href="library.html" class="btn-ghost">View All Athlete Profiles</a>
+  </div>
+</section>
+
+<section class="framework-cta" aria-labelledby="fw-cta-heading">
+  <div class="fw-cta-inner">
+    <div class="kicker">The Leaf Plate System™</div>
+    <h2 class="display-h reveal" id="fw-cta-heading">THE<br /><em>FRAMEWORK.</em></h2>
+    <p class="editorial reveal" style="margin: 20px 0 20px;">This page is the lived, practical extension of The Leaf Plate System™ — taking the nutritional architecture from theory into the real, social, sometimes messy world of daily life.</p>
+    <p class="body-text reveal">We do not ask anyone to abandon Indian food culture. We teach you to live within it — intelligently, practically, and without anxiety.</p>
+    <div class="fw-cta-buttons reveal">
+      <a href="frameworks.html#leaf-plate" class="btn-primary">Explore The Leaf Plate System™</a>
+      <a href="nutrition.html" class="btn-ghost">Explore Nutrition Science</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-faq" id="faq" aria-labelledby="faq-heading">
+  <div class="faq-layout">
+    <div class="faq-left">
+      <div class="kicker">Common Questions</div>
+      <h2 class="display-h reveal" id="faq-heading">FREQUENTLY<br /><em>ASKED.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 0;">What people ask about transitioning and living plant-based day to day.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Do I need to go 100% plant-based immediately?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>No. The evidence on adherence and long-term success strongly favours gradual transitions over abrupt, all-or-nothing changes. Many people find a "mostly plant-based" approach — 80–90% of meals — more sustainable and ultimately reach a fully plant-based pattern naturally over time, without the rebound that often follows rigid restriction.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">How do I handle family pressure or skepticism?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Lead with what you're adding, not what you're removing — "I'm trying to eat more dal and vegetables" lands very differently than "I'm not eating meat anymore." Most skepticism softens once people see you're still eating well, enjoying food, and not lecturing them about their own choices.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">What if I slip up or eat animal products occasionally?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>This is not a moral failure — it's a normal part of navigating a complex social food environment. The evidence supports the overall pattern of your eating mattering far more than perfect adherence to any single meal. Return to your default pattern at the next meal without guilt or overcorrection.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Is plant-based eating more expensive?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Whole-food plant-based eating built around dal, rice, seasonal vegetables, and grains is typically less expensive than a diet centred on meat and dairy, especially in the Indian context where these staples are widely available and affordable. Costs rise primarily when relying on processed plant-based meat substitutes, which are not necessary for a whole-food approach.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="download-band" aria-labelledby="downloads-heading">
+  <div class="kicker">Free Downloads</div>
+  <h2 class="display-h reveal" id="downloads-heading" style="margin-bottom: 44px;">TAKE THESE<br /><em>WITH YOU.</em></h2>
+  <div class="download-grid">
+    <a href="guides.html#wfpb" class="dl-card reveal">
+      <div class="dl-icon">🌱</div>
+      <div class="dl-cat">Starter Guide</div>
+      <div class="dl-title">WHOLE-FOOD PLANT-BASED STARTER GUIDE</div>
+      <p class="dl-desc">The complete beginner roadmap with transition timeline and practical strategies. 32 pages.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+    <a href="guides.html#indian" class="dl-card reveal">
+      <div class="dl-icon">🍛</div>
+      <div class="dl-cat">Cultural Guide</div>
+      <div class="dl-title">SEASONAL INDIAN FOODS GUIDE</div>
+      <p class="dl-desc">Performance nutrition from the Indian kitchen — seasonal foods and traditional combinations.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+    <a href="guides.html" class="dl-card reveal">
+      <div class="dl-icon">🛒</div>
+      <div class="dl-cat">Practical</div>
+      <div class="dl-title">SHOPPING GUIDE</div>
+      <p class="dl-desc">A practical whole-food shopping list organised by Indian market and grocery store sections.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+  </div>
+</section>
+
+<section class="related" aria-labelledby="related-heading">
+  <div class="kicker">Keep Learning</div>
+  <h2 class="display-h reveal" id="related-heading" style="margin-bottom: 0;">WHERE TO<br /><em>GO NEXT.</em></h2>
+  <div class="related-grid">
+    <a href="nutrition.html" class="related-card reveal"><div class="related-type">Pillar 01 · Foundation</div><div class="related-title">NUTRITION & FOOD SCIENCE</div><p class="related-desc">The evidence base behind everything taught on this page.</p><span class="related-link">Explore Nutrition</span></a>
+    <a href="strength.html" class="related-card reveal"><div class="related-type">Pillar 02 · Movement</div><div class="related-title">STRENGTH & CONDITIONING</div><p class="related-desc">Building muscle and strength on a whole-food plant-based foundation.</p><span class="related-link">Explore Strength</span></a>
+    <a href="trail-running.html" class="related-card reveal"><div class="related-type">Pillar 06 · Performance</div><div class="related-title">TRAIL RUNNING</div><p class="related-desc">Endurance fuelling and athlete examples from the trail running world.</p><span class="related-link">Explore Trail Running</span></a>
+    <a href="library.html" class="related-card reveal"><div class="related-type">The Library</div><div class="related-title">ATHLETE PROFILES</div><p class="related-desc">Eight elite plant-based athletes across strength, endurance, and combat sports.</p><span class="related-link">Browse Library</span></a>
+  </div>
+</section>
+
+<section class="newsletter" aria-labelledby="nl-heading">
+  <div class="newsletter-inner">
+    <div class="kicker" style="justify-content:center;">The Weekly Letter</div>
+    <h2 class="display-h reveal" id="nl-heading">EVIDENCE.<br /><em>PRACTICE.</em><br />DEPTH.</h2>
+    <p class="editorial reveal" style="margin-top: 16px;">One email per week. Plant-based living, nutrition science, and long-form thinking.</p>
+    <div class="nl-form"><input type="email" placeholder="Your email address" aria-label="Email address" /><button type="button">Join</button></div>
+    <p class="nl-note">No spam. No product pushes. Unsubscribe any time.</p>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-mark">THE IRON <span>LEAF</span></div>
+      <p>Grounded in Nature.<br />Forged in Grit.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Learn</div>
+      <ul class="footer-links">
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="strength.html">Strength</a></li>
+        <li><a href="mobility.html">Mobility</a></li>
+        <li><a href="recovery.html">Recovery</a></li>
+        <li><a href="longevity.html">Longevity</a></li>
+        <li><a href="trail-running.html">Trail Running</a></li>
+        <li><a href="plant-based.html" aria-current="page">Plant-Based Living</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Resources</div>
+      <ul class="footer-links">
+        <li><a href="guides.html">Free Guides</a></li>
+        <li><a href="research.html">Research Library</a></li>
+        <li><a href="frameworks.html">The Frameworks</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Work Together</div>
+      <ul class="footer-links">
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 The Iron Leaf · All rights reserved</p>
+    <span class="footer-tagline">Grounded in Nature. Forged in Grit.</span>
+    <p><a href="privacy.html" style="color:var(--moss)">Privacy</a> · <a href="terms.html" style="color:var(--moss)">Terms</a></p>
+  </div>
+</footer>
+
+<script>
+const revealEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((el, i) => { if (el.isIntersecting) { setTimeout(() => el.target.classList.add('visible'), (i % 4) * 80); obs.unobserve(el.target); } });
+}, { threshold: 0.07 });
+revealEls.forEach(el => obs.observe(el));
+
+document.querySelectorAll('.scenario-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.scenario-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.scenario-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.scenario-toggle').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+  });
+});
+
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.pillar-nav-link');
+const sectionObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) navLinks.forEach(link => link.classList.toggle('active', link.dataset.section === entry.target.id)); });
+}, { rootMargin: `-${68 + 44}px 0px -60% 0px` });
+sections.forEach(s => sectionObs.observe(s));
+
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+  });
+});
+
+const nlForm = document.querySelector('.nl-form');
+if (nlForm) {
+  const btn = nlForm.querySelector('button');
+  const input = nlForm.querySelector('input');
+  btn.addEventListener('click', () => {
+    if (input.value && input.value.includes('@')) { btn.textContent = 'Welcome.'; btn.style.background = 'var(--moss)'; input.disabled = true; }
+    else { input.style.outline = '1px solid var(--amber)'; setTimeout(() => { input.style.outline = ''; }, 1800); }
+  });
+}
+
+const hamburger = document.querySelector('.nav-hamburger');
+if (hamburger) hamburger.addEventListener('click', () => {
+  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+  hamburger.setAttribute('aria-expanded', !expanded);
+});
+</script>
+
+</body>
+</html>
