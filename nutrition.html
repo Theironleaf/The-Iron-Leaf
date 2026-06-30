@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nutrition — The Iron Leaf | Whole-Food Plant-Based Nutrition Science</title>
+<meta name="description" content="Evidence-informed nutrition education — protein, fibre, gut health, micronutrients, sports nutrition, and Indian food culture. The most comprehensive plant-based nutrition resource outside a university." />
+<meta property="og:title" content="Nutrition — The Iron Leaf" />
+<meta property="og:description" content="Real nutrition science. No myths, no marketing, no supplement dependency. Plants are enough — here is the evidence." />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://theironleaf.com/nutrition" />
+
+<!-- Schema markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "The Iron Leaf — Nutrition",
+  "description": "Evidence-informed plant-based nutrition education covering protein, fibre, gut health, micronutrients, and sports nutrition.",
+  "url": "https://theironleaf.com/nutrition"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+<style>
+/* ═══════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════ */
+:root {
+  --iron:   #1a1a18;
+  --bark:   #2c2a24;
+  --moss:   #4a5240;
+  --leaf:   #7a8c5e;
+  --sage:   #a8b89a;
+  --cream:  #f4f1eb;
+  --gold:   #c9a84c;
+  --amber:  #d4882a;
+  --white:  #fafaf8;
+  /* Nutrition accent */
+  --nutrition: #6b8c52;
+  --nutrition-light: rgba(107,140,82,0.1);
+
+  --serif:   'Cormorant Garamond', Georgia, serif;
+  --mono:    'DM Mono', monospace;
+  --display: 'Bebas Neue', sans-serif;
+  --body:    'DM Sans', sans-serif;
+
+  --nav-h: 68px;
+  --gutter: clamp(24px, 6vw, 96px);
+  --section-pad: clamp(80px, 10vw, 130px);
+  --col-read: 720px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: var(--iron);
+  color: var(--cream);
+  font-family: var(--body);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
+
+/* ═══════════════════════════════════════
+   NAV
+═══════════════════════════════════════ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  height: var(--nav-h);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--gutter);
+  background: rgba(26,26,24,0.92);
+  border-bottom: 1px solid rgba(122,140,94,0.14);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+}
+.nav-logo { display: flex; flex-direction: column; gap: 2px; }
+.nav-logo-mark { font-family: var(--display); font-size: 22px; letter-spacing: 0.14em; color: var(--cream); line-height: 1; }
+.nav-logo-mark span { color: var(--leaf); }
+.nav-logo-sub { font-family: var(--mono); font-size: 8px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--moss); }
+.nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+.nav-links a { font-size: 13px; font-weight: 400; letter-spacing: 0.06em; color: rgba(244,241,235,0.65); transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--cream); }
+.nav-cta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 10px 22px; transition: background 0.2s; }
+.nav-cta:hover { background: var(--sage); }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+.nav-hamburger span { display: block; width: 22px; height: 1px; background: var(--cream); }
+@media (max-width: 768px) { .nav-links, .nav-cta { display: none; } .nav-hamburger { display: flex; } }
+
+/* ═══════════════════════════════════════
+   BREADCRUMB
+═══════════════════════════════════════ */
+.breadcrumb {
+  padding: calc(var(--nav-h) + 20px) var(--gutter) 0;
+  background: var(--bark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.breadcrumb a, .breadcrumb span {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--moss);
+  transition: color 0.18s;
+}
+.breadcrumb a:hover { color: var(--leaf); }
+.breadcrumb .sep { opacity: 0.4; }
+.breadcrumb .current { color: var(--leaf); }
+
+/* ═══════════════════════════════════════
+   HERO — EDITORIAL MAGAZINE OPENING
+═══════════════════════════════════════ */
+.hero {
+  background: var(--bark);
+  position: relative;
+  overflow: hidden;
+  padding: clamp(48px, 7vw, 80px) var(--gutter) 0;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(122,140,94,0.3), transparent);
+}
+/* Full-width decorative line art — plant/leaf SVG background */
+.hero-deco {
+  position: absolute;
+  top: 0; right: 0;
+  width: 45%; height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+.hero-deco svg {
+  width: 100%; height: 100%;
+  opacity: 0.04;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: clamp(48px, 6vw, 80px);
+  align-items: end;
+  padding-bottom: clamp(48px, 7vw, 80px);
+  position: relative;
+  z-index: 1;
+}
+.hero-left {}
+.hero-kicker {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--leaf);
+  margin-bottom: 20px;
+  display: flex; align-items: center; gap: 14px;
+}
+.hero-kicker::before { content: ''; display: block; width: 28px; height: 1px; background: var(--leaf); }
+.hero-title {
+  font-family: var(--display);
+  font-size: clamp(76px, 13vw, 180px);
+  line-height: 0.84;
+  letter-spacing: 0.01em;
+  color: var(--cream);
+  margin-bottom: 32px;
+}
+.hero-title em { color: var(--leaf); font-style: normal; }
+.hero-lead {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(17px, 2vw, 24px);
+  color: var(--sage);
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 560px;
+  border-left: 2px solid var(--gold);
+  padding-left: 24px;
+}
+
+/* Right panel — key stats */
+.hero-panel {
+  background: rgba(26,26,24,0.5);
+  border: 1px solid rgba(122,140,94,0.16);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-self: start;
+  margin-top: 20px;
+}
+.hero-panel-title {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--leaf);
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(122,140,94,0.18);
+}
+.panel-stat {}
+.panel-stat-num {
+  font-family: var(--display);
+  font-size: 38px;
+  letter-spacing: 0.03em;
+  color: var(--cream);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.panel-stat-num span { color: var(--leaf); }
+.panel-stat-label {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 4px;
+}
+.panel-stat-note { font-size: 11.5px; font-weight: 300; color: var(--sage); line-height: 1.5; }
+.panel-cta {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--iron);
+  background: var(--leaf);
+  padding: 12px 20px;
+  text-align: center;
+  transition: background 0.2s;
+  display: block;
+  margin-top: 8px;
+}
+.panel-cta:hover { background: var(--sage); }
+
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } .hero-panel { display: none; } }
+
+/* ═══════════════════════════════════════
+   PILLAR NAV — sticky sub-navigation
+═══════════════════════════════════════ */
+.pillar-nav {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 100;
+  background: rgba(26,26,24,0.95);
+  border-bottom: 1px solid rgba(122,140,94,0.14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0 var(--gutter);
+  overflow-x: auto;
+}
+.pillar-nav-inner {
+  display: flex;
+  gap: 0;
+  min-width: max-content;
+}
+.pillar-nav-link {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--moss);
+  padding: 16px 22px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.pillar-nav-link:hover { color: var(--leaf); }
+.pillar-nav-link.active { color: var(--leaf); border-bottom-color: var(--leaf); }
+
+/* ═══════════════════════════════════════
+   SHARED UTILITIES
+═══════════════════════════════════════ */
+.kicker {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--leaf); margin-bottom: 16px;
+  display: flex; align-items: center; gap: 14px;
+}
+.kicker::after { content: ''; display: block; width: 32px; height: 1px; background: var(--leaf); opacity: 0.5; }
+.display-h { font-family: var(--display); font-size: clamp(36px, 6vw, 72px); line-height: 0.92; letter-spacing: 0.03em; color: var(--cream); }
+.display-h em { color: var(--leaf); font-style: normal; }
+.editorial { font-family: var(--serif); font-style: italic; font-size: clamp(15px, 1.7vw, 20px); color: var(--sage); font-weight: 300; line-height: 1.65; }
+.body-text { font-size: 15px; font-weight: 300; color: rgba(244,241,235,0.82); line-height: 1.85; }
+.btn-primary { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 13px 30px; transition: background 0.2s; display: inline-block; }
+.btn-primary:hover { background: var(--sage); }
+.btn-ghost { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage); border-bottom: 1px solid rgba(168,184,154,0.35); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; display: inline-block; }
+.btn-ghost:hover { color: var(--cream); border-color: var(--cream); }
+
+/* Evidence badge */
+.evidence-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 4px 10px;
+}
+.evidence-badge .stars { font-size: 9px; letter-spacing: 1px; }
+
+/* Myth-fact box */
+.myth-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin: 48px 0;
+}
+.myth-side, .fact-side {
+  padding: 32px 28px;
+  border: 1px solid;
+}
+.myth-side { border-color: rgba(184,92,58,0.25); background: rgba(184,92,58,0.04); }
+.fact-side { border-color: rgba(122,140,94,0.25); background: rgba(122,140,94,0.05); }
+.myth-label {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #b85c3a; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 8px;
+}
+.myth-label::before { content: '✕'; }
+.fact-label {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--leaf); margin-bottom: 12px;
+  display: flex; align-items: center; gap: 8px;
+}
+.fact-label::before { content: '✓'; }
+.myth-text, .fact-text { font-size: 14px; font-weight: 300; line-height: 1.7; }
+.myth-text { color: rgba(244,241,235,0.6); }
+.fact-text { color: var(--cream); }
+
+/* Callout box */
+.callout {
+  border-left: 3px solid var(--gold);
+  padding: 24px 28px;
+  background: rgba(201,168,76,0.05);
+  margin: 36px 0;
+}
+.callout-kicker { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.callout p { font-size: 14.5px; font-weight: 300; color: var(--cream); line-height: 1.75; }
+
+/* Data table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 36px 0;
+  font-size: 13.5px;
+}
+.data-table thead th {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--moss);
+  padding: 14px 16px; text-align: left;
+  border-bottom: 1px solid rgba(122,140,94,0.22);
+}
+.data-table tbody tr { border-bottom: 1px solid rgba(122,140,94,0.08); transition: background 0.16s; }
+.data-table tbody tr:hover { background: rgba(122,140,94,0.04); }
+.data-table tbody td { padding: 14px 16px; font-weight: 300; color: rgba(244,241,235,0.8); vertical-align: top; line-height: 1.55; }
+.data-table tbody td:first-child { color: var(--cream); font-weight: 400; }
+.data-table .highlight td { color: var(--cream); }
+.data-table .highlight td:first-child { color: var(--leaf); }
+
+/* Reveal */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+/* ═══════════════════════════════════════
+   INTRODUCTION SECTION
+═══════════════════════════════════════ */
+.intro {
+  padding: var(--section-pad) var(--gutter);
+  background: var(--iron);
+}
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(48px, 7vw, 100px);
+  align-items: start;
+}
+.intro-right { padding-top: 8px; }
+.intro-right .body-text { margin-bottom: 24px; }
+.intro-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 40px;
+}
+.intro-pillar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(122,140,94,0.1);
+  cursor: pointer;
+}
+.ip-num { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; color: var(--moss); flex-shrink: 0; width: 28px; }
+.ip-name { font-family: var(--display); font-size: 18px; letter-spacing: 0.05em; color: var(--cream); flex: 1; }
+.ip-arrow { font-size: 13px; color: var(--leaf); opacity: 0.5; transition: opacity 0.2s, transform 0.2s; }
+.intro-pillar:hover .ip-arrow { opacity: 1; transform: translateX(4px); }
+.intro-pillar:hover .ip-name { color: var(--sage); }
+
+@media (max-width: 800px) { .intro-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+/* ═══════════════════════════════════════
+   PROTEIN — anchor section
+═══════════════════════════════════════ */
+.section-protein {
+  padding: var(--section-pad) var(--gutter);
+  background: var(--bark);
+  position: relative;
+  overflow: hidden;
+}
+.section-protein::before {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 50%; height: 100%;
+  background: radial-gradient(ellipse at 70% 50%, rgba(122,140,94,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+.section-layout {
+  display: grid;
+  grid-template-columns: var(--col-read) 1fr;
+  gap: clamp(48px, 6vw, 80px);
+  position: relative;
+  z-index: 1;
+}
+.section-main {}
+.section-main .display-h { margin: 16px 0 24px; }
+.section-main .body-text { margin-bottom: 20px; }
+.section-sidebar {
+  padding-top: 60px;
+}
+.sidebar-card {
+  background: rgba(26,26,24,0.5);
+  border: 1px solid rgba(122,140,94,0.16);
+  padding: 28px 24px;
+  margin-bottom: 2px;
+}
+.sidebar-card-title { font-family: var(--display); font-size: 18px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 10px; }
+.sidebar-card-title span { color: var(--leaf); }
+.sidebar-card p { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.65; margin-bottom: 16px; }
+.sidebar-link { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--leaf); display: flex; align-items: center; gap: 6px; transition: gap 0.18s; }
+.sidebar-link:hover { gap: 12px; }
+.sidebar-link::after { content: '→'; }
+
+@media (max-width: 1100px) { .section-layout { grid-template-columns: 1fr; } .section-sidebar { padding-top: 0; } }
+
+/* ═══════════════════════════════════════
+   PROTEIN COMPARISON VISUAL
+═══════════════════════════════════════ */
+.protein-chart {
+  margin: 44px 0;
+  background: rgba(26,26,24,0.4);
+  border: 1px solid rgba(122,140,94,0.14);
+  padding: 32px 28px;
+}
+.protein-chart-title {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 24px;
+}
+.protein-bars { display: flex; flex-direction: column; gap: 12px; }
+.pbar-row { display: grid; grid-template-columns: 160px 1fr 56px; align-items: center; gap: 14px; }
+.pbar-label { font-size: 12.5px; font-weight: 300; color: var(--cream); }
+.pbar-track { height: 8px; background: rgba(122,140,94,0.1); position: relative; border-radius: 1px; }
+.pbar-fill {
+  position: absolute; left: 0; top: 0; height: 100%;
+  background: var(--leaf); border-radius: 1px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0;
+}
+.pbar-fill.plant { background: var(--leaf); }
+.pbar-fill.animal { background: rgba(201,168,76,0.5); }
+.pbar-value { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: var(--sage); text-align: right; }
+.chart-legend { display: flex; gap: 24px; margin-top: 20px; }
+.legend-item { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); }
+.legend-dot { width: 10px; height: 10px; border-radius: 1px; }
+
+/* ═══════════════════════════════════════
+   GUT HEALTH SECTION
+═══════════════════════════════════════ */
+.section-gut {
+  padding: var(--section-pad) var(--gutter);
+  background: var(--iron);
+}
+.gut-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(48px, 6vw, 80px);
+  align-items: start;
+}
+.gut-visual {
+  background: rgba(122,140,94,0.04);
+  border: 1px solid rgba(122,140,94,0.14);
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.gut-visual-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+.microbiome-rings {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.ring-row { display: grid; grid-template-columns: 140px 1fr; align-items: center; gap: 16px; }
+.ring-label { font-size: 12px; font-weight: 300; color: var(--sage); }
+.ring-track { height: 6px; background: rgba(122,140,94,0.1); position: relative; }
+.ring-fill { position: absolute; left: 0; top: 0; height: 100%; background: var(--leaf); width: 0; transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1); }
+.ring-pct { font-family: var(--mono); font-size: 10px; color: var(--leaf); text-align: right; }
+
+.gut-facts { display: flex; flex-direction: column; gap: 2px; margin-top: 24px; }
+.gut-fact { padding: 14px 0; border-bottom: 1px solid rgba(122,140,94,0.09); display: flex; align-items: flex-start; gap: 14px; }
+.gut-fact-icon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.gut-fact-text { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.6; }
+.gut-fact-text strong { color: var(--cream); font-weight: 400; }
+
+@media (max-width: 900px) { .gut-layout { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════
+   MICRONUTRIENTS WHEEL SECTION
+═══════════════════════════════════════ */
+.section-micro {
+  padding: var(--section-pad) var(--gutter);
+  background: var(--bark);
+}
+.micro-layout {
+  display: grid;
+  grid-template-columns: 1fr var(--col-read);
+  gap: clamp(48px, 6vw, 80px);
+  align-items: start;
+}
+.micro-visual {
+  position: sticky;
+  top: calc(var(--nav-h) + 60px);
+}
+.nutrients-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+.nutrient-card {
+  background: rgba(26,26,24,0.5);
+  border: 1px solid rgba(122,140,94,0.12);
+  padding: 22px 20px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.nutrient-card:hover { border-color: rgba(122,140,94,0.3); background: rgba(122,140,94,0.06); }
+.nutrient-name { font-family: var(--display); font-size: 16px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 6px; }
+.nutrient-role { font-size: 11.5px; font-weight: 300; color: var(--sage); line-height: 1.55; margin-bottom: 10px; }
+.nutrient-sources { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.1em; color: var(--moss); }
+.nutrient-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  margin-top: 8px;
+  border: 1px solid;
+}
+.nutrient-status.watch { color: var(--amber); border-color: rgba(212,136,42,0.3); background: rgba(212,136,42,0.05); }
+.nutrient-status.good { color: var(--leaf); border-color: rgba(122,140,94,0.3); background: rgba(122,140,94,0.05); }
+
+@media (max-width: 1100px) { .micro-layout { grid-template-columns: 1fr; } .micro-visual { position: static; } }
+
+/* ═══════════════════════════════════════
+   MYTHS vs FACTS — full section
+═══════════════════════════════════════ */
+.section-myths {
+  padding: var(--section-pad) var(--gutter);
+  background: var(--iron);
+}
+.myths-intro {
+  max-width: var(--col-read);
+  margin-bottom: 52px;
+}
+.myths-intro .display-h { margin: 16px 0 20px; }
+.myths-stack { display: flex; flex-direction: column; gap: 2px; }
+.myth-item {
+  border: 1px solid rgba(122,140,94,0.1);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.myth-item:hover { border-color: rgba(122,140,94,0.25); }
+.myth-toggle {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 24px 28px;
+  cursor: pointer;
+  gap: 20px;
+  background: rgba(122,140,94,0.02);
+  transition: background 0.18s;
+}
+.myth-toggle:hover { background: rgba(122,140,94,0.05); }
+.myth-toggle-left {}
+.myth-tag {
+  font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: #b85c3a; margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.myth-tag::before { content: '✕ Myth'; }
+.myth-question { font-family: var(--display); font-size: clamp(18px, 2.5vw, 24px); letter-spacing: 0.04em; color: var(--cream); }
+.myth-chevron {
+  width: 28px; height: 28px;
+  border: 1px solid rgba(122,140,94,0.2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--leaf);
+  font-size: 12px;
+  transition: transform 0.25s, background 0.2s;
+  flex-shrink: 0;
+}
+.myth-item.open .myth-chevron { transform: rotate(45deg); background: rgba(122,140,94,0.1); }
+.myth-body {
+  display: none;
+  padding: 0 28px 28px;
+  border-top: 1px solid rgba(122,140,94,0.1);
+}
+.myth-item.open .myth-body { display: block; }
+.myth-body .evidence-badge { margin: 20px 0 16px; }
+.myth-body .body-text { margin-bottom: 16px; font-size: 14px; }
+.myth-body .ref {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em;
+  color: var(--moss); padding-top: 16px; border-top: 1px solid rgba(122,140,94,0.1);
+}
+
+/* ═══════════════════════════════════════
+   INDIAN FOODS — Cultural section
+═══════════════════════════════════════ */
+.section-indian {
+  padding: var(--section-pad) var(--gutter);
+  background: var(--bark);
+  position: relative;
+  overflow: hidden;
+}
+.section-indian::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 30% 60%, rgba(201,168,76,0.04) 0%, transparent 65%);
+  pointer-events: none;
+}
+.indian-layout {
+  display: grid;
+  grid-template-columns: var(--col-read) 1fr;
+  gap: clamp(48px, 6vw, 80px);
+  position: relative;
+  z-index: 1;
+}
+.indian-foods-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.food-card {
+  background: rgba(26,26,24,0.4);
+  border: 1px solid rgba(122,140,94,0.12);
+  padding: 22px 24px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 16px;
+  transition: border-color 0.2s, background 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+.food-card:hover { border-color: rgba(122,140,94,0.3); background: rgba(122,140,94,0.06); }
+.food-name { font-family: var(--display); font-size: 20px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 4px; }
+.food-desc { font-size: 12px; font-weight: 300; color: var(--sage); line-height: 1.5; }
+.food-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.food-badge {
+  font-family: var(--mono); font-size: 8px; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 3px 8px;
+  border: 1px solid rgba(122,140,94,0.25); color: var(--leaf);
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px) { .indian-layout { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════
+   SPORTS NUTRITION SECTION
+═══════════════════════════════════════ */
+.section-sports {
+  padding: var(--section-pad) var(--gutter);
+  background: var(--iron);
+}
+.sports-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(48px, 6vw, 80px);
+  align-items: start;
+}
+.sports-timeline {
+  position: relative;
+  padding-left: 28px;
+}
+.sports-timeline::before {
+  content: '';
+  position: absolute; left: 0; top: 8px; bottom: 8px;
+  width: 1px; background: rgba(122,140,94,0.2);
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -32px; top: 6px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--leaf);
+  background: var(--iron);
+}
+.tl-time { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.tl-title { font-family: var(--display); font-size: 20px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 8px; }
+.tl-body { font-size: 13px; font-weight: 300; color: var(--sage); line-height: 1.68; }
+
+@media (max-width: 900px) { .sports-layout { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════
+   FRAMEWORK CALLOUT — Leaf Plate System
+═══════════════════════════════════════ */
+.framework-cta {
+  padding: var(--section-pad) var(--gutter);
+  background: var(--bark);
+  position: relative;
+  overflow: hidden;
+}
+.framework-cta::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(122,140,94,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+.fw-cta-inner {
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
+}
+.fw-cta-inner .kicker { margin-bottom: 20px; }
+.fw-cta-inner .display-h { margin-bottom: 20px; }
+.fw-cta-inner .editorial { margin-bottom: 16px; }
+.fw-cta-inner .body-text { margin-bottom: 40px; }
+.fw-cta-buttons { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+
+/* ═══════════════════════════════════════
+   FAQ
+═══════════════════════════════════════ */
+.section-faq {
+  padding: var(--section-pad) var(--gutter);
+  background: var(--iron);
+}
+.faq-layout { display: grid; grid-template-columns: 320px 1fr; gap: 80px; align-items: start; }
+.faq-left { position: sticky; top: calc(var(--nav-h) + 60px); }
+.faq-left .display-h { margin: 16px 0 20px; }
+.faq-list { display: flex; flex-direction: column; gap: 2px; }
+.faq-item { border-bottom: 1px solid rgba(122,140,94,0.1); }
+.faq-q {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 0; cursor: pointer; gap: 20px;
+  transition: color 0.18s;
+}
+.faq-q:hover .faq-q-text { color: var(--sage); }
+.faq-q-text { font-size: 14.5px; font-weight: 300; color: var(--cream); line-height: 1.5; flex: 1; }
+.faq-icon { color: var(--leaf); opacity: 0.6; font-size: 18px; transition: transform 0.25s, opacity 0.2s; flex-shrink: 0; }
+.faq-item.open .faq-icon { transform: rotate(45deg); opacity: 1; }
+.faq-a { display: none; padding: 0 0 22px; }
+.faq-item.open .faq-a { display: block; }
+.faq-a p { font-size: 13.5px; font-weight: 300; color: var(--sage); line-height: 1.8; }
+
+@media (max-width: 900px) { .faq-layout { grid-template-columns: 1fr; } .faq-left { position: static; } }
+
+/* ═══════════════════════════════════════
+   DOWNLOAD CTA
+═══════════════════════════════════════ */
+.download-band {
+  padding: clamp(64px, 8vw, 96px) var(--gutter);
+  background: var(--bark);
+  border-top: 1px solid rgba(122,140,94,0.12);
+}
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.dl-card {
+  background: rgba(122,140,94,0.04);
+  border: 1px solid rgba(122,140,94,0.12);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.22s, background 0.22s;
+  text-decoration: none;
+  color: inherit;
+}
+.dl-card:hover { border-color: rgba(122,140,94,0.32); background: rgba(122,140,94,0.08); }
+.dl-icon { font-size: 28px; }
+.dl-cat { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+.dl-title { font-family: var(--display); font-size: 22px; letter-spacing: 0.05em; color: var(--cream); line-height: 1.1; }
+.dl-desc { font-size: 13px; font-weight: 300; color: var(--sage); line-height: 1.65; flex: 1; }
+.dl-cta {
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--leaf);
+  display: flex; align-items: center; gap: 7px;
+  transition: gap 0.2s; margin-top: 4px;
+}
+.dl-card:hover .dl-cta { gap: 13px; }
+.dl-cta::after { content: '↓'; }
+
+@media (max-width: 800px) { .download-grid { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════
+   RELATED CONTENT
+═══════════════════════════════════════ */
+.related {
+  padding: var(--section-pad) var(--gutter);
+  background: var(--iron);
+  border-top: 1px solid rgba(122,140,94,0.1);
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 48px;
+}
+.related-card {
+  border: 1px solid rgba(122,140,94,0.1);
+  padding: 28px 24px;
+  display: flex; flex-direction: column; gap: 10px;
+  transition: border-color 0.2s, background 0.2s;
+  text-decoration: none; color: inherit;
+}
+.related-card:hover { border-color: rgba(122,140,94,0.28); background: rgba(122,140,94,0.05); }
+.related-type { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+.related-title { font-family: var(--display); font-size: 19px; letter-spacing: 0.04em; color: var(--cream); line-height: 1.1; }
+.related-desc { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.6; flex: 1; }
+.related-link { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--leaf); display: flex; align-items: center; gap: 6px; transition: gap 0.18s; }
+.related-card:hover .related-link { gap: 12px; }
+.related-link::after { content: '→'; }
+
+@media (max-width: 900px) { .related-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .related-grid { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════
+   NEWSLETTER
+═══════════════════════════════════════ */
+.newsletter {
+  padding: clamp(72px, 9vw, 112px) var(--gutter);
+  background: var(--bark);
+  border-top: 1px solid rgba(122,140,94,0.12);
+}
+.newsletter-inner { max-width: 580px; margin: 0 auto; text-align: center; }
+.newsletter-inner .kicker { justify-content: center; }
+.newsletter-inner .kicker::after { display: none; }
+.newsletter-inner .display-h { margin: 16px 0 20px; }
+.nl-form { display: flex; border: 1px solid rgba(122,140,94,0.22); background: rgba(26,26,24,0.5); margin-top: 36px; transition: border-color 0.2s; }
+.nl-form:focus-within { border-color: rgba(122,140,94,0.5); }
+.nl-form input { flex: 1; background: none; border: none; outline: none; color: var(--cream); font-family: var(--body); font-size: 14px; font-weight: 300; padding: 15px 20px; }
+.nl-form input::placeholder { color: var(--moss); }
+.nl-form button { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 0 26px; transition: background 0.2s; flex-shrink: 0; }
+.nl-form button:hover { background: var(--sage); }
+.nl-note { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin-top: 14px; }
+
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
+.footer { background: var(--iron); padding: 72px var(--gutter) 40px; border-top: 1px solid rgba(122,140,94,0.14); }
+.footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; gap: 60px; margin-bottom: 64px; }
+.footer-brand-mark { font-family: var(--display); font-size: 26px; letter-spacing: 0.14em; color: var(--cream); }
+.footer-brand-mark span { color: var(--leaf); }
+.footer-brand p { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--moss); margin-top: 14px; line-height: 1.7; }
+.footer-col-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--leaf); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(122,140,94,0.18); }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13.5px; font-weight: 300; color: rgba(244,241,235,0.45); transition: color 0.18s; }
+.footer-links a:hover { color: var(--cream); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 32px; border-top: 1px solid rgba(122,140,94,0.1); flex-wrap: wrap; gap: 16px; }
+.footer-bottom p { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; color: var(--moss); text-transform: uppercase; }
+.footer-tagline { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--moss); }
+@media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+@media (max-width: 600px) { .myth-box { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="The Iron Leaf home">
+    <div class="nav-logo-mark">THE IRON <span>LEAF</span></div>
+    <div class="nav-logo-sub">Sustainable Human Performance</div>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="learn.html" class="active">Learn</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="get-started.html" class="nav-cta">Get Started</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="sep" aria-hidden="true">·</span>
+  <a href="learn.html">Learn</a>
+  <span class="sep" aria-hidden="true">·</span>
+  <span class="current" aria-current="page">Nutrition</span>
+</nav>
+
+<!-- HERO -->
+<header class="hero" role="banner">
+  <div class="hero-deco" aria-hidden="true">
+    <svg viewBox="0 0 500 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M250 50 C150 150, 50 300, 100 500 C150 700, 350 750, 400 600 C450 450, 350 250, 250 50Z" stroke="#7a8c5e" stroke-width="1" fill="none"/>
+      <path d="M250 50 L250 750" stroke="#7a8c5e" stroke-width="0.5" fill="none"/>
+      <path d="M250 200 C200 180, 120 220, 100 300" stroke="#7a8c5e" stroke-width="0.5" fill="none"/>
+      <path d="M250 300 C300 280, 380 320, 400 400" stroke="#7a8c5e" stroke-width="0.5" fill="none"/>
+      <path d="M250 450 C190 430, 110 470, 100 550" stroke="#7a8c5e" stroke-width="0.5" fill="none"/>
+      <path d="M250 550 C310 530, 390 570, 400 650" stroke="#7a8c5e" stroke-width="0.5" fill="none"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-kicker">Pillar 01 · Foundation</div>
+      <h1 class="hero-title">NUTRI<br /><em>TION.</em></h1>
+      <p class="hero-lead">Plants are enough. Not as an opinion — as a conclusion drawn from decades of peer-reviewed evidence. Here is everything you need to understand why, and what to do about it.</p>
+    </div>
+    <div class="hero-panel" aria-label="Key nutrition facts">
+      <div class="hero-panel-title">At a Glance</div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">39<span>g</span></div>
+        <div class="panel-stat-label">Protein in 100g dry lentils</div>
+        <div class="panel-stat-note">Higher than most animal sources. Comparable bioavailability when eaten in variety.</div>
+      </div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">10<span>×</span></div>
+        <div class="panel-stat-label">More fibre than typical omnivore diet</div>
+        <div class="panel-stat-note">Whole-food plant-based eating consistently delivers 40–80g fibre daily vs. 15–20g average.</div>
+      </div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">★★★★★</div>
+        <div class="panel-stat-label">Evidence level: WFPB + longevity</div>
+        <div class="panel-stat-note">Systematic reviews consistently associate plant-predominant diets with reduced all-cause mortality.</div>
+      </div>
+      <a href="guides.html#wfpb" class="panel-cta">Download Starter Guide</a>
+    </div>
+  </div>
+</header>
+
+<!-- STICKY SUB-NAV -->
+<nav class="pillar-nav" aria-label="Nutrition sections">
+  <div class="pillar-nav-inner">
+    <a href="#intro" class="pillar-nav-link active" data-section="intro">Overview</a>
+    <a href="#protein" class="pillar-nav-link" data-section="protein">Protein</a>
+    <a href="#gut" class="pillar-nav-link" data-section="gut">Gut Health</a>
+    <a href="#micronutrients" class="pillar-nav-link" data-section="micronutrients">Micronutrients</a>
+    <a href="#myths" class="pillar-nav-link" data-section="myths">Myths</a>
+    <a href="#indian-foods" class="pillar-nav-link" data-section="indian-foods">Indian Foods</a>
+    <a href="#sports" class="pillar-nav-link" data-section="sports">Sports Nutrition</a>
+    <a href="#faq" class="pillar-nav-link" data-section="faq">FAQ</a>
+  </div>
+</nav>
+
+<!-- ═══ INTRODUCTION ═══ -->
+<section class="intro" id="intro" aria-labelledby="intro-heading">
+  <div class="intro-grid">
+    <div>
+      <div class="kicker">Where to Begin</div>
+      <h2 class="display-h reveal" id="intro-heading">THE CASE<br />FOR <em>PLANTS.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 32px;">This is not a vegan manifesto. It is a careful reading of the evidence — what the highest-quality research actually says about food, performance, and long-term health.</p>
+      <div class="callout reveal">
+        <div class="callout-kicker">The Iron Leaf Position</div>
+        <p>We do not advocate for veganism as an ideology. We follow the evidence — and the evidence consistently shows that whole-food, plant-predominant eating patterns are associated with the best long-term health outcomes across virtually every measurable biomarker.</p>
+      </div>
+    </div>
+    <div class="intro-right">
+      <p class="body-text reveal">The modern nutrition conversation is dominated by noise — protein wars, supplement marketing, ketogenic absolutism, fear-based messaging, and a supplement industry worth billions built on manufactured deficiency anxiety.</p>
+      <p class="body-text reveal">The Iron Leaf cuts through all of it with one question: what does the highest-quality evidence actually say?</p>
+      <p class="body-text reveal">The answer, across thousands of studies, is consistently the same: diverse, whole-food, plant-predominant eating patterns are associated with lower all-cause mortality, reduced chronic disease risk, superior gut microbiome diversity, and excellent athletic performance — including at the elite level.</p>
+      <p class="body-text reveal">This section teaches you the mechanisms, not just the conclusions. Understanding why something works makes you capable of applying it independently — for the rest of your life.</p>
+      <div class="intro-pillars reveal" role="navigation" aria-label="Nutrition topics">
+        <a href="#protein" class="intro-pillar"><span class="ip-num">01</span><span class="ip-name">PROTEIN & AMINO ACIDS</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#gut" class="intro-pillar"><span class="ip-num">02</span><span class="ip-name">GUT HEALTH & FIBRE</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#micronutrients" class="intro-pillar"><span class="ip-num">03</span><span class="ip-name">MICRONUTRIENTS</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#myths" class="intro-pillar"><span class="ip-num">04</span><span class="ip-name">MYTHS & MISINFORMATION</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#indian-foods" class="intro-pillar"><span class="ip-num">05</span><span class="ip-name">INDIAN FOODS & CULTURE</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#sports" class="intro-pillar"><span class="ip-num">06</span><span class="ip-name">SPORTS NUTRITION</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROTEIN ═══ -->
+<section class="section-protein" id="protein" aria-labelledby="protein-heading">
+  <div class="section-layout">
+    <div class="section-main">
+      <div class="kicker">Topic 01</div>
+      <h2 class="display-h reveal" id="protein-heading">PROTEIN &amp;<br /><em>AMINO ACIDS.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">The most misunderstood macronutrient in fitness culture. Plants contain all essential amino acids — what matters is variety, total intake, and leucine thresholds. Not source.</p>
+
+      <div class="evidence-badge reveal" style="margin-bottom: 28px;">
+        <span class="stars">★★★★★</span>
+        <span>Strong Evidence — Meta-analyses, multiple RCTs</span>
+      </div>
+
+      <p class="body-text reveal">Protein is not a single molecule — it is a family of 20 amino acids, nine of which are essential and must come from diet. The fitness industry's obsession with "complete proteins" from animal sources ignores a fundamental truth: the body draws from an amino acid pool continuously replenished across the day. Variety eliminates any theoretical deficit.</p>
+
+      <p class="body-text reveal" style="margin-top: 20px;">What actually matters for muscle protein synthesis is the leucine threshold — approximately 2–3g of leucine per meal to trigger maximal muscle-building signalling. This threshold is achievable from plant foods. A serving of tofu delivers 1.5g. A cup of lentils delivers 1.3g. A handful of hemp seeds delivers 0.9g. Combine them.</p>
+
+      <div class="protein-chart reveal" role="img" aria-label="Plant protein comparison chart">
+        <div class="protein-chart-title">Plant Protein Sources — Content per 100g Dry Weight</div>
+        <div class="protein-bars">
+          <div class="pbar-row">
+            <span class="pbar-label">Hemp Seeds</span>
+            <div class="pbar-track"><div class="pbar-fill plant" data-width="96"></div></div>
+            <span class="pbar-value">31g</span>
+          </div>
+          <div class="pbar-row">
+            <span class="pbar-label">Pumpkin Seeds</span>
+            <div class="pbar-track"><div class="pbar-fill plant" data-width="75"></div></div>
+            <span class="pbar-value">24g</span>
+          </div>
+          <div class="pbar-row">
+            <span class="pbar-label">Tempeh</span>
+            <div class="pbar-track"><div class="pbar-fill plant" data-width="59"></div></div>
+            <span class="pbar-value">19g</span>
+          </div>
+          <div class="pbar-row">
+            <span class="pbar-label">Chickpeas</span>
+            <div class="pbar-track"><div class="pbar-fill plant" data-width="59"></div></div>
+            <span class="pbar-value">19g</span>
+          </div>
+          <div class="pbar-row">
+            <span class="pbar-label">Black Lentils (Urad)</span>
+            <div class="pbar-track"><div class="pbar-fill plant" data-width="77"></div></div>
+            <span class="pbar-value">25g</span>
+          </div>
+          <div class="pbar-row">
+            <span class="pbar-label">Amaranth</span>
+            <div class="pbar-track"><div class="pbar-fill plant" data-width="44"></div></div>
+            <span class="pbar-value">14g</span>
+          </div>
+          <div class="pbar-row">
+            <span class="pbar-label">Tofu (firm)</span>
+            <div class="pbar-track"><div class="pbar-fill plant" data-width="53"></div></div>
+            <span class="pbar-value">17g</span>
+          </div>
+        </div>
+        <div class="chart-legend">
+          <div class="legend-item"><div class="legend-dot" style="background: var(--leaf);"></div>Plant source</div>
+        </div>
+      </div>
+
+      <div class="myth-box reveal" role="complementary" aria-label="Myth versus fact">
+        <div class="myth-side">
+          <div class="myth-label">The Myth</div>
+          <p class="myth-text">"Plant proteins are incomplete and inferior. You cannot build muscle without animal protein."</p>
+        </div>
+        <div class="fact-side">
+          <div class="fact-label">The Evidence</div>
+          <p class="fact-text">Systematic reviews of RCTs show equivalent muscle hypertrophy from plant and animal protein when leucine thresholds are met and total protein intake is adequate. World record holders and Olympic athletes train on plant protein alone.</p>
+        </div>
+      </div>
+
+      <p class="body-text reveal">The practical target: 1.6–2.2g of protein per kilogram of bodyweight per day for those in resistance training. Distribute across 3–4 meals. Prioritise leucine-rich sources — lentils, tofu, tempeh, hemp seeds, pumpkin seeds — and combine complementary sources naturally through normal eating. No tracking required once the pattern is established.</p>
+
+      <div class="callout reveal">
+        <div class="callout-kicker">The Iron Leaf Recommendation</div>
+        <p>Build your diet around whole plant protein sources first. Eat a diversity of legumes, whole grains, seeds, and vegetables daily. If you do this consistently, your protein requirements will be met without supplementation, tracking, or anxiety.</p>
+      </div>
+    </div>
+
+    <div class="section-sidebar">
+      <a href="guides.html#protein" class="sidebar-card reveal" style="display:block; text-decoration:none; color:inherit;">
+        <div class="sidebar-card-title">PROTEIN MYTHS<br /><span>GUIDE™</span></div>
+        <p>Everything the fitness industry gets wrong about plant protein — and the peer-reviewed evidence that corrects it. 24 pages. Free.</p>
+        <span class="sidebar-link">Download Free</span>
+      </a>
+      <a href="research.html#protein" class="sidebar-card reveal" style="display:block; text-decoration:none; color:inherit;">
+        <div class="sidebar-card-title">RESEARCH<br /><span>LIBRARY</span></div>
+        <p>11 peer-reviewed studies on plant protein and muscle hypertrophy — each summarised and rated by evidence quality.</p>
+        <span class="sidebar-link">View Research</span>
+      </a>
+      <a href="learn.html#foods" class="sidebar-card reveal" style="display:block; text-decoration:none; color:inherit;">
+        <div class="sidebar-card-title">FOODS<br /><span>LIBRARY</span></div>
+        <p>Searchable database of 200+ plant foods with protein content, amino acid profiles, and culinary applications.</p>
+        <span class="sidebar-link">Browse Foods</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GUT HEALTH ═══ -->
+<section class="section-gut" id="gut" aria-labelledby="gut-heading">
+  <div class="gut-layout">
+    <div>
+      <div class="kicker">Topic 02</div>
+      <h2 class="display-h reveal" id="gut-heading">GUT HEALTH &amp;<br /><em>THE MICROBIOME.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">38 trillion microorganisms live in your gut. They govern your immune system, your inflammation levels, your recovery, your mood, and your metabolic health. What you eat shapes them every single day.</p>
+      <div class="evidence-badge reveal" style="margin-bottom: 28px;"><span class="stars">★★★★★</span><span>Strong Evidence — Multiple systematic reviews</span></div>
+      <p class="body-text reveal">Dietary fibre is the single most powerful tool for gut microbiome health — and plant-based eating is the most reliable way to consume it in therapeutic quantities. The average Indian whole-food diet, before the infiltration of processed foods, delivered 40–60g of fibre daily. The modern Indian urban diet delivers around 15g. The consequences for gut health, immune function, and chronic disease risk are significant.</p>
+      <p class="body-text reveal" style="margin-top: 20px;">Fibre feeds specific bacterial species that produce short-chain fatty acids — butyrate, propionate, and acetate — which reduce intestinal inflammation, strengthen the gut barrier, regulate blood glucose, and signal satiety. This is not peripheral biology. This is the mechanistic foundation of long-term health.</p>
+      <p class="body-text reveal" style="margin-top: 20px;">The target: 30+ different plant foods per week. Not servings — species. Diversity of plant input drives diversity of microbial species, which is the strongest predictor of a healthy, resilient gut ecosystem.</p>
+
+      <div class="callout reveal" style="margin-top: 32px;">
+        <div class="callout-kicker">Practical Target</div>
+        <p>Aim for 30 different plant species per week. Count everything — every vegetable, grain, legume, nut, seed, herb, and spice. A traditional Indian thali can contain 8–12 in a single meal.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="gut-visual reveal" role="img" aria-label="Gut microbiome diversity indicators">
+        <div class="gut-visual-title">What Feeds a Healthy Microbiome</div>
+        <div class="microbiome-rings">
+          <div class="ring-row"><span class="ring-label">Dietary Fibre (g/day)</span><div class="ring-track"><div class="ring-fill" data-width="82"></div></div><span class="ring-pct">40g+</span></div>
+          <div class="ring-row"><span class="ring-label">Plant Species / Week</span><div class="ring-track"><div class="ring-fill" data-width="100"></div></div><span class="ring-pct">30+</span></div>
+          <div class="ring-row"><span class="ring-label">Fermented Foods</span><div class="ring-track"><div class="ring-fill" data-width="60"></div></div><span class="ring-pct">Daily</span></div>
+          <div class="ring-row"><span class="ring-label">Resistant Starch</span><div class="ring-track"><div class="ring-fill" data-width="50"></div></div><span class="ring-pct">Moderate</span></div>
+          <div class="ring-row"><span class="ring-label">Polyphenols</span><div class="ring-track"><div class="ring-fill" data-width="70"></div></div><span class="ring-pct">High</span></div>
+        </div>
+        <div class="gut-facts">
+          <div class="gut-fact"><span class="gut-fact-icon">🦠</span><p class="gut-fact-text"><strong>38 trillion</strong> microbial cells in the human gut — outnumbering human cells 1.3:1</p></div>
+          <div class="gut-fact"><span class="gut-fact-icon">🌿</span><p class="gut-fact-text">Plant-based eaters show <strong>significantly greater</strong> microbial diversity than omnivores in large-scale studies</p></div>
+          <div class="gut-fact"><span class="gut-fact-icon">🔬</span><p class="gut-fact-text">Butyrate — produced by fibre fermentation — is the <strong>primary fuel</strong> for colonocytes and a key anti-cancer compound</p></div>
+          <div class="gut-fact"><span class="gut-fact-icon">⚡</span><p class="gut-fact-text">The gut-brain axis connects microbiome composition to <strong>mood, sleep quality, and cognitive function</strong></p></div>
+        </div>
+      </div>
+      <a href="guides.html#gut" class="sidebar-card reveal" style="display:block; text-decoration:none; color:inherit; margin-top: 2px;">
+        <div class="sidebar-card-title">GUT HEALTH<br /><span>GUIDE™</span></div>
+        <p>The complete Iron Leaf guide to fibre, fermented foods, the microbiome, and gut-brain axis. Free download.</p>
+        <span class="sidebar-link">Download Free</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MICRONUTRIENTS ═══ -->
+<section class="section-micro" id="micronutrients" aria-labelledby="micro-heading">
+  <div class="micro-layout">
+    <div class="micro-visual">
+      <div class="kicker">Topic 03</div>
+      <h2 class="display-h reveal" id="micro-heading">MICRO<br /><em>NUTRIENTS.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">The nutrients the fitness industry never mentions. The ones that govern recovery, immunity, hormonal function, bone density, and neurological health — and that whole-food plant-based eating delivers in abundance.</p>
+      <div class="evidence-badge reveal" style="margin-bottom: 28px;"><span class="stars">★★★★</span><span>Good Evidence — Consistent RCTs</span></div>
+      <p class="body-text reveal">The supplement industry profits from micronutrient anxiety. The truth: a diverse whole-food plant-based diet delivers virtually every essential micronutrient in abundance — with the single exception of vitamin B12, which is a supplementation of modern hygiene, not diet.</p>
+      <p class="body-text reveal" style="margin-top: 20px;">The nutrients most people worry about — iron, zinc, calcium, omega-3s — are all present in whole plant foods in quantities sufficient for health and athletic performance. Bioavailability varies, but is optimised through food combining and preparation methods used in traditional Indian cooking for thousands of years.</p>
+      <a href="guides.html#micronutrients" class="btn-primary reveal" style="margin-top: 28px;">Download Micronutrient Guide</a>
+    </div>
+    <div>
+      <div class="nutrients-grid">
+        <div class="nutrient-card reveal">
+          <div class="nutrient-name">IRON</div>
+          <p class="nutrient-role">Oxygen transport, energy metabolism, immune function. Non-haem iron from plants is well-absorbed with vitamin C.</p>
+          <div class="nutrient-sources">Best sources: Lentils, spinach, tofu, pumpkin seeds, amaranth</div>
+          <div class="nutrient-status good">✓ Well-covered</div>
+        </div>
+        <div class="nutrient-card reveal">
+          <div class="nutrient-name">ZINC</div>
+          <p class="nutrient-role">Testosterone production, wound healing, immune function, protein synthesis. Absorption enhanced by soaking legumes.</p>
+          <div class="nutrient-sources">Best sources: Pumpkin seeds, hemp seeds, chickpeas, cashews, oats</div>
+          <div class="nutrient-status watch">↑ Prioritise</div>
+        </div>
+        <div class="nutrient-card reveal">
+          <div class="nutrient-name">CALCIUM</div>
+          <p class="nutrient-role">Bone density, muscle contraction, nerve signalling. Non-dairy sources are widely available and well-absorbed.</p>
+          <div class="nutrient-sources">Best sources: Bok choy, kale, tofu (set), sesame, fortified milks</div>
+          <div class="nutrient-status good">✓ Well-covered</div>
+        </div>
+        <div class="nutrient-card reveal">
+          <div class="nutrient-name">VITAMIN B12</div>
+          <p class="nutrient-role">Neurological function, red blood cell formation, DNA synthesis. The one genuine supplementation requirement on a plant-based diet.</p>
+          <div class="nutrient-sources">Supplement: 250–500mcg cyanocobalamin daily or 1000mcg weekly</div>
+          <div class="nutrient-status watch">↑ Supplement required</div>
+        </div>
+        <div class="nutrient-card reveal">
+          <div class="nutrient-name">OMEGA-3</div>
+          <p class="nutrient-role">Anti-inflammatory signalling, brain health, joint lubrication, cardiovascular function. ALA converts to EPA/DHA — optimise with algae oil.</p>
+          <div class="nutrient-sources">Best sources: Flax, chia, hemp, walnuts. Algae oil for EPA/DHA.</div>
+          <div class="nutrient-status watch">↑ Consider algae oil</div>
+        </div>
+        <div class="nutrient-card reveal">
+          <div class="nutrient-name">VITAMIN D</div>
+          <p class="nutrient-role">Bone metabolism, immune modulation, testosterone production, mood regulation. Sun exposure primary; supplement in winter or low-sun environments.</p>
+          <div class="nutrient-sources">Sunlight (primary), fortified foods, supplement 1000–2000IU D3</div>
+          <div class="nutrient-status watch">↑ Test & supplement</div>
+        </div>
+        <div class="nutrient-card reveal">
+          <div class="nutrient-name">MAGNESIUM</div>
+          <p class="nutrient-role">Muscle recovery, sleep quality, energy production, 300+ enzymatic reactions. Chronically low in processed-food diets.</p>
+          <div class="nutrient-sources">Best sources: Pumpkin seeds, dark chocolate, spinach, black beans, millets</div>
+          <div class="nutrient-status good">✓ Well-covered on WFPB</div>
+        </div>
+        <div class="nutrient-card reveal">
+          <div class="nutrient-name">IODINE</div>
+          <p class="nutrient-role">Thyroid hormone production, metabolic rate regulation. Often overlooked in plant-based diets without dairy or seafood.</p>
+          <div class="nutrient-sources">Best sources: Seaweed, iodised salt, or supplement 150mcg daily</div>
+          <div class="nutrient-status watch">↑ Monitor intake</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MYTHS ═══ -->
+<section class="section-myths" id="myths" aria-labelledby="myths-heading">
+  <div class="myths-intro">
+    <div class="kicker">Topic 04</div>
+    <h2 class="display-h reveal" id="myths-heading">MYTHS &amp;<br /><em>MISINFORMATION.</em></h2>
+    <p class="editorial reveal" style="margin: 20px 0 0;">The nutrition space is saturated with industry-funded research, influencer opinion, and decades-old myths that survive not because of evidence, but because they serve commercial interests. Here is the evidence that corrects them.</p>
+  </div>
+
+  <div class="myths-stack" role="list">
+    <div class="myth-item reveal" role="listitem">
+      <button class="myth-toggle" aria-expanded="false" aria-controls="myth1-body">
+        <div class="myth-toggle-left">
+          <div class="myth-tag"></div>
+          <div class="myth-question">YOU NEED MEAT TO BUILD MUSCLE</div>
+        </div>
+        <div class="myth-chevron" aria-hidden="true">+</div>
+      </button>
+      <div class="myth-body" id="myth1-body">
+        <div class="evidence-badge"><span class="stars">★★★★★</span><span>Refuted — Multiple systematic reviews</span></div>
+        <p class="body-text">A 2021 systematic review and meta-analysis published in Sports Medicine examined 18 RCTs comparing plant and animal protein for muscle hypertrophy in resistance-trained individuals. Conclusion: no significant difference in lean mass gains when total protein and leucine intake are matched.</p>
+        <p class="body-text" style="margin-top: 14px;">The world's strongest man competitor, multiple Olympic weightlifters, professional NFL players, and seven-time Western States ultramarathon champion Scott Jurek all train on plant protein alone. The anecdotal case is as strong as the experimental one.</p>
+        <div class="ref">Source: Messina et al. (2021), Sports Medicine. Vliet et al. (2015), Journal of Nutrition.</div>
+      </div>
+    </div>
+
+    <div class="myth-item reveal" role="listitem">
+      <button class="myth-toggle" aria-expanded="false" aria-controls="myth2-body">
+        <div class="myth-toggle-left">
+          <div class="myth-tag"></div>
+          <div class="myth-question">PLANT PROTEINS ARE "INCOMPLETE"</div>
+        </div>
+        <div class="myth-chevron" aria-hidden="true">+</div>
+      </button>
+      <div class="myth-body" id="myth2-body">
+        <div class="evidence-badge"><span class="stars">★★★★★</span><span>Refuted — Decades of nutritional biochemistry</span></div>
+        <p class="body-text">The term "incomplete protein" refers to a single food's amino acid profile relative to the human requirement pattern. It does not mean the food is useless or inferior. The body maintains a free amino acid pool replenished across the day — meaning variety over 24 hours eliminates any theoretical amino acid limitation.</p>
+        <p class="body-text" style="margin-top: 14px;">Moreover, most plant foods contain all nine essential amino acids. Lentils, quinoa, hemp seeds, soy, and amaranth are complete by any definition. Even rice — often called "incomplete" — provides all nine amino acids; it simply has a lower proportion of lysine, easily compensated by combining with legumes.</p>
+        <div class="ref">Source: Young & Pellett (1994), American Journal of Clinical Nutrition. FAO/WHO (2011) PDCAAS and DIAAS protein quality assessment.</div>
+      </div>
+    </div>
+
+    <div class="myth-item reveal" role="listitem">
+      <button class="myth-toggle" aria-expanded="false" aria-controls="myth3-body">
+        <div class="myth-toggle-left">
+          <div class="myth-tag"></div>
+          <div class="myth-question">YOU NEED DAIRY FOR STRONG BONES</div>
+        </div>
+        <div class="myth-chevron" aria-hidden="true">+</div>
+      </button>
+      <div class="myth-body" id="myth3-body">
+        <div class="evidence-badge"><span class="stars">★★★★</span><span>Refuted — Prospective cohort studies</span></div>
+        <p class="body-text">The Harvard Nurses' Health Study — one of the largest nutritional studies ever conducted — found no significant reduction in fracture risk from higher dairy consumption. Countries with the highest dairy intake have among the highest rates of osteoporosis.</p>
+        <p class="body-text" style="margin-top: 14px;">Bone health is governed by calcium, vitamin D, vitamin K2, magnesium, protein, and mechanical loading through resistance training — not by dairy specifically. All of these except vitamin D can be obtained from a well-designed plant-based diet. Bok choy, kale, broccoli, fortified plant milks, sesame, and tofu provide calcium in highly bioavailable forms.</p>
+        <div class="ref">Source: Feskanich et al. (1997), American Journal of Public Health. Willett (2003), American Journal of Clinical Nutrition.</div>
+      </div>
+    </div>
+
+    <div class="myth-item reveal" role="listitem">
+      <button class="myth-toggle" aria-expanded="false" aria-controls="myth4-body">
+        <div class="myth-toggle-left">
+          <div class="myth-tag"></div>
+          <div class="myth-question">SOY CAUSES HORMONAL PROBLEMS IN MEN</div>
+        </div>
+        <div class="myth-chevron" aria-hidden="true">+</div>
+      </button>
+      <div class="myth-body" id="myth4-body">
+        <div class="evidence-badge"><span class="stars">★★★★★</span><span>Refuted — Multiple RCTs and meta-analyses</span></div>
+        <p class="body-text">Soy isoflavones are phytoestrogens — compounds that bind weakly to oestrogen receptors. The concern that soy reduces testosterone or causes feminisation in men has been studied extensively and consistently refuted in clinical trials.</p>
+        <p class="body-text" style="margin-top: 14px;">A 2021 meta-analysis of 41 studies found no significant effect of soy protein or isoflavone intake on testosterone, oestrogen, or SHBG in men. Asian populations consuming soy daily for millennia show no evidence of hormonal disruption. The case studies cited in fitness communities involve pharmacological quantities of soy — not normal dietary intake.</p>
+        <div class="ref">Source: Reed et al. (2021), Reproductive Toxicology. Messina (2010), Fertility and Sterility.</div>
+      </div>
+    </div>
+
+    <div class="myth-item reveal" role="listitem">
+      <button class="myth-toggle" aria-expanded="false" aria-controls="myth5-body">
+        <div class="myth-toggle-left">
+          <div class="myth-tag"></div>
+          <div class="myth-question">HIGH-PROTEIN DIETS ARE NECESSARY FOR PERFORMANCE</div>
+        </div>
+        <div class="myth-chevron" aria-hidden="true">+</div>
+      </button>
+      <div class="myth-body" id="myth5-body">
+        <div class="evidence-badge"><span class="stars">★★★★</span><span>Nuanced — Context-dependent</span></div>
+        <p class="body-text">Protein requirements are higher for resistance-trained individuals than sedentary people — this is true. The current evidence supports 1.6–2.2g/kg/day for those seeking to maximise muscle hypertrophy. But "high protein" beyond this threshold shows no additional benefit, and extreme intakes (3g/kg+) are unnecessary and add digestive burden without measurable advantage.</p>
+        <p class="body-text" style="margin-top: 14px;">The typical whole-food plant-based diet of an active individual eating adequate calories easily reaches 15–20% of calories from protein — well within the optimal range for performance. Protein anxiety is largely a supplement industry invention.</p>
+        <div class="ref">Source: Morton et al. (2018), British Journal of Sports Medicine. Stokes et al. (2018), Nutrients.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INDIAN FOODS ═══ -->
+<section class="section-indian" id="indian-foods" aria-labelledby="indian-heading">
+  <div class="indian-layout">
+    <div>
+      <div class="kicker">Topic 05</div>
+      <h2 class="display-h reveal" id="indian-heading">INDIAN FOODS &amp;<br /><em>FOOD CULTURE.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">The Indian food tradition is, at its whole-food core, one of the most nutritionally sophisticated eating systems ever developed. Millennia before nutritional science existed, Indian cuisine had discovered the right combinations.</p>
+      <p class="body-text reveal">Dal and rice. Roti and sabzi. Idli with sambar. Khichdi. The traditional Indian thali. These combinations are not coincidental — they are the accumulated nutritional intelligence of thousands of years of human experimentation, intuition, and culture.</p>
+      <p class="body-text reveal" style="margin-top: 20px;">Rice and lentils together provide a complete amino acid profile. Turmeric and black pepper together enhance curcumin bioavailability 2000%. Iron-rich foods with lemon or tamarind enhance absorption. Fermented idli and dosa batter increases B vitamins. Traditional food wisdom and modern nutritional science, when examined together, say the same thing.</p>
+      <p class="body-text reveal" style="margin-top: 20px;">The Iron Leaf nutrition system is rooted in Indian food culture — not as a dietary restriction, but as a powerful, practical, locally available, seasonally appropriate, and deeply pleasurable foundation for sustainable human performance.</p>
+      <div class="callout reveal">
+        <div class="callout-kicker">The Iron Leaf Position on Indian Food</div>
+        <p>We do not Westernise Indian nutrition. We do not ask you to replace dal with protein shakes or roti with rice cakes. We teach you to understand why the traditional Indian diet works — and how to optimise it for athletic performance and longevity without losing its cultural identity.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="kicker" style="margin-bottom: 24px;">Performance Foods from the Indian Kitchen</div>
+      <div class="indian-foods-grid">
+        <a href="learn.html#foods" class="food-card reveal">
+          <div><div class="food-name">MASOOR DAL</div><p class="food-desc">Red lentils — 26g protein per 100g dry, iron, folate, resistant starch. The most complete plant protein source.</p></div>
+          <div class="food-badges"><span class="food-badge">High Protein</span><span class="food-badge">Iron-rich</span></div>
+        </a>
+        <a href="learn.html#foods" class="food-card reveal">
+          <div><div class="food-name">BAJRA (Pearl Millet)</div><p class="food-desc">11g protein, exceptionally high magnesium, iron, and prebiotic fibre. Superior to wheat in micronutrient density.</p></div>
+          <div class="food-badges"><span class="food-badge">Magnesium</span><span class="food-badge">Prebiotic</span></div>
+        </a>
+        <a href="learn.html#foods" class="food-card reveal">
+          <div><div class="food-name">RAJMA (Kidney Beans)</div><p class="food-desc">22g protein per 100g dry, high potassium, resistant starch that feeds beneficial bacteria for hours after digestion.</p></div>
+          <div class="food-badges"><span class="food-badge">High Protein</span><span class="food-badge">Resistant Starch</span></div>
+        </a>
+        <a href="learn.html#foods" class="food-card reveal">
+          <div><div class="food-name">MORINGA (Drumstick Leaf)</div><p class="food-desc">9g complete protein per 100g fresh — all essential amino acids, calcium, iron, and powerful anti-inflammatory compounds.</p></div>
+          <div class="food-badges"><span class="food-badge">Complete Protein</span><span class="food-badge">Anti-inflammatory</span></div>
+        </a>
+        <a href="learn.html#foods" class="food-card reveal">
+          <div><div class="food-name">RAGI (Finger Millet)</div><p class="food-desc">Highest calcium content of any grain — 344mg per 100g. Essential for plant-based bone health and muscle contraction.</p></div>
+          <div class="food-badges"><span class="food-badge">Highest Calcium</span><span class="food-badge">Gluten-free</span></div>
+        </a>
+        <a href="learn.html#foods" class="food-card reveal">
+          <div><div class="food-name">TURMERIC + BLACK PEPPER</div><p class="food-desc">Curcumin bioavailability increased by 2000% with piperine. The most powerful anti-inflammatory combination in the Indian kitchen.</p></div>
+          <div class="food-badges"><span class="food-badge">Anti-inflammatory</span><span class="food-badge">Synergistic</span></div>
+        </a>
+        <a href="learn.html#foods" class="food-card reveal">
+          <div><div class="food-name">SABJA / CHIA SEEDS</div><p class="food-desc">ALA omega-3, gel-forming fibre, calcium. Traditional Indian cooling food with excellent modern sports nutrition application.</p></div>
+          <div class="food-badges"><span class="food-badge">Omega-3</span><span class="food-badge">Fibre</span></div>
+        </a>
+        <a href="learn.html#foods" class="food-card reveal">
+          <div><div class="food-name">AMLA (Indian Gooseberry)</div><p class="food-desc">Highest vitamin C concentration of any food. Preserves collagen, enhances iron absorption, and provides potent antioxidant support.</p></div>
+          <div class="food-badges"><span class="food-badge">Vitamin C</span><span class="food-badge">Collagen</span></div>
+        </a>
+      </div>
+      <div style="margin-top: 28px;">
+        <a href="guides.html#indian" class="btn-primary">Download Indian Foods Guide</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SPORTS NUTRITION ═══ -->
+<section class="section-sports" id="sports" aria-labelledby="sports-heading">
+  <div class="sports-layout">
+    <div>
+      <div class="kicker">Topic 06</div>
+      <h2 class="display-h reveal" id="sports-heading">SPORTS<br /><em>NUTRITION.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">Fuelling training, competition, and recovery from whole plant foods. No powder required — but timing, composition, and understanding of mechanisms matters.</p>
+      <p class="body-text reveal">Sports nutrition is not complicated once you understand the underlying physiology. Muscle glycogen drives high-intensity effort — carbohydrates replenish it. Muscle protein synthesis requires leucine threshold — plant proteins provide it. Recovery depends on anti-inflammatory signalling — whole plants deliver it in abundance.</p>
+      <p class="body-text reveal" style="margin-top: 20px;">The supplement industry has manufactured complexity around something fundamentally simple. Eat whole plants, time your largest carbohydrate intake around your training, ensure leucine-rich protein at each meal, and recover with sleep. That is 95% of the picture.</p>
+
+      <div class="data-table-wrap reveal" style="overflow-x: auto; margin-top: 36px;">
+        <table class="data-table" role="table" aria-label="Sports nutrition targets">
+          <thead>
+            <tr>
+              <th scope="col">Goal</th>
+              <th scope="col">Protein</th>
+              <th scope="col">Carbohydrate</th>
+              <th scope="col">Key Focus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight">
+              <td>Hypertrophy</td>
+              <td>1.6–2.2g/kg</td>
+              <td>4–7g/kg</td>
+              <td>Leucine threshold per meal, caloric surplus</td>
+            </tr>
+            <tr>
+              <td>Strength</td>
+              <td>1.6–2.0g/kg</td>
+              <td>4–6g/kg</td>
+              <td>Peri-workout carbs, protein timing</td>
+            </tr>
+            <tr>
+              <td>Endurance</td>
+              <td>1.4–1.7g/kg</td>
+              <td>6–10g/kg</td>
+              <td>Glycogen loading, mid-session fuelling</td>
+            </tr>
+            <tr>
+              <td>Fat Loss</td>
+              <td>2.0–2.4g/kg</td>
+              <td>3–5g/kg</td>
+              <td>High protein satiety, caloric deficit</td>
+            </tr>
+            <tr>
+              <td>Longevity</td>
+              <td>1.2–1.6g/kg</td>
+              <td>Ad libitum</td>
+              <td>Diversity, fibre, phytonutrients</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <div class="kicker" style="margin-bottom: 28px;">The Training Day Nutrition Timeline</div>
+      <div class="sports-timeline reveal">
+        <div class="timeline-item">
+          <div class="tl-time">Wake — 60 min before training</div>
+          <div class="tl-title">PRE-WORKOUT FUEL</div>
+          <p class="tl-body">Easily digestible carbohydrates + small protein. Banana with peanut butter, oats with hemp seeds, or dates with almonds. Goal: glycogen top-up without GI distress.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-time">During — sessions over 90 minutes</div>
+          <div class="tl-title">INTRA-WORKOUT</div>
+          <p class="tl-body">Simple carbohydrates every 30–45 minutes for endurance. Dates, dried figs, rice cakes, or coconut water. Water + electrolytes throughout. Protein unnecessary during training.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-time">Within 30–60 min post-training</div>
+          <div class="tl-title">POST-WORKOUT WINDOW</div>
+          <p class="tl-body">Carbohydrate + protein combination to initiate glycogen resynthesis and muscle protein synthesis. The window is real but not as narrow as supplement marketing implies. A wholesome meal works well.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-time">Evening meal</div>
+          <div class="tl-title">RECOVERY NUTRITION</div>
+          <p class="tl-body">The day's most important protein feeding. A complete plant meal — dal, rice, sabzi, seeds — provides all essential amino acids for overnight muscle repair and adaptation.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-time">Night</div>
+          <div class="tl-title">CASEIN EQUIVALENT</div>
+          <p class="tl-body">Slow-digesting plant proteins before sleep — tempeh, tofu, or a small serve of legumes — provide sustained amino acid availability during the overnight anabolic window.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FRAMEWORK CALLOUT ═══ -->
+<section class="framework-cta" aria-labelledby="fw-cta-heading">
+  <div class="fw-cta-inner">
+    <div class="kicker">The Leaf Plate System™</div>
+    <h2 class="display-h reveal" id="fw-cta-heading">THE<br /><em>FRAMEWORK.</em></h2>
+    <p class="editorial reveal" style="margin: 20px 0 20px;">Everything on this page is governed by one of ten Iron Leaf proprietary frameworks. For nutrition, that is The Leaf Plate System™ — a practical whole-food eating architecture rooted in Indian food culture and built on the evidence base you have just read.</p>
+    <p class="body-text reveal">The Leaf Plate System is not a meal plan. It is not a list of rules. It is a way of thinking about food that, once learned, requires no ongoing guidance, no tracking, and no dependency on anyone's advice — including ours.</p>
+    <div class="fw-cta-buttons reveal">
+      <a href="frameworks.html#leaf-plate" class="btn-primary">Explore The Leaf Plate System™</a>
+      <a href="programs.html" class="btn-ghost">Work With Iron Leaf</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section-faq" id="faq" aria-labelledby="faq-heading">
+  <div class="faq-layout">
+    <div class="faq-left">
+      <div class="kicker">Common Questions</div>
+      <h2 class="display-h reveal" id="faq-heading">FREQUENTLY<br /><em>ASKED.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 0;">The questions we hear most often — answered with the same evidence standard applied to everything at The Iron Leaf.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Do I need to supplement on a plant-based diet?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>One supplement is non-negotiable: vitamin B12. This is not a flaw of plant-based eating — it is a consequence of modern food hygiene removing soil bacteria that historically provided B12. 250–500mcg cyanocobalamin daily or 1000mcg weekly. Beyond B12, vitamin D (if limited sun exposure) and algae-derived omega-3 (EPA/DHA) are worth considering depending on individual circumstances. Everything else is industry-manufactured anxiety.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">How much protein do I actually need?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>For resistance-trained individuals seeking muscle hypertrophy: 1.6–2.2g per kg of bodyweight per day, distributed across 3–4 meals to ensure leucine threshold is met at each sitting. For recreational athletes: 1.4–1.7g/kg. For longevity-focused individuals with moderate activity: 1.2–1.6g/kg. These numbers are achievable from whole plants without supplements. A 75kg individual training for hypertrophy needs 120–165g daily — entirely achievable with lentils, tofu, hemp seeds, and legumes.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Can I build muscle on a plant-based diet?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Yes. This is not a belief — it is the conclusion of multiple systematic reviews and meta-analyses comparing plant and animal protein for resistance-training outcomes. The mechanism: muscle protein synthesis requires leucine threshold (approximately 2–3g per meal) and adequate total daily protein. Both are achievable from plant foods. The practical difference in muscle gain between plant and animal protein, when intake is matched, is statistically indistinguishable in the research literature.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Is a plant-based diet appropriate for Indian culture?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Indian cuisine at its traditional whole-food core is one of the world's most sophisticated plant-based eating systems. Dal, rice, roti, sabzi, chutneys, fermented foods, seasonal vegetables, and a diversity of legumes and grains — this is the foundation. The challenge is not cultural; it is navigating modern food environments where processed and animal foods have displaced traditional eating patterns. We do not ask anyone to abandon Indian food culture. We teach you to return to and optimise it.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">What about iron and anaemia on a plant-based diet?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Non-haem iron from plants has lower absorption than haem iron from meat — but this is easily addressed. Consuming vitamin C-rich foods alongside iron-rich plants enhances absorption significantly. Lemon juice on dal, tomatoes with spinach, amla with iron-rich foods. Traditional Indian cooking already does this intuitively. Studies consistently show that well-planned plant-based diets are not associated with higher rates of iron deficiency anaemia than omnivorous diets. Get a blood test annually to verify your iron status.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Do I need to track macros and calories?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>For most people, no. Tracking is a useful tool during the learning phase — it builds intuition about portion sizes and nutrient density. Once you understand what your meals contain, tracking becomes unnecessary and often counterproductive (it can increase dietary anxiety and disordered eating patterns in susceptible individuals). The goal of nutrition education at The Iron Leaf is to build the literacy that makes tracking redundant. Pattern-based eating — the right foods in sufficient variety and volume — beats chronic tracking in long-term adherence and wellbeing.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DOWNLOADS ═══ -->
+<section class="download-band" aria-labelledby="downloads-heading">
+  <div class="kicker">Free Downloads</div>
+  <h2 class="display-h reveal" id="downloads-heading" style="margin-bottom: 44px;">TAKE THESE<br /><em>WITH YOU.</em></h2>
+  <div class="download-grid">
+    <a href="guides.html#wfpb" class="dl-card reveal">
+      <div class="dl-icon">🌱</div>
+      <div class="dl-cat">Starter Guide</div>
+      <div class="dl-title">WHOLE-FOOD PLANT-BASED STARTER GUIDE</div>
+      <p class="dl-desc">The complete beginner roadmap. What to eat, why it works, how to transition, and what the research says. 32 pages. Fully referenced.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+    <a href="guides.html#protein" class="dl-card reveal">
+      <div class="dl-icon">🔬</div>
+      <div class="dl-cat">Science Guide</div>
+      <div class="dl-title">PROTEIN MYTHS — THE REAL SCIENCE</div>
+      <p class="dl-desc">Every major protein myth addressed with the peer-reviewed evidence that refutes it. Practical and referenced. 24 pages. No opinions.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+    <a href="guides.html#indian" class="dl-card reveal">
+      <div class="dl-icon">🍛</div>
+      <div class="dl-cat">Cultural Guide</div>
+      <div class="dl-title">SEASONAL INDIAN FOODS GUIDE</div>
+      <p class="dl-desc">Performance nutrition from the Indian kitchen. Seasonal foods, traditional combinations, nutritional analysis, and practical meal ideas.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+  </div>
+</section>
+
+<!-- ═══ RELATED CONTENT ═══ -->
+<section class="related" aria-labelledby="related-heading">
+  <div class="kicker">Keep Learning</div>
+  <h2 class="display-h reveal" id="related-heading" style="margin-bottom: 0;">WHERE TO<br /><em>GO NEXT.</em></h2>
+  <div class="related-grid">
+    <a href="strength.html" class="related-card reveal">
+      <div class="related-type">Pillar 02 · Movement</div>
+      <div class="related-title">STRENGTH & CONDITIONING</div>
+      <p class="related-desc">How to fuel strength training on plants, programme for hypertrophy, and build capability that lasts decades.</p>
+      <span class="related-link">Explore Strength</span>
+    </a>
+    <a href="gut-health.html" class="related-card reveal">
+      <div class="related-type">Deep Dive · Gut Health</div>
+      <div class="related-title">GUT MICROBIOME</div>
+      <p class="related-desc">The full gut health education — fibre types, fermented foods, microbiome testing, and the gut-brain-performance axis.</p>
+      <span class="related-link">Explore Gut Health</span>
+    </a>
+    <a href="longevity.html" class="related-card reveal">
+      <div class="related-type">Pillar 05 · Longevity</div>
+      <div class="related-title">LONGEVITY & HEALTHSPAN</div>
+      <p class="related-desc">How nutrition decisions made now shape your health at 60, 70, and 80. The long-game nutrition framework.</p>
+      <span class="related-link">Explore Longevity</span>
+    </a>
+    <a href="plant-based.html" class="related-card reveal">
+      <div class="related-type">Pillar 07 · Lifestyle</div>
+      <div class="related-title">PLANT-BASED LIVING</div>
+      <p class="related-desc">The practical guide to living plant-based — eating out, travelling, cooking for family, and navigating social situations.</p>
+      <span class="related-link">Explore Plant-Based Living</span>
+    </a>
+  </div>
+</section>
+
+<!-- ═══ NEWSLETTER ═══ -->
+<section class="newsletter" aria-labelledby="nl-heading">
+  <div class="newsletter-inner">
+    <div class="kicker" style="justify-content:center;">The Weekly Letter</div>
+    <h2 class="display-h reveal" id="nl-heading">EVIDENCE.<br /><em>PRACTICE.</em><br />DEPTH.</h2>
+    <p class="editorial reveal" style="margin-top: 16px;">One email per week. Nutrition science, training insights, and long-form thinking — for people who want to understand, not just follow.</p>
+    <div class="nl-form">
+      <input type="email" placeholder="Your email address" aria-label="Email address" />
+      <button type="button">Join</button>
+    </div>
+    <p class="nl-note">No spam. No product pushes. Unsubscribe any time.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-mark">THE IRON <span>LEAF</span></div>
+      <p>Grounded in Nature.<br />Forged in Grit.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Learn</div>
+      <ul class="footer-links">
+        <li><a href="nutrition.html" aria-current="page">Nutrition</a></li>
+        <li><a href="strength.html">Strength</a></li>
+        <li><a href="mobility.html">Mobility</a></li>
+        <li><a href="recovery.html">Recovery</a></li>
+        <li><a href="longevity.html">Longevity</a></li>
+        <li><a href="trail-running.html">Trail Running</a></li>
+        <li><a href="plant-based.html">Plant-Based Living</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Resources</div>
+      <ul class="footer-links">
+        <li><a href="guides.html">Free Guides</a></li>
+        <li><a href="research.html">Research Library</a></li>
+        <li><a href="frameworks.html">The Frameworks</a></li>
+        <li><a href="learn.html#books">Books</a></li>
+        <li><a href="learn.html#experts">Experts</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Work Together</div>
+      <ul class="footer-links">
+        <li><a href="programs.html#coaching">1:1 Coaching</a></li>
+        <li><a href="programs.html#group">Group Coaching</a></li>
+        <li><a href="programs.html#corporate">Corporate Wellness</a></li>
+        <li><a href="programs.html#courses">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 The Iron Leaf · All rights reserved</p>
+    <span class="footer-tagline">Grounded in Nature. Forged in Grit.</span>
+    <p><a href="privacy.html" style="color:var(--moss)">Privacy</a> · <a href="terms.html" style="color:var(--moss)">Terms</a></p>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+// ─── Scroll reveal ────────────────────────────────────
+const revealEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((el, i) => {
+    if (el.isIntersecting) {
+      setTimeout(() => el.target.classList.add('visible'), (i % 4) * 80);
+      obs.unobserve(el.target);
+    }
+  });
+}, { threshold: 0.07 });
+revealEls.forEach(el => obs.observe(el));
+
+// ─── Animated bars (protein chart) ───────────────────
+const barObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.pbar-fill, .ring-fill').forEach(bar => {
+        const w = bar.dataset.width || bar.style.width;
+        setTimeout(() => { bar.style.width = (w || 70) + '%'; }, 200);
+      });
+      barObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.protein-chart, .gut-visual').forEach(el => barObs.observe(el));
+
+// ─── Sticky sub-nav highlight ─────────────────────────
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.pillar-nav-link');
+const sectionObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.dataset.section === entry.target.id);
+      });
+    }
+  });
+}, { rootMargin: `-${68 + 44}px 0px -60% 0px` });
+sections.forEach(s => sectionObs.observe(s));
+
+// ─── Myth accordion ───────────────────────────────────
+document.querySelectorAll('.myth-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.myth-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.myth-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.myth-toggle').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// ─── FAQ accordion ────────────────────────────────────
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// ─── Newsletter ───────────────────────────────────────
+const nlForm = document.querySelector('.nl-form');
+if (nlForm) {
+  const btn = nlForm.querySelector('button');
+  const input = nlForm.querySelector('input');
+  btn.addEventListener('click', () => {
+    if (input.value && input.value.includes('@')) {
+      btn.textContent = 'Welcome.';
+      btn.style.background = 'var(--moss)';
+      input.disabled = true;
+    } else {
+      input.style.outline = '1px solid var(--amber)';
+      setTimeout(() => { input.style.outline = ''; }, 1800);
+    }
+  });
+}
+
+// ─── Mobile nav ───────────────────────────────────────
+const hamburger = document.querySelector('.nav-hamburger');
+if (hamburger) hamburger.addEventListener('click', () => {
+  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+  hamburger.setAttribute('aria-expanded', !expanded);
+});
+</script>
+
+</body>
+</html>

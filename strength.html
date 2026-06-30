@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Strength & Conditioning — The Iron Leaf | Sustainable Strength Training Science</title>
+<meta name="description" content="Evidence-informed strength training education — hypertrophy, periodisation, Olympic lifting, programming, and movement quality. Strength as a lifelong practice, not a seasonal pursuit." />
+<meta property="og:title" content="Strength & Conditioning — The Iron Leaf" />
+<meta property="og:description" content="The Iron Root System. Strength training built for decades of capability — not weeks of aesthetics." />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://theironleaf.com/strength" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "The Iron Leaf — Strength & Conditioning",
+  "description": "Evidence-informed strength and conditioning education covering hypertrophy, periodisation, Olympic lifting, and programming.",
+  "url": "https://theironleaf.com/strength"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --iron:   #1a1a18;
+  --bark:   #2c2a24;
+  --moss:   #4a5240;
+  --leaf:   #7a8c5e;
+  --sage:   #a8b89a;
+  --cream:  #f4f1eb;
+  --gold:   #c9a84c;
+  --amber:  #d4882a;
+  --white:  #fafaf8;
+  --rust:   #b85c3a;
+
+  --serif:   'Cormorant Garamond', Georgia, serif;
+  --mono:    'DM Mono', monospace;
+  --display: 'Bebas Neue', sans-serif;
+  --body:    'DM Sans', sans-serif;
+
+  --nav-h: 68px;
+  --gutter: clamp(24px, 6vw, 96px);
+  --section-pad: clamp(80px, 10vw, 130px);
+  --col-read: 720px;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { background: var(--iron); color: var(--cream); font-family: var(--body); font-weight: 300; line-height: 1.7; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 var(--gutter); background: rgba(26,26,24,0.92); border-bottom: 1px solid rgba(122,140,94,0.14); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.nav-logo { display: flex; flex-direction: column; gap: 2px; }
+.nav-logo-mark { font-family: var(--display); font-size: 22px; letter-spacing: 0.14em; color: var(--cream); line-height: 1; }
+.nav-logo-mark span { color: var(--leaf); }
+.nav-logo-sub { font-family: var(--mono); font-size: 8px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--moss); }
+.nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+.nav-links a { font-size: 13px; font-weight: 400; letter-spacing: 0.06em; color: rgba(244,241,235,0.65); transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--cream); }
+.nav-cta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 10px 22px; transition: background 0.2s; }
+.nav-cta:hover { background: var(--sage); }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+.nav-hamburger span { display: block; width: 22px; height: 1px; background: var(--cream); }
+@media (max-width: 768px) { .nav-links, .nav-cta { display: none; } .nav-hamburger { display: flex; } }
+
+.breadcrumb { padding: calc(var(--nav-h) + 20px) var(--gutter) 0; background: var(--bark); display: flex; align-items: center; gap: 10px; }
+.breadcrumb a, .breadcrumb span { font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); transition: color 0.18s; }
+.breadcrumb a:hover { color: var(--leaf); }
+.breadcrumb .sep { opacity: 0.4; }
+.breadcrumb .current { color: var(--leaf); }
+
+.hero { background: var(--bark); position: relative; overflow: hidden; padding: clamp(48px, 7vw, 80px) var(--gutter) 0; }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(122,140,94,0.3), transparent); }
+.hero-deco { position: absolute; top: 0; right: 0; width: 45%; height: 100%; pointer-events: none; overflow: hidden; }
+.hero-deco svg { width: 100%; height: 100%; opacity: 0.04; }
+.hero-inner { display: grid; grid-template-columns: 1fr 360px; gap: clamp(48px, 6vw, 80px); align-items: end; padding-bottom: clamp(48px, 7vw, 80px); position: relative; z-index: 1; }
+.hero-kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--leaf); margin-bottom: 20px; display: flex; align-items: center; gap: 14px; }
+.hero-kicker::before { content: ''; display: block; width: 28px; height: 1px; background: var(--leaf); }
+.hero-title { font-family: var(--display); font-size: clamp(72px, 12.5vw, 175px); line-height: 0.84; letter-spacing: 0.01em; color: var(--cream); margin-bottom: 32px; }
+.hero-title em { color: var(--leaf); font-style: normal; }
+.hero-lead { font-family: var(--serif); font-style: italic; font-size: clamp(17px, 2vw, 24px); color: var(--sage); font-weight: 300; line-height: 1.6; max-width: 560px; border-left: 2px solid var(--gold); padding-left: 24px; }
+.hero-panel { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.16); padding: 36px 28px; display: flex; flex-direction: column; gap: 28px; align-self: start; margin-top: 20px; }
+.hero-panel-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--leaf); padding-bottom: 14px; border-bottom: 1px solid rgba(122,140,94,0.18); }
+.panel-stat-num { font-family: var(--display); font-size: 38px; letter-spacing: 0.03em; color: var(--cream); line-height: 1; margin-bottom: 4px; }
+.panel-stat-num span { color: var(--leaf); }
+.panel-stat-label { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); margin-bottom: 4px; }
+.panel-stat-note { font-size: 11.5px; font-weight: 300; color: var(--sage); line-height: 1.5; }
+.panel-cta { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 12px 20px; text-align: center; transition: background 0.2s; display: block; margin-top: 8px; }
+.panel-cta:hover { background: var(--sage); }
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } .hero-panel { display: none; } }
+
+.pillar-nav { position: sticky; top: var(--nav-h); z-index: 100; background: rgba(26,26,24,0.95); border-bottom: 1px solid rgba(122,140,94,0.14); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 0 var(--gutter); overflow-x: auto; }
+.pillar-nav-inner { display: flex; gap: 0; min-width: max-content; }
+.pillar-nav-link { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); padding: 16px 22px; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; white-space: nowrap; cursor: pointer; }
+.pillar-nav-link:hover { color: var(--leaf); }
+.pillar-nav-link.active { color: var(--leaf); border-bottom-color: var(--leaf); }
+
+.kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--leaf); margin-bottom: 16px; display: flex; align-items: center; gap: 14px; }
+.kicker::after { content: ''; display: block; width: 32px; height: 1px; background: var(--leaf); opacity: 0.5; }
+.display-h { font-family: var(--display); font-size: clamp(36px, 6vw, 72px); line-height: 0.92; letter-spacing: 0.03em; color: var(--cream); }
+.display-h em { color: var(--leaf); font-style: normal; }
+.editorial { font-family: var(--serif); font-style: italic; font-size: clamp(15px, 1.7vw, 20px); color: var(--sage); font-weight: 300; line-height: 1.65; }
+.body-text { font-size: 15px; font-weight: 300; color: rgba(244,241,235,0.82); line-height: 1.85; }
+.btn-primary { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 13px 30px; transition: background 0.2s; display: inline-block; }
+.btn-primary:hover { background: var(--sage); }
+.btn-ghost { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage); border-bottom: 1px solid rgba(168,184,154,0.35); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; display: inline-block; }
+.btn-ghost:hover { color: var(--cream); border-color: var(--cream); }
+.evidence-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); padding: 4px 10px; }
+.evidence-badge .stars { font-size: 9px; letter-spacing: 1px; }
+.callout { border-left: 3px solid var(--gold); padding: 24px 28px; background: rgba(201,168,76,0.05); margin: 36px 0; }
+.callout-kicker { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.callout p { font-size: 14.5px; font-weight: 300; color: var(--cream); line-height: 1.75; }
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+.intro { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 100px); align-items: start; }
+.intro-right .body-text { margin-bottom: 24px; }
+.intro-pillars { display: flex; flex-direction: column; gap: 2px; margin-top: 40px; }
+.intro-pillar { display: flex; align-items: center; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(122,140,94,0.1); cursor: pointer; }
+.ip-num { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; color: var(--moss); flex-shrink: 0; width: 28px; }
+.ip-name { font-family: var(--display); font-size: 18px; letter-spacing: 0.05em; color: var(--cream); flex: 1; }
+.ip-arrow { font-size: 13px; color: var(--leaf); opacity: 0.5; transition: opacity 0.2s, transform 0.2s; }
+.intro-pillar:hover .ip-arrow { opacity: 1; transform: translateX(4px); }
+.intro-pillar:hover .ip-name { color: var(--sage); }
+@media (max-width: 800px) { .intro-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+.section-pyramid { padding: var(--section-pad) var(--gutter); background: var(--bark); position: relative; overflow: hidden; }
+.section-pyramid::before { content: ''; position: absolute; top: 0; left: 0; width: 50%; height: 100%; background: radial-gradient(ellipse at 30% 50%, rgba(122,140,94,0.07) 0%, transparent 65%); pointer-events: none; }
+.pyramid-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 6vw, 80px); align-items: center; position: relative; z-index: 1; }
+.pyramid-visual { display: flex; flex-direction: column; gap: 2px; }
+.pyr-tier { display: flex; align-items: center; padding: 22px 28px; transition: transform 0.2s; }
+.pyr-tier:hover { transform: translateX(6px); }
+.pyr-tier-1 { background: rgba(122,140,94,0.18); width: 100%; }
+.pyr-tier-2 { background: rgba(122,140,94,0.14); width: 92%; }
+.pyr-tier-3 { background: rgba(122,140,94,0.1); width: 84%; }
+.pyr-tier-4 { background: rgba(122,140,94,0.06); width: 76%; }
+.pyr-tier-content { display: flex; flex-direction: column; gap: 4px; }
+.pyr-tier-label { font-family: var(--mono); font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+.pyr-tier-title { font-family: var(--display); font-size: clamp(18px, 2.2vw, 26px); letter-spacing: 0.04em; color: var(--cream); }
+.pyr-tier-desc { font-size: 11.5px; font-weight: 300; color: var(--sage); }
+@media (max-width: 900px) { .pyramid-layout { grid-template-columns: 1fr; gap: 48px; } }
+
+.section-hyper { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.section-layout { display: grid; grid-template-columns: var(--col-read) 1fr; gap: clamp(48px, 6vw, 80px); }
+.section-sidebar { padding-top: 60px; }
+.sidebar-card { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.16); padding: 28px 24px; margin-bottom: 2px; display: block; text-decoration: none; color: inherit; }
+.sidebar-card-title { font-family: var(--display); font-size: 18px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 10px; }
+.sidebar-card-title span { color: var(--leaf); }
+.sidebar-card p { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.65; margin-bottom: 16px; }
+.sidebar-link { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--leaf); display: flex; align-items: center; gap: 6px; transition: gap 0.18s; }
+.sidebar-link:hover { gap: 12px; }
+.sidebar-link::after { content: '→'; }
+@media (max-width: 1100px) { .section-layout { grid-template-columns: 1fr; } .section-sidebar { padding-top: 0; } }
+
+.volume-chart { margin: 44px 0; background: rgba(26,26,24,0.4); border: 1px solid rgba(122,140,94,0.14); padding: 32px 28px; }
+.volume-chart-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+.vol-bars { display: flex; flex-direction: column; gap: 14px; }
+.vol-row { display: grid; grid-template-columns: 170px 1fr 70px; align-items: center; gap: 14px; }
+.vol-label { font-size: 12.5px; font-weight: 300; color: var(--cream); }
+.vol-track { height: 10px; background: rgba(122,140,94,0.1); position: relative; border-radius: 1px; }
+.vol-fill { position: absolute; left: 0; top: 0; height: 100%; background: var(--leaf); border-radius: 1px; transition: width 1s cubic-bezier(0.4, 0, 0.2, 1); width: 0; }
+.vol-value { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: var(--sage); text-align: right; }
+
+.myth-box { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 48px 0; }
+.myth-side, .fact-side { padding: 32px 28px; border: 1px solid; }
+.myth-side { border-color: rgba(184,92,58,0.25); background: rgba(184,92,58,0.04); }
+.fact-side { border-color: rgba(122,140,94,0.25); background: rgba(122,140,94,0.05); }
+.myth-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rust); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.myth-label::before { content: '✕'; }
+.fact-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--leaf); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.fact-label::before { content: '✓'; }
+.myth-text, .fact-text { font-size: 14px; font-weight: 300; line-height: 1.7; }
+.myth-text { color: rgba(244,241,235,0.6); }
+.fact-text { color: var(--cream); }
+@media (max-width: 600px) { .myth-box { grid-template-columns: 1fr; } }
+
+.section-program { padding: var(--section-pad) var(--gutter); background: var(--bark); }
+.program-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 6vw, 80px); align-items: start; }
+.program-timeline { position: relative; padding-left: 28px; }
+.program-timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: rgba(122,140,94,0.2); }
+.timeline-item { position: relative; margin-bottom: 32px; }
+.timeline-item::before { content: ''; position: absolute; left: -32px; top: 6px; width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--leaf); background: var(--iron); }
+.tl-time { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.tl-title { font-family: var(--display); font-size: 20px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 8px; }
+.tl-body { font-size: 13px; font-weight: 300; color: var(--sage); line-height: 1.68; }
+@media (max-width: 900px) { .program-layout { grid-template-columns: 1fr; } }
+
+.data-table { width: 100%; border-collapse: collapse; margin: 36px 0; font-size: 13.5px; }
+.data-table thead th { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--moss); padding: 14px 16px; text-align: left; border-bottom: 1px solid rgba(122,140,94,0.22); }
+.data-table tbody tr { border-bottom: 1px solid rgba(122,140,94,0.08); transition: background 0.16s; }
+.data-table tbody tr:hover { background: rgba(122,140,94,0.04); }
+.data-table tbody td { padding: 14px 16px; font-weight: 300; color: rgba(244,241,235,0.8); vertical-align: top; line-height: 1.55; }
+.data-table tbody td:first-child { color: var(--cream); font-weight: 400; }
+.data-table .highlight td { color: var(--cream); }
+.data-table .highlight td:first-child { color: var(--leaf); }
+
+.section-oly { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.oly-intro { max-width: var(--col-read); margin-bottom: 52px; }
+.oly-intro .display-h { margin: 16px 0 20px; }
+.oly-sequence { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+.oly-phase { background: rgba(122,140,94,0.04); border: 1px solid rgba(122,140,94,0.12); padding: 28px 22px; position: relative; transition: border-color 0.22s, background 0.22s; }
+.oly-phase:hover { border-color: rgba(122,140,94,0.3); background: rgba(122,140,94,0.07); }
+.oly-phase-num { font-family: var(--display); font-size: 36px; letter-spacing: 0.03em; color: var(--leaf); opacity: 0.3; line-height: 1; margin-bottom: 14px; }
+.oly-phase-name { font-family: var(--display); font-size: 18px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 8px; }
+.oly-phase-desc { font-size: 12px; font-weight: 300; color: var(--sage); line-height: 1.6; }
+@media (max-width: 900px) { .oly-sequence { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .oly-sequence { grid-template-columns: 1fr; } }
+
+.section-movement { padding: var(--section-pad) var(--gutter); background: var(--bark); }
+.movement-layout { display: grid; grid-template-columns: var(--col-read) 1fr; gap: clamp(48px, 6vw, 80px); }
+.exercise-grid { display: flex; flex-direction: column; gap: 2px; margin-top: 28px; }
+.exercise-card { background: rgba(26,26,24,0.4); border: 1px solid rgba(122,140,94,0.12); padding: 22px 24px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 16px; transition: border-color 0.2s, background 0.2s; text-decoration: none; color: inherit; }
+.exercise-card:hover { border-color: rgba(122,140,94,0.3); background: rgba(122,140,94,0.06); }
+.exercise-name { font-family: var(--display); font-size: 19px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 4px; }
+.exercise-desc { font-size: 12px; font-weight: 300; color: var(--sage); line-height: 1.5; }
+.exercise-tag { font-family: var(--mono); font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 8px; border: 1px solid rgba(122,140,94,0.25); color: var(--leaf); white-space: nowrap; }
+
+.framework-cta { padding: var(--section-pad) var(--gutter); background: var(--iron); position: relative; overflow: hidden; }
+.framework-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(122,140,94,0.08) 0%, transparent 65%); pointer-events: none; }
+.fw-cta-inner { max-width: 800px; position: relative; z-index: 1; }
+.fw-cta-buttons { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 40px; }
+
+.section-faq { padding: var(--section-pad) var(--gutter); background: var(--bark); }
+.faq-layout { display: grid; grid-template-columns: 320px 1fr; gap: 80px; align-items: start; }
+.faq-left { position: sticky; top: calc(var(--nav-h) + 60px); }
+.faq-list { display: flex; flex-direction: column; gap: 2px; }
+.faq-item { border-bottom: 1px solid rgba(122,140,94,0.1); }
+.faq-q { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; cursor: pointer; gap: 20px; transition: color 0.18s; }
+.faq-q-text { font-size: 14.5px; font-weight: 300; color: var(--cream); line-height: 1.5; flex: 1; }
+.faq-icon { color: var(--leaf); opacity: 0.6; font-size: 18px; transition: transform 0.25s, opacity 0.2s; flex-shrink: 0; }
+.faq-item.open .faq-icon { transform: rotate(45deg); opacity: 1; }
+.faq-a { display: none; padding: 0 0 22px; }
+.faq-item.open .faq-a { display: block; }
+.faq-a p { font-size: 13.5px; font-weight: 300; color: var(--sage); line-height: 1.8; }
+@media (max-width: 900px) { .faq-layout { grid-template-columns: 1fr; } .faq-left { position: static; } }
+
+.download-band { padding: clamp(64px, 8vw, 96px) var(--gutter); background: var(--iron); border-top: 1px solid rgba(122,140,94,0.12); }
+.download-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.dl-card { background: rgba(122,140,94,0.04); border: 1px solid rgba(122,140,94,0.12); padding: 36px 28px; display: flex; flex-direction: column; gap: 12px; transition: border-color 0.22s, background 0.22s; text-decoration: none; color: inherit; }
+.dl-card:hover { border-color: rgba(122,140,94,0.32); background: rgba(122,140,94,0.08); }
+.dl-icon { font-size: 28px; }
+.dl-cat { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+.dl-title { font-family: var(--display); font-size: 22px; letter-spacing: 0.05em; color: var(--cream); line-height: 1.1; }
+.dl-desc { font-size: 13px; font-weight: 300; color: var(--sage); line-height: 1.65; flex: 1; }
+.dl-cta { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--leaf); display: flex; align-items: center; gap: 7px; transition: gap 0.2s; margin-top: 4px; }
+.dl-card:hover .dl-cta { gap: 13px; }
+.dl-cta::after { content: '↓'; }
+@media (max-width: 800px) { .download-grid { grid-template-columns: 1fr; } }
+
+.related { padding: var(--section-pad) var(--gutter); background: var(--bark); border-top: 1px solid rgba(122,140,94,0.1); }
+.related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 48px; }
+.related-card { border: 1px solid rgba(122,140,94,0.1); padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; transition: border-color 0.2s, background 0.2s; text-decoration: none; color: inherit; }
+.related-card:hover { border-color: rgba(122,140,94,0.28); background: rgba(122,140,94,0.05); }
+.related-type { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+.related-title { font-family: var(--display); font-size: 19px; letter-spacing: 0.04em; color: var(--cream); line-height: 1.1; }
+.related-desc { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.6; flex: 1; }
+.related-link { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--leaf); display: flex; align-items: center; gap: 6px; transition: gap 0.18s; }
+.related-card:hover .related-link { gap: 12px; }
+.related-link::after { content: '→'; }
+@media (max-width: 900px) { .related-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .related-grid { grid-template-columns: 1fr; } }
+
+.newsletter { padding: clamp(72px, 9vw, 112px) var(--gutter); background: var(--iron); border-top: 1px solid rgba(122,140,94,0.12); }
+.newsletter-inner { max-width: 580px; margin: 0 auto; text-align: center; }
+.newsletter-inner .kicker { justify-content: center; }
+.newsletter-inner .kicker::after { display: none; }
+.nl-form { display: flex; border: 1px solid rgba(122,140,94,0.22); background: rgba(26,26,24,0.5); margin-top: 36px; transition: border-color 0.2s; }
+.nl-form:focus-within { border-color: rgba(122,140,94,0.5); }
+.nl-form input { flex: 1; background: none; border: none; outline: none; color: var(--cream); font-family: var(--body); font-size: 14px; font-weight: 300; padding: 15px 20px; }
+.nl-form input::placeholder { color: var(--moss); }
+.nl-form button { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 0 26px; transition: background 0.2s; flex-shrink: 0; }
+.nl-form button:hover { background: var(--sage); }
+.nl-note { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin-top: 14px; }
+
+.footer { background: var(--iron); padding: 72px var(--gutter) 40px; border-top: 1px solid rgba(122,140,94,0.14); }
+.footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; gap: 60px; margin-bottom: 64px; }
+.footer-brand-mark { font-family: var(--display); font-size: 26px; letter-spacing: 0.14em; color: var(--cream); }
+.footer-brand-mark span { color: var(--leaf); }
+.footer-brand p { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--moss); margin-top: 14px; line-height: 1.7; }
+.footer-col-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--leaf); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(122,140,94,0.18); }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13.5px; font-weight: 300; color: rgba(244,241,235,0.45); transition: color 0.18s; }
+.footer-links a:hover { color: var(--cream); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 32px; border-top: 1px solid rgba(122,140,94,0.1); flex-wrap: wrap; gap: 16px; }
+.footer-bottom p { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; color: var(--moss); text-transform: uppercase; }
+.footer-tagline { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--moss); }
+@media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="The Iron Leaf home">
+    <div class="nav-logo-mark">THE IRON <span>LEAF</span></div>
+    <div class="nav-logo-sub">Sustainable Human Performance</div>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="learn.html" class="active">Learn</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="get-started.html" class="nav-cta">Get Started</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span class="sep" aria-hidden="true">·</span>
+  <a href="learn.html">Learn</a><span class="sep" aria-hidden="true">·</span>
+  <span class="current" aria-current="page">Strength &amp; Conditioning</span>
+</nav>
+
+<header class="hero" role="banner">
+  <div class="hero-deco" aria-hidden="true">
+    <svg viewBox="0 0 500 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M150 100 L150 700" stroke="#7a8c5e" stroke-width="2"/>
+      <path d="M100 150 L200 150" stroke="#7a8c5e" stroke-width="2"/>
+      <path d="M90 130 L90 170" stroke="#7a8c5e" stroke-width="2"/>
+      <path d="M210 130 L210 170" stroke="#7a8c5e" stroke-width="2"/>
+      <path d="M100 650 L200 650" stroke="#7a8c5e" stroke-width="2"/>
+      <path d="M90 630 L90 670" stroke="#7a8c5e" stroke-width="2"/>
+      <path d="M210 630 L210 670" stroke="#7a8c5e" stroke-width="2"/>
+      <circle cx="350" cy="400" r="120" stroke="#7a8c5e" stroke-width="1" fill="none"/>
+      <circle cx="350" cy="400" r="80" stroke="#7a8c5e" stroke-width="0.5" fill="none"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-kicker">Pillar 02 · Movement</div>
+      <h1 class="hero-title">STRE<br /><em>NGTH.</em></h1>
+      <p class="hero-lead">Strength is not a season. It is a lifelong practice. Progressive, intelligent, and built to compound — not chase a number for six weeks and disappear.</p>
+    </div>
+    <div class="hero-panel" aria-label="Key strength facts">
+      <div class="hero-panel-title">At a Glance</div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">3<span>–5</span></div>
+        <div class="panel-stat-label">Sets per muscle group, per session</div>
+        <div class="panel-stat-note">The evidence-supported range for hypertrophy stimulus without excessive fatigue accumulation.</div>
+      </div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">10<span>–20</span></div>
+        <div class="panel-stat-label">Weekly sets per muscle group</div>
+        <div class="panel-stat-note">The volume landmark zone associated with maximal hypertrophy in trained individuals.</div>
+      </div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">★★★★★</div>
+        <div class="panel-stat-label">Evidence level: Progressive overload</div>
+        <div class="panel-stat-note">The single most well-established principle in all of exercise science.</div>
+      </div>
+      <a href="guides.html#strength" class="panel-cta">Download Strength Bible</a>
+    </div>
+  </div>
+</header>
+
+<nav class="pillar-nav" aria-label="Strength sections">
+  <div class="pillar-nav-inner">
+    <a href="#intro" class="pillar-nav-link active" data-section="intro">Overview</a>
+    <a href="#pyramid" class="pillar-nav-link" data-section="pyramid">The Hierarchy</a>
+    <a href="#hypertrophy" class="pillar-nav-link" data-section="hypertrophy">Hypertrophy</a>
+    <a href="#programming" class="pillar-nav-link" data-section="programming">Programming</a>
+    <a href="#olympic" class="pillar-nav-link" data-section="olympic">Olympic Lifting</a>
+    <a href="#movement" class="pillar-nav-link" data-section="movement">Movement Quality</a>
+    <a href="#faq" class="pillar-nav-link" data-section="faq">FAQ</a>
+  </div>
+</nav>
+
+<section class="intro" id="intro" aria-labelledby="intro-heading">
+  <div class="intro-grid">
+    <div>
+      <div class="kicker">Where to Begin</div>
+      <h2 class="display-h reveal" id="intro-heading">STRENGTH AS<br />A <em>PRACTICE.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 32px;">Not a 12-week transformation. Not a six-pack by summer. A lifelong relationship with resistance, load, and capability — built to serve you at 30, 50, and 80.</p>
+      <div class="callout reveal">
+        <div class="callout-kicker">The Iron Leaf Position</div>
+        <p>We train for capability, not aesthetics. Strength that lets you carry your own groceries at 75, lift your grandchildren, and recover from a fall without breaking a hip. Aesthetics are often a byproduct of this training — never the goal.</p>
+      </div>
+    </div>
+    <div class="intro-right">
+      <p class="body-text reveal">The strength and conditioning industry is dominated by two extremes: bodybuilding culture obsessed with appearance, and CrossFit-style intensity worship that often outpaces recovery capacity. The Iron Leaf occupies neither space.</p>
+      <p class="body-text reveal">Our approach is rooted in exercise science — progressive overload, appropriate volume, movement quality, and periodisation — applied with a 20-year time horizon. Every programme decision is evaluated by one question: will this still serve you in a decade?</p>
+      <p class="body-text reveal">This section covers the full strength education — from foundational principles through advanced programming, Olympic lifting technique, and the movement quality work that protects the joints carrying your training load.</p>
+      <div class="intro-pillars reveal" role="navigation" aria-label="Strength topics">
+        <a href="#pyramid" class="intro-pillar"><span class="ip-num">01</span><span class="ip-name">THE TRAINING HIERARCHY</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#hypertrophy" class="intro-pillar"><span class="ip-num">02</span><span class="ip-name">HYPERTROPHY SCIENCE</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#programming" class="intro-pillar"><span class="ip-num">03</span><span class="ip-name">PROGRAMMING & PERIODISATION</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#olympic" class="intro-pillar"><span class="ip-num">04</span><span class="ip-name">OLYMPIC LIFTING</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#movement" class="intro-pillar"><span class="ip-num">05</span><span class="ip-name">MOVEMENT QUALITY</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pyramid" id="pyramid" aria-labelledby="pyramid-heading">
+  <div class="pyramid-layout">
+    <div>
+      <div class="kicker">Topic 01</div>
+      <h2 class="display-h reveal" id="pyramid-heading">THE TRAINING<br /><em>HIERARCHY.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">Not every training variable matters equally. This hierarchy — adapted from decades of exercise science consensus — ranks what actually drives results, from foundational to marginal.</p>
+      <p class="body-text reveal">Most people obsess over the top of this pyramid — exercise selection, rep tempo, rest periods — while neglecting the foundation. Get the base right and the rest becomes far less important than the fitness industry suggests.</p>
+      <a href="guides.html#strength" class="btn-primary reveal" style="margin-top: 24px;">Download the Strength Bible</a>
+    </div>
+    <div class="pyramid-visual" role="img" aria-label="Strength training hierarchy of importance">
+      <div class="pyr-tier pyr-tier-1 reveal">
+        <div class="pyr-tier-content">
+          <div class="pyr-tier-label">Foundation · Highest Impact</div>
+          <div class="pyr-tier-title">ADHERENCE & CONSISTENCY</div>
+          <div class="pyr-tier-desc">The programme you actually follow beats the perfect programme you abandon</div>
+        </div>
+      </div>
+      <div class="pyr-tier pyr-tier-2 reveal">
+        <div class="pyr-tier-content">
+          <div class="pyr-tier-label">Critical</div>
+          <div class="pyr-tier-title">PROGRESSIVE OVERLOAD</div>
+          <div class="pyr-tier-desc">Gradually increasing load, volume, or difficulty over time</div>
+        </div>
+      </div>
+      <div class="pyr-tier pyr-tier-3 reveal">
+        <div class="pyr-tier-content">
+          <div class="pyr-tier-label">Important</div>
+          <div class="pyr-tier-title">VOLUME & FREQUENCY</div>
+          <div class="pyr-tier-desc">Sufficient weekly training volume per muscle group, distributed appropriately</div>
+        </div>
+      </div>
+      <div class="pyr-tier pyr-tier-4 reveal">
+        <div class="pyr-tier-content">
+          <div class="pyr-tier-label">Marginal</div>
+          <div class="pyr-tier-title">EXERCISE SELECTION & TEMPO</div>
+          <div class="pyr-tier-desc">Specific exercises, rep tempo, and rest periods — real, but the smallest lever</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-hyper" id="hypertrophy" aria-labelledby="hyper-heading">
+  <div class="section-layout">
+    <div class="section-main">
+      <div class="kicker">Topic 02</div>
+      <h2 class="display-h reveal" id="hyper-heading">HYPER<br /><em>TROPHY.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">The science of muscle growth — distilled from decades of research into the variables that actually matter, and the ones the industry exaggerates.</p>
+      <div class="evidence-badge reveal" style="margin-bottom: 28px;"><span class="stars">★★★★★</span><span>Strong Evidence — Multiple meta-analyses</span></div>
+      <p class="body-text reveal">Muscle hypertrophy is driven by three primary mechanisms: mechanical tension, metabolic stress, and (to a lesser degree) muscle damage. Of these, mechanical tension — achieved through progressive overload across a sufficient range of motion — is the dominant driver according to the current research consensus.</p>
+      <p class="body-text reveal" style="margin-top: 20px;">Training volume, measured in weekly sets per muscle group, shows a clear dose-response relationship up to a point. Schoenfeld's meta-analyses establish 10–20 weekly sets per muscle group as the landmark zone for most trained individuals — below this, growth is suboptimal; above it, returns diminish and recovery capacity is challenged.</p>
+
+      <div class="volume-chart reveal" role="img" aria-label="Weekly training volume landmarks">
+        <div class="volume-chart-title">Weekly Volume Landmarks — Sets per Muscle Group</div>
+        <div class="vol-bars">
+          <div class="vol-row"><span class="vol-label">Maintenance Volume</span><div class="vol-track"><div class="vol-fill" data-width="25"></div></div><span class="vol-value">4–6 sets</span></div>
+          <div class="vol-row"><span class="vol-label">Minimum Effective</span><div class="vol-track"><div class="vol-fill" data-width="40"></div></div><span class="vol-value">8–10 sets</span></div>
+          <div class="vol-row"><span class="vol-label">Optimal Range</span><div class="vol-track"><div class="vol-fill" data-width="75"></div></div><span class="vol-value">10–20 sets</span></div>
+          <div class="vol-row"><span class="vol-label">Maximum Recoverable</span><div class="vol-track"><div class="vol-fill" data-width="100"></div></div><span class="vol-value">20–25 sets</span></div>
+        </div>
+      </div>
+
+      <div class="myth-box reveal" role="complementary" aria-label="Myth versus fact">
+        <div class="myth-side">
+          <div class="myth-label">The Myth</div>
+          <p class="myth-text">"You need to train each muscle group to complete failure every set to maximise growth."</p>
+        </div>
+        <div class="fact-side">
+          <div class="fact-label">The Evidence</div>
+          <p class="fact-text">Training within 1–3 reps of failure produces equivalent hypertrophy to training to absolute failure, with significantly less fatigue and faster recovery — allowing higher sustainable training volume over time.</p>
+        </div>
+      </div>
+
+      <p class="body-text reveal">Training frequency — how often you train each muscle group weekly — matters less than total weekly volume, provided that volume is achievable in fewer, larger sessions or distributed across more frequent smaller sessions. Both approaches produce similar outcomes when volume is equated.</p>
+
+      <div class="callout reveal">
+        <div class="callout-kicker">The Iron Leaf Recommendation</div>
+        <p>Train each major muscle group 2–3 times weekly with 10–20 total weekly sets, mostly within 1–3 reps of failure. Progress load or reps over time. Prioritise compound movements. This single paragraph contains more practical value than most paid programmes.</p>
+      </div>
+    </div>
+
+    <div class="section-sidebar">
+      <a href="guides.html#hypertrophy" class="sidebar-card reveal">
+        <div class="sidebar-card-title">HYPERTROPHY<br /><span>GUIDE™</span></div>
+        <p>The complete evidence-based hypertrophy guide — volume, intensity, frequency, and exercise selection. Free download.</p>
+        <span class="sidebar-link">Download Free</span>
+      </a>
+      <a href="research.html#hypertrophy" class="sidebar-card reveal">
+        <div class="sidebar-card-title">RESEARCH<br /><span>LIBRARY</span></div>
+        <p>The Schoenfeld meta-analyses and the full body of evidence behind muscle growth, summarised and rated.</p>
+        <span class="sidebar-link">View Research</span>
+      </a>
+      <a href="nutrition.html#protein" class="sidebar-card reveal">
+        <div class="sidebar-card-title">PLANT MUSCLE<br /><span>PROTOCOL™</span></div>
+        <p>How to fuel hypertrophy training on a whole-food plant-based diet — leucine, timing, and total intake.</p>
+        <span class="sidebar-link">Explore Nutrition</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section-program" id="programming" aria-labelledby="program-heading">
+  <div class="program-layout">
+    <div>
+      <div class="kicker">Topic 03</div>
+      <h2 class="display-h reveal" id="program-heading">PROGRAMMING &amp;<br /><em>PERIODISATION.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">A training year is not a single block. It is a sequence of phases, each with a distinct purpose, building toward sustained long-term progress without burnout or plateau.</p>
+      <p class="body-text reveal">Periodisation is the deliberate variation of training variables over time — volume, intensity, exercise selection — to manage fatigue, drive adaptation, and prevent the plateaus that occur when the same stimulus is repeated indefinitely.</p>
+      <p class="body-text reveal" style="margin-top: 20px;">The simplest and most evidence-supported model for most lifters is linear or undulating periodisation — gradually shifting from higher volume, lower intensity phases toward lower volume, higher intensity phases across a training block, then deloading and repeating.</p>
+
+      <div style="overflow-x: auto; margin-top: 36px;" class="reveal">
+        <table class="data-table" role="table" aria-label="Periodisation phase comparison">
+          <thead>
+            <tr><th scope="col">Phase</th><th scope="col">Duration</th><th scope="col">Intensity</th><th scope="col">Purpose</th></tr>
+          </thead>
+          <tbody>
+            <tr class="highlight"><td>Accumulation</td><td>4–6 weeks</td><td>65–75% 1RM</td><td>Build volume tolerance, muscle growth</td></tr>
+            <tr><td>Intensification</td><td>3–4 weeks</td><td>75–85% 1RM</td><td>Convert volume to strength expression</td></tr>
+            <tr><td>Peaking</td><td>1–2 weeks</td><td>85–95% 1RM</td><td>Express maximal strength, low fatigue</td></tr>
+            <tr><td>Deload</td><td>1 week</td><td>40–60% 1RM</td><td>Dissipate fatigue, consolidate adaptation</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <div class="kicker" style="margin-bottom: 28px;">A 12-Week Strength Block</div>
+      <div class="program-timeline reveal">
+        <div class="timeline-item">
+          <div class="tl-time">Weeks 1–4</div>
+          <div class="tl-title">ACCUMULATION PHASE</div>
+          <p class="tl-body">Higher volume, moderate intensity. Build work capacity and muscle through 12–18 weekly sets per muscle group at 65–75% intensity.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-time">Weeks 5–8</div>
+          <div class="tl-title">INTENSIFICATION PHASE</div>
+          <p class="tl-body">Volume drops, intensity rises. Fewer sets, heavier loads. Strength expression begins to manifest from the accumulated muscle base.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-time">Weeks 9–11</div>
+          <div class="tl-title">PEAKING PHASE</div>
+          <p class="tl-body">Low volume, high intensity. Practising near-maximal lifts with full recovery between sessions. Performance testing in week 11.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-time">Week 12</div>
+          <div class="tl-title">DELOAD & RESET</div>
+          <p class="tl-body">Dramatically reduced volume and intensity. Allow full recovery before beginning the next training block with a higher baseline.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-oly" id="olympic" aria-labelledby="oly-heading">
+  <div class="oly-intro">
+    <div class="kicker">Topic 04</div>
+    <h2 class="display-h reveal" id="oly-heading">OLYMPIC<br /><em>LIFTING.</em></h2>
+    <p class="editorial reveal" style="margin: 20px 0 0;">The most technically demanding and athletically valuable lifts in strength training. Total body power, coordination, and explosive force production in a single coordinated movement.</p>
+  </div>
+  <div class="oly-sequence" role="list" aria-label="Clean and jerk phase breakdown">
+    <div class="oly-phase reveal" role="listitem">
+      <div class="oly-phase-num">01</div>
+      <div class="oly-phase-name">SET-UP & FIRST PULL</div>
+      <p class="oly-phase-desc">Bar over midfoot, hips above knees, shoulders over bar. The first pull lifts the bar from floor to knee with controlled, gradually increasing velocity.</p>
+    </div>
+    <div class="oly-phase reveal" role="listitem">
+      <div class="oly-phase-num">02</div>
+      <div class="oly-phase-name">TRANSITION & SECOND PULL</div>
+      <p class="oly-phase-desc">The power position — bar at mid-thigh, knees re-bend slightly. Then explosive triple extension of hip, knee, and ankle generates maximum bar speed.</p>
+    </div>
+    <div class="oly-phase reveal" role="listitem">
+      <div class="oly-phase-num">03</div>
+      <div class="oly-phase-name">TURNOVER & CATCH</div>
+      <p class="oly-phase-desc">The lifter pulls themselves under the bar as it reaches peak height, catching it in a front rack position with stable trunk and full mobility.</p>
+    </div>
+    <div class="oly-phase reveal" role="listitem">
+      <div class="oly-phase-num">04</div>
+      <div class="oly-phase-name">RECOVERY & STABILISATION</div>
+      <p class="oly-phase-desc">Standing up from the catch position with control, demonstrating full-body stability under load before the jerk or lowering sequence begins.</p>
+    </div>
+  </div>
+  <div style="margin-top: 36px;" class="reveal">
+    <div class="callout">
+      <div class="callout-kicker">A Word of Caution</div>
+      <p>Olympic lifts are technically demanding and carry injury risk without proper coaching. We strongly recommend learning these movements under qualified supervision before training them independently — particularly the catch positions, which require significant shoulder and hip mobility.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-movement" id="movement" aria-labelledby="movement-heading">
+  <div class="movement-layout">
+    <div>
+      <div class="kicker">Topic 05</div>
+      <h2 class="display-h reveal" id="movement-heading">MOVEMENT<br /><em>QUALITY.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">Strength built on poor movement patterns is strength borrowed against your future joints. Quality first. Load second.</p>
+      <p class="body-text reveal">Movement quality refers to the ability to control your body through a full, appropriate range of motion with stability and coordination — independent of how much weight is involved. It is the foundation that strength training builds upon, not a separate consideration.</p>
+      <p class="body-text reveal" style="margin-top: 20px;">Functional movement screening identifies asymmetries and limitations before they become injuries. Compound, multi-joint exercises that demand coordination — squats, deadlifts, presses, pulls — are simultaneously the best strength builders and the best movement quality tests available.</p>
+    </div>
+    <div>
+      <div class="kicker" style="margin-bottom: 20px;">Foundational Movement Patterns</div>
+      <div class="exercise-grid">
+        <a href="learn.html#exercises" class="exercise-card reveal">
+          <div><div class="exercise-name">DEADLIFT</div><p class="exercise-desc">Hip hinge pattern — the most comprehensive posterior chain exercise and total-body strength foundation.</p></div>
+          <span class="exercise-tag">Hip Hinge</span>
+        </a>
+        <a href="learn.html#exercises" class="exercise-card reveal">
+          <div><div class="exercise-name">FRONT SQUAT</div><p class="exercise-desc">Knee-dominant squat pattern requiring thoracic extension and ankle dorsiflexion mobility.</p></div>
+          <span class="exercise-tag">Squat</span>
+        </a>
+        <a href="learn.html#exercises" class="exercise-card reveal">
+          <div><div class="exercise-name">PULL-UP</div><p class="exercise-desc">Vertical pull pattern — lat dominance, scapular control, and relative bodyweight strength.</p></div>
+          <span class="exercise-tag">Vertical Pull</span>
+        </a>
+        <a href="learn.html#exercises" class="exercise-card reveal">
+          <div><div class="exercise-name">OVERHEAD PRESS</div><p class="exercise-desc">Vertical push pattern demanding shoulder mobility, core stability, and total body tension.</p></div>
+          <span class="exercise-tag">Vertical Push</span>
+        </a>
+        <a href="learn.html#exercises" class="exercise-card reveal">
+          <div><div class="exercise-name">TURKISH GET-UP</div><p class="exercise-desc">Multi-planar movement integrating hip mobility, rotational stability, and ground-to-stand transition.</p></div>
+          <span class="exercise-tag">Integration</span>
+        </a>
+        <a href="learn.html#exercises" class="exercise-card reveal">
+          <div><div class="exercise-name">FARMER'S CARRY</div><p class="exercise-desc">Loaded carry pattern — grip strength, core stability, and postural endurance under load.</p></div>
+          <span class="exercise-tag">Loaded Carry</span>
+        </a>
+      </div>
+      <div style="margin-top: 28px;">
+        <a href="mobility.html" class="btn-primary">Explore Mobility Pillar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="framework-cta" aria-labelledby="fw-cta-heading">
+  <div class="fw-cta-inner">
+    <div class="kicker">The Iron Root System™</div>
+    <h2 class="display-h reveal" id="fw-cta-heading">THE<br /><em>FRAMEWORK.</em></h2>
+    <p class="editorial reveal" style="margin: 20px 0 20px;">Everything on this page is governed by The Iron Root System™ — five pillars of sustainable strength: movement quality, progressive loading, recovery integration, nutritional support, and longevity-focused programming.</p>
+    <p class="body-text reveal">The Iron Root System is built for the 20-year horizon. Every training decision is filtered through one question — will this still serve you a decade from now?</p>
+    <div class="fw-cta-buttons reveal">
+      <a href="frameworks.html#iron-root" class="btn-primary">Explore The Iron Root System™</a>
+      <a href="programs.html" class="btn-ghost">Work With Iron Leaf</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-faq" id="faq" aria-labelledby="faq-heading">
+  <div class="faq-layout">
+    <div class="faq-left">
+      <div class="kicker">Common Questions</div>
+      <h2 class="display-h reveal" id="faq-heading">FREQUENTLY<br /><em>ASKED.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 0;">The questions we hear most often about strength training, programming, and progression.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">How often should I train each muscle group?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Research suggests training each muscle group 2–3 times weekly produces optimal hypertrophy outcomes for most people, primarily because it allows more even distribution of weekly volume. That said, total weekly volume matters more than frequency itself — training a muscle group once weekly with sufficient volume can still produce comparable results to higher frequency approaches, provided recovery and intensity are well managed.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Should I train to failure every set?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>No. Training within 1–3 reps of failure produces equivalent hypertrophy outcomes to training to absolute failure, with substantially less neuromuscular fatigue and faster recovery between sessions. This allows you to sustain higher total weekly volume over time, which is the more important driver of long-term progress.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">How long before I see strength gains?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Neural adaptations — improved coordination and motor unit recruitment — produce noticeable strength gains within 2–4 weeks for beginners. Measurable muscle growth typically takes 6–8 weeks to become visible, though it begins at the cellular level much earlier. The Iron Leaf approach is built around years, not weeks — but early progress is real and motivating.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Do I need to lift heavy to build muscle?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>No — research consistently shows that a wide range of loads (anywhere from roughly 30% to 85% of 1RM) can produce similar hypertrophy outcomes, provided sets are taken close to failure. Heavier loads are more efficient for building maximal strength specifically, but for pure muscle growth, moderate loads with sufficient effort work just as well.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">How do I avoid injury while progressing?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Progress load or volume gradually — no more than 5–10% increases week to week. Prioritise movement quality and full range of motion before adding load. Include a structured deload every 4–6 weeks. Address mobility limitations proactively rather than reactively. Most training injuries result from rapid, poorly managed progression rather than the exercises themselves.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Can I get strong on a plant-based diet?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Yes — comprehensively documented across multiple meta-analyses and demonstrated by world record holders and elite athletes training on plant-based nutrition alone. See our Nutrition pillar for the complete evidence base and practical protein strategy for strength athletes.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="download-band" aria-labelledby="downloads-heading">
+  <div class="kicker">Free Downloads</div>
+  <h2 class="display-h reveal" id="downloads-heading" style="margin-bottom: 44px;">TAKE THESE<br /><em>WITH YOU.</em></h2>
+  <div class="download-grid">
+    <a href="guides.html#strength" class="dl-card reveal">
+      <div class="dl-icon">📘</div>
+      <div class="dl-cat">Foundational Guide</div>
+      <div class="dl-title">STRENGTH TRAINING BIBLE</div>
+      <p class="dl-desc">The complete strength education — programming, periodisation, progression, and the principles that never go out of date. 40 pages.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+    <a href="guides.html#hypertrophy" class="dl-card reveal">
+      <div class="dl-icon">🔬</div>
+      <div class="dl-cat">Science Guide</div>
+      <div class="dl-title">HYPERTROPHY GUIDE — THE EVIDENCE</div>
+      <p class="dl-desc">Volume landmarks, intensity zones, frequency, and exercise selection — distilled from the current research consensus.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+    <a href="guides.html#transformation" class="dl-card reveal">
+      <div class="dl-icon">📅</div>
+      <div class="dl-cat">Programme</div>
+      <div class="dl-title">10-WEEK TRANSFORMATION GUIDE</div>
+      <p class="dl-desc">A structured, sustainable strength and nutrition system for building habits that compound over a lifetime.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+  </div>
+</section>
+
+<section class="related" aria-labelledby="related-heading">
+  <div class="kicker">Keep Learning</div>
+  <h2 class="display-h reveal" id="related-heading" style="margin-bottom: 0;">WHERE TO<br /><em>GO NEXT.</em></h2>
+  <div class="related-grid">
+    <a href="mobility.html" class="related-card reveal">
+      <div class="related-type">Pillar 03 · Movement</div>
+      <div class="related-title">MOBILITY & MOVEMENT</div>
+      <p class="related-desc">The joint health and movement fluency work that protects the strength you build for decades.</p>
+      <span class="related-link">Explore Mobility</span>
+    </a>
+    <a href="recovery.html" class="related-card reveal">
+      <div class="related-type">Pillar 04 · Recovery</div>
+      <div class="related-title">RECOVERY & REGENERATION</div>
+      <p class="related-desc">How sleep, training load, and tissue repair determine whether your strength training actually works.</p>
+      <span class="related-link">Explore Recovery</span>
+    </a>
+    <a href="nutrition.html" class="related-card reveal">
+      <div class="related-type">Pillar 01 · Foundation</div>
+      <div class="related-title">NUTRITION & FOOD SCIENCE</div>
+      <p class="related-desc">How to fuel strength training and hypertrophy with whole-food plant-based nutrition.</p>
+      <span class="related-link">Explore Nutrition</span>
+    </a>
+    <a href="longevity.html" class="related-card reveal">
+      <div class="related-type">Pillar 05 · Longevity</div>
+      <div class="related-title">LONGEVITY & HEALTHSPAN</div>
+      <p class="related-desc">Why strength training is the single most powerful longevity intervention available — and how to apply it across decades.</p>
+      <span class="related-link">Explore Longevity</span>
+    </a>
+  </div>
+</section>
+
+<section class="newsletter" aria-labelledby="nl-heading">
+  <div class="newsletter-inner">
+    <div class="kicker" style="justify-content:center;">The Weekly Letter</div>
+    <h2 class="display-h reveal" id="nl-heading">EVIDENCE.<br /><em>PRACTICE.</em><br />DEPTH.</h2>
+    <p class="editorial reveal" style="margin-top: 16px;">One email per week. Training insights, nutrition science, and long-form thinking — for people who want to understand, not just follow.</p>
+    <div class="nl-form">
+      <input type="email" placeholder="Your email address" aria-label="Email address" />
+      <button type="button">Join</button>
+    </div>
+    <p class="nl-note">No spam. No product pushes. Unsubscribe any time.</p>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-mark">THE IRON <span>LEAF</span></div>
+      <p>Grounded in Nature.<br />Forged in Grit.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Learn</div>
+      <ul class="footer-links">
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="strength.html" aria-current="page">Strength</a></li>
+        <li><a href="mobility.html">Mobility</a></li>
+        <li><a href="recovery.html">Recovery</a></li>
+        <li><a href="longevity.html">Longevity</a></li>
+        <li><a href="trail-running.html">Trail Running</a></li>
+        <li><a href="plant-based.html">Plant-Based Living</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Resources</div>
+      <ul class="footer-links">
+        <li><a href="guides.html">Free Guides</a></li>
+        <li><a href="research.html">Research Library</a></li>
+        <li><a href="frameworks.html">The Frameworks</a></li>
+        <li><a href="learn.html#books">Books</a></li>
+        <li><a href="learn.html#experts">Experts</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Work Together</div>
+      <ul class="footer-links">
+        <li><a href="programs.html#coaching">1:1 Coaching</a></li>
+        <li><a href="programs.html#group">Group Coaching</a></li>
+        <li><a href="programs.html#corporate">Corporate Wellness</a></li>
+        <li><a href="programs.html#courses">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 The Iron Leaf · All rights reserved</p>
+    <span class="footer-tagline">Grounded in Nature. Forged in Grit.</span>
+    <p><a href="privacy.html" style="color:var(--moss)">Privacy</a> · <a href="terms.html" style="color:var(--moss)">Terms</a></p>
+  </div>
+</footer>
+
+<script>
+const revealEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((el, i) => {
+    if (el.isIntersecting) {
+      setTimeout(() => el.target.classList.add('visible'), (i % 4) * 80);
+      obs.unobserve(el.target);
+    }
+  });
+}, { threshold: 0.07 });
+revealEls.forEach(el => obs.observe(el));
+
+const barObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.vol-fill').forEach(bar => {
+        const w = bar.dataset.width;
+        setTimeout(() => { bar.style.width = w + '%'; }, 200);
+      });
+      barObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.volume-chart').forEach(el => barObs.observe(el));
+
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.pillar-nav-link');
+const sectionObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.toggle('active', link.dataset.section === entry.target.id));
+    }
+  });
+}, { rootMargin: `-${68 + 44}px 0px -60% 0px` });
+sections.forEach(s => sectionObs.observe(s));
+
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+  });
+});
+
+const nlForm = document.querySelector('.nl-form');
+if (nlForm) {
+  const btn = nlForm.querySelector('button');
+  const input = nlForm.querySelector('input');
+  btn.addEventListener('click', () => {
+    if (input.value && input.value.includes('@')) {
+      btn.textContent = 'Welcome.';
+      btn.style.background = 'var(--moss)';
+      input.disabled = true;
+    } else {
+      input.style.outline = '1px solid var(--amber)';
+      setTimeout(() => { input.style.outline = ''; }, 1800);
+    }
+  });
+}
+
+const hamburger = document.querySelector('.nav-hamburger');
+if (hamburger) hamburger.addEventListener('click', () => {
+  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+  hamburger.setAttribute('aria-expanded', !expanded);
+});
+</script>
+
+</body>
+</html>

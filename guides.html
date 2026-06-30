@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free Guides — The Iron Leaf | 19 Downloadable Educational Resources</title>
+<meta name="description" content="19 free, downloadable guides covering nutrition, strength, mobility, recovery, and Indian food culture. No paywall on the fundamentals — education is the product." />
+<meta property="og:title" content="Free Guides — The Iron Leaf" />
+<meta property="og:description" content="Every major topic has a companion guide. Downloadable, referenced, and free." />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://theironleaf.com/guides" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --iron: #1a1a18; --bark: #2c2a24; --moss: #4a5240; --leaf: #7a8c5e; --sage: #a8b89a;
+  --cream: #f4f1eb; --gold: #c9a84c; --amber: #d4882a; --white: #fafaf8;
+  --serif: 'Cormorant Garamond', Georgia, serif; --mono: 'DM Mono', monospace;
+  --display: 'Bebas Neue', sans-serif; --body: 'DM Sans', sans-serif;
+  --nav-h: 68px; --gutter: clamp(24px, 6vw, 96px); --section-pad: clamp(80px, 10vw, 130px);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { background: var(--iron); color: var(--cream); font-family: var(--body); font-weight: 300; line-height: 1.7; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 var(--gutter); background: rgba(26,26,24,0.92); border-bottom: 1px solid rgba(122,140,94,0.14); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.nav-logo { display: flex; flex-direction: column; gap: 2px; }
+.nav-logo-mark { font-family: var(--display); font-size: 22px; letter-spacing: 0.14em; color: var(--cream); line-height: 1; }
+.nav-logo-mark span { color: var(--leaf); }
+.nav-logo-sub { font-family: var(--mono); font-size: 8px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--moss); }
+.nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+.nav-links a { font-size: 13px; font-weight: 400; letter-spacing: 0.06em; color: rgba(244,241,235,0.65); transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--cream); }
+.nav-cta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 10px 22px; transition: background 0.2s; }
+.nav-cta:hover { background: var(--sage); }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+.nav-hamburger span { display: block; width: 22px; height: 1px; background: var(--cream); }
+@media (max-width: 768px) { .nav-links, .nav-cta { display: none; } .nav-hamburger { display: flex; } }
+
+.breadcrumb { padding: calc(var(--nav-h) + 20px) var(--gutter) 0; background: var(--bark); display: flex; align-items: center; gap: 10px; }
+.breadcrumb a, .breadcrumb span { font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); transition: color 0.18s; }
+.breadcrumb a:hover { color: var(--leaf); }
+.breadcrumb .sep { opacity: 0.4; }
+.breadcrumb .current { color: var(--leaf); }
+
+.kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--leaf); margin-bottom: 16px; display: flex; align-items: center; gap: 14px; }
+.kicker::after { content: ''; display: block; width: 32px; height: 1px; background: var(--leaf); opacity: 0.5; }
+.display-h { font-family: var(--display); font-size: clamp(36px, 6vw, 72px); line-height: 0.92; letter-spacing: 0.03em; color: var(--cream); }
+.display-h em { color: var(--leaf); font-style: normal; }
+.editorial { font-family: var(--serif); font-style: italic; font-size: clamp(15px, 1.7vw, 20px); color: var(--sage); font-weight: 300; line-height: 1.65; }
+.body-text { font-size: 15px; font-weight: 300; color: rgba(244,241,235,0.82); line-height: 1.85; }
+.btn-primary { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 13px 30px; transition: background 0.2s; display: inline-block; }
+.btn-primary:hover { background: var(--sage); }
+.btn-ghost { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage); border-bottom: 1px solid rgba(168,184,154,0.35); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; display: inline-block; }
+.btn-ghost:hover { color: var(--cream); border-color: var(--cream); }
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+/* HERO */
+.hero { background: var(--bark); position: relative; overflow: hidden; padding: clamp(48px, 7vw, 80px) var(--gutter) clamp(56px, 7vw, 80px); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(122,140,94,0.3), transparent); }
+.hero::before { content: ''; position: absolute; top: -10%; right: -5%; width: 55%; height: 130%; background: radial-gradient(ellipse at 70% 50%, rgba(122,140,94,0.08) 0%, transparent 62%); pointer-events: none; }
+.hero-inner { max-width: 900px; position: relative; z-index: 1; }
+.hero-title { font-family: var(--display); font-size: clamp(56px, 10vw, 130px); line-height: 0.86; letter-spacing: 0.02em; color: var(--cream); margin: 24px 0 28px; }
+.hero-title em { color: var(--leaf); font-style: normal; }
+.hero-lead { font-family: var(--serif); font-style: italic; font-size: clamp(17px, 2vw, 23px); color: var(--sage); font-weight: 300; line-height: 1.6; max-width: 600px; margin-bottom: 36px; }
+.hero-stats { display: flex; gap: 40px; flex-wrap: wrap; padding-top: 28px; border-top: 1px solid rgba(122,140,94,0.15); }
+.hs-num { font-family: var(--display); font-size: 36px; color: var(--cream); line-height: 1; }
+.hs-num span { color: var(--leaf); }
+.hs-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); margin-top: 4px; }
+
+/* FILTER BAR */
+.filter-bar { position: sticky; top: var(--nav-h); z-index: 100; background: rgba(26,26,24,0.95); border-bottom: 1px solid rgba(122,140,94,0.14); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 18px var(--gutter); }
+.filter-inner { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.filter-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); margin-right: 4px; }
+.filter-chip {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--moss); padding: 7px 16px; border: 1px solid rgba(122,140,94,0.2);
+  cursor: pointer; transition: color 0.18s, border-color 0.18s, background 0.18s;
+}
+.filter-chip:hover { color: var(--leaf); border-color: rgba(122,140,94,0.4); }
+.filter-chip.active { color: var(--iron); background: var(--leaf); border-color: var(--leaf); }
+.filter-search { margin-left: auto; display: flex; align-items: center; border: 1px solid rgba(122,140,94,0.2); background: rgba(26,26,24,0.4); }
+.filter-search input { background: none; border: none; outline: none; color: var(--cream); font-family: var(--body); font-size: 12.5px; padding: 8px 14px; width: 180px; }
+.filter-search input::placeholder { color: var(--moss); }
+.filter-search-icon { padding-left: 12px; color: var(--moss); font-size: 13px; }
+@media (max-width: 700px) { .filter-search { margin-left: 0; width: 100%; } .filter-search input { width: 100%; } }
+
+/* GUIDES GRID */
+.guides-section { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.guides-count { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--moss); margin-bottom: 32px; }
+.guides-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.guide-card {
+  background: rgba(122,140,94,0.04); border: 1px solid rgba(122,140,94,0.12);
+  padding: 32px 28px; display: flex; flex-direction: column; gap: 14px;
+  transition: border-color 0.22s, background 0.22s, transform 0.2s;
+  text-decoration: none; color: inherit; position: relative; overflow: hidden;
+}
+.guide-card:hover { border-color: rgba(122,140,94,0.32); background: rgba(122,140,94,0.08); transform: translateY(-2px); }
+.gc-top { display: flex; align-items: center; justify-content: space-between; }
+.gc-icon { font-size: 26px; }
+.gc-format { font-family: var(--mono); font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; padding: 3px 8px; border: 1px solid rgba(122,140,94,0.28); color: var(--leaf); }
+.gc-category { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+.gc-title { font-family: var(--display); font-size: 22px; letter-spacing: 0.04em; color: var(--cream); line-height: 1.05; }
+.gc-desc { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.65; flex: 1; }
+.gc-meta { display: flex; gap: 14px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em; color: var(--moss); padding-top: 12px; border-top: 1px solid rgba(122,140,94,0.08); }
+.gc-cta { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--leaf); display: flex; align-items: center; gap: 7px; transition: gap 0.2s; }
+.guide-card:hover .gc-cta { gap: 13px; }
+.gc-cta::after { content: '↓'; }
+.guide-card.hidden { display: none; }
+
+@media (max-width: 1024px) { .guides-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .guides-grid { grid-template-columns: 1fr; } }
+
+/* TRACKERS BAND */
+.trackers-section { padding: var(--section-pad) var(--gutter); background: var(--bark); }
+.trackers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 48px; }
+.tracker-card { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.14); padding: 28px 22px; transition: border-color 0.2s, background 0.2s; text-decoration: none; color: inherit; }
+.tracker-card:hover { border-color: rgba(122,140,94,0.3); background: rgba(122,140,94,0.06); }
+.tracker-icon { font-size: 22px; margin-bottom: 14px; }
+.tracker-title { font-family: var(--display); font-size: 17px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 8px; }
+.tracker-desc { font-size: 11.5px; font-weight: 300; color: var(--sage); line-height: 1.55; }
+@media (max-width: 900px) { .trackers-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .trackers-grid { grid-template-columns: 1fr; } }
+
+/* NEWSLETTER CTA */
+.newsletter { padding: clamp(72px, 9vw, 112px) var(--gutter); background: var(--iron); border-top: 1px solid rgba(122,140,94,0.12); }
+.newsletter-inner { max-width: 580px; margin: 0 auto; text-align: center; }
+.newsletter-inner .kicker { justify-content: center; }
+.newsletter-inner .kicker::after { display: none; }
+.nl-form { display: flex; border: 1px solid rgba(122,140,94,0.22); background: rgba(26,26,24,0.5); margin-top: 36px; transition: border-color 0.2s; }
+.nl-form:focus-within { border-color: rgba(122,140,94,0.5); }
+.nl-form input { flex: 1; background: none; border: none; outline: none; color: var(--cream); font-family: var(--body); font-size: 14px; font-weight: 300; padding: 15px 20px; }
+.nl-form input::placeholder { color: var(--moss); }
+.nl-form button { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 0 26px; transition: background 0.2s; flex-shrink: 0; }
+.nl-form button:hover { background: var(--sage); }
+.nl-note { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin-top: 14px; }
+
+/* FOOTER */
+.footer { background: var(--iron); padding: 72px var(--gutter) 40px; border-top: 1px solid rgba(122,140,94,0.14); }
+.footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; gap: 60px; margin-bottom: 64px; }
+.footer-brand-mark { font-family: var(--display); font-size: 26px; letter-spacing: 0.14em; color: var(--cream); }
+.footer-brand-mark span { color: var(--leaf); }
+.footer-brand p { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--moss); margin-top: 14px; line-height: 1.7; }
+.footer-col-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--leaf); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(122,140,94,0.18); }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13.5px; font-weight: 300; color: rgba(244,241,235,0.45); transition: color 0.18s; }
+.footer-links a:hover { color: var(--cream); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 32px; border-top: 1px solid rgba(122,140,94,0.1); flex-wrap: wrap; gap: 16px; }
+.footer-bottom p { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; color: var(--moss); text-transform: uppercase; }
+.footer-tagline { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--moss); }
+@media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="The Iron Leaf home">
+    <div class="nav-logo-mark">THE IRON <span>LEAF</span></div>
+    <div class="nav-logo-sub">Sustainable Human Performance</div>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="learn.html" class="active">Learn</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="get-started.html" class="nav-cta">Get Started</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span class="sep" aria-hidden="true">·</span>
+  <a href="learn.html">Learn</a><span class="sep" aria-hidden="true">·</span>
+  <span class="current" aria-current="page">Free Guides</span>
+</nav>
+
+<header class="hero" role="banner">
+  <div class="hero-inner">
+    <div class="kicker">Free Educational Library</div>
+    <h1 class="hero-title">19 FREE<br /><em>GUIDES.</em></h1>
+    <p class="hero-lead">Every major topic has a companion guide — downloadable, referenced, and built to the same evidence standard as the rest of the platform. No paywall on the fundamentals.</p>
+    <div class="hero-stats">
+      <div><div class="hs-num">19</div><div class="hs-label">Free Guides</div></div>
+      <div><div class="hs-num">5<span>+</span></div><div class="hs-label">Categories</div></div>
+      <div><div class="hs-num">0</div><div class="hs-label">Email Walls on Core Guides</div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="filter-bar" aria-label="Guide filters">
+  <div class="filter-inner">
+    <span class="filter-label">Filter</span>
+    <button class="filter-chip active" data-filter="all">All Guides</button>
+    <button class="filter-chip" data-filter="nutrition">Nutrition</button>
+    <button class="filter-chip" data-filter="strength">Strength</button>
+    <button class="filter-chip" data-filter="mobility">Mobility & Recovery</button>
+    <button class="filter-chip" data-filter="indian">Indian Foods</button>
+    <button class="filter-chip" data-filter="trackers">Trackers</button>
+    <div class="filter-search">
+      <span class="filter-search-icon" aria-hidden="true">⌕</span>
+      <input type="search" id="guideSearch" placeholder="Search guides…" aria-label="Search guides" />
+    </div>
+  </div>
+</nav>
+
+<section class="guides-section" aria-labelledby="guides-heading">
+  <h2 class="display-h reveal" id="guides-heading" style="margin-bottom: 8px;">THE FULL<br /><em>LIBRARY.</em></h2>
+  <p class="guides-count" id="guidesCount">Showing all 19 guides</p>
+
+  <div class="guides-grid" id="guidesGrid">
+
+    <a href="#" class="guide-card reveal" data-category="nutrition" id="wfpb">
+      <div class="gc-top"><span class="gc-icon">🌱</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Nutrition · Starter</div>
+      <div class="gc-title">WHOLE-FOOD PLANT-BASED STARTER GUIDE</div>
+      <p class="gc-desc">The complete beginner roadmap — what to eat, why it works, how to transition, and what the research says.</p>
+      <div class="gc-meta"><span>32 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="strength" id="strength">
+      <div class="gc-top"><span class="gc-icon">📘</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Strength · Foundational</div>
+      <div class="gc-title">STRENGTH TRAINING BIBLE</div>
+      <p class="gc-desc">Programming, periodisation, progression, and the principles that never go out of date.</p>
+      <div class="gc-meta"><span>40 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="strength" id="hypertrophy">
+      <div class="gc-top"><span class="gc-icon">🔬</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Strength · Science</div>
+      <div class="gc-title">HYPERTROPHY GUIDE — THE EVIDENCE</div>
+      <p class="gc-desc">Volume landmarks, intensity zones, frequency, and exercise selection — distilled from current research.</p>
+      <div class="gc-meta"><span>26 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="nutrition" id="plants-enough">
+      <div class="gc-top"><span class="gc-icon">🌿</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Nutrition · Philosophy</div>
+      <div class="gc-title">PLANTS ARE ENOUGH</div>
+      <p class="gc-desc">The complete evidence case for whole-food plant-based eating — for athletes, longevity, and everyday life.</p>
+      <div class="gc-meta"><span>22 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="nutrition" id="protein">
+      <div class="gc-top"><span class="gc-icon">💪</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Nutrition · Myth-Busting</div>
+      <div class="gc-title">PROTEIN MYTHS — THE REAL SCIENCE</div>
+      <p class="gc-desc">Every major protein myth addressed with peer-reviewed evidence. Practical, referenced, no opinions.</p>
+      <div class="gc-meta"><span>24 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="mobility" id="mobility">
+      <div class="gc-top"><span class="gc-icon">🌊</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Mobility · Foundational</div>
+      <div class="gc-title">MOBILITY GUIDE — JOINTS FOR LIFE</div>
+      <p class="gc-desc">The complete Living Joint Method — joint priorities, daily routines, and active range of motion science.</p>
+      <div class="gc-meta"><span>28 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="mobility" id="recovery">
+      <div class="gc-top"><span class="gc-icon">🌙</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Recovery · Foundational</div>
+      <div class="gc-title">RECOVERY BLUEPRINT</div>
+      <p class="gc-desc">Sleep science, training load management, and tissue repair — the complete recovery system.</p>
+      <div class="gc-meta"><span>30 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="nutrition" id="gut">
+      <div class="gc-top"><span class="gc-icon">🦠</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Nutrition · Microbiome</div>
+      <div class="gc-title">GUT HEALTH GUIDE</div>
+      <p class="gc-desc">Fibre, fermented foods, the microbiome, and the gut-brain-performance axis — explained clearly.</p>
+      <div class="gc-meta"><span>26 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="nutrition" id="fiber">
+      <div class="gc-top"><span class="gc-icon">🌾</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Nutrition · Deep Dive</div>
+      <div class="gc-title">FIBRE GUIDE</div>
+      <p class="gc-desc">Soluble, insoluble, resistant starch — the complete fibre education with practical daily targets.</p>
+      <div class="gc-meta"><span>18 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="nutrition" id="micronutrients">
+      <div class="gc-top"><span class="gc-icon">⚡</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Nutrition · Reference</div>
+      <div class="gc-title">MICRONUTRIENTS HANDBOOK</div>
+      <p class="gc-desc">Iron, zinc, calcium, B12, omega-3, vitamin D, magnesium, iodine — sources and practical targets.</p>
+      <div class="gc-meta"><span>20 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="indian" id="indian">
+      <div class="gc-top"><span class="gc-icon">🍛</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Indian Foods · Cultural</div>
+      <div class="gc-title">SEASONAL INDIAN FOODS GUIDE</div>
+      <p class="gc-desc">Performance nutrition from the Indian kitchen — seasonal foods, traditional combinations, and analysis.</p>
+      <div class="gc-meta"><span>24 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="indian" id="millets">
+      <div class="gc-top"><span class="gc-icon">🌾</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Indian Foods · Deep Dive</div>
+      <div class="gc-title">MILLET GUIDE — ANCIENT GRAINS, MODERN PERFORMANCE</div>
+      <p class="gc-desc">Bajra, ragi, jowar, and beyond — the complete nutritional case for India's ancient grains.</p>
+      <div class="gc-meta"><span>16 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="indian" id="legumes">
+      <div class="gc-top"><span class="gc-icon">🫘</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Indian Foods · Deep Dive</div>
+      <div class="gc-title">LEGUME GUIDE — THE PLANT PROTEIN CORNERSTONE</div>
+      <p class="gc-desc">Dal varieties, rajma, chana — the complete protein and micronutrient breakdown of Indian legumes.</p>
+      <div class="gc-meta"><span>18 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="strength" id="trail">
+      <div class="gc-top"><span class="gc-icon">🏃</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Performance · Trail Running</div>
+      <div class="gc-title">TRAIL RUNNER BLUEPRINT</div>
+      <p class="gc-desc">Beginner to advanced — training progression, terrain skill, fuelling, and injury prevention for trail running.</p>
+      <div class="gc-meta"><span>34 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="strength" id="transformation">
+      <div class="gc-top"><span class="gc-icon">📅</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Programme · Comprehensive</div>
+      <div class="gc-title">10-WEEK TRANSFORMATION GUIDE</div>
+      <p class="gc-desc">A structured, sustainable strength and nutrition system for building habits that compound over a lifetime.</p>
+      <div class="gc-meta"><span>42 pages</span><span>·</span><span>Fully referenced</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="indian" id="shopping">
+      <div class="gc-top"><span class="gc-icon">🛒</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Practical · Shopping</div>
+      <div class="gc-title">SHOPPING GUIDE</div>
+      <p class="gc-desc">A practical whole-food shopping list organised by Indian market and grocery store sections.</p>
+      <div class="gc-meta"><span>12 pages</span><span>·</span><span>Printable</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="trackers" id="habit-tracker">
+      <div class="gc-top"><span class="gc-icon">✓</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Tracker · Daily Habits</div>
+      <div class="gc-title">DAILY HABIT TRACKER</div>
+      <p class="gc-desc">A printable tracker for the daily systems that compound — sleep, movement, nutrition, and mobility.</p>
+      <div class="gc-meta"><span>8 pages</span><span>·</span><span>Printable</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="trackers" id="movement-tracker">
+      <div class="gc-top"><span class="gc-icon">📊</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Tracker · Mobility</div>
+      <div class="gc-title">MOVEMENT TRACKER</div>
+      <p class="gc-desc">Daily mobility practice tracker with joint restriction notes and progress monitoring across months.</p>
+      <div class="gc-meta"><span>6 pages</span><span>·</span><span>Printable</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+    <a href="#" class="guide-card reveal" data-category="trackers" id="nutrition-tracker">
+      <div class="gc-top"><span class="gc-icon">🍽️</span><span class="gc-format">PDF</span></div>
+      <div class="gc-category">Tracker · Nutrition</div>
+      <div class="gc-title">NUTRITION TRACKER</div>
+      <p class="gc-desc">A plant-diversity tracker — log your 30 plant species weekly without calorie counting.</p>
+      <div class="gc-meta"><span>6 pages</span><span>·</span><span>Printable</span></div>
+      <span class="gc-cta">Download Free</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- TRACKERS HIGHLIGHT BAND -->
+<section class="trackers-section" aria-labelledby="trackers-heading">
+  <div class="kicker">Quick Access</div>
+  <h2 class="display-h reveal" id="trackers-heading">PRINTABLE<br /><em>TRACKERS.</em></h2>
+  <p class="editorial reveal" style="margin: 20px 0 0; max-width: 560px;">Simple, printable tools for daily practice — no app required, no subscription, no data collection.</p>
+
+  <div class="trackers-grid">
+    <a href="#habit-tracker" class="tracker-card reveal">
+      <div class="tracker-icon">✓</div>
+      <div class="tracker-title">DAILY HABIT TRACKER</div>
+      <p class="tracker-desc">Sleep, movement, nutrition, mobility — all in one printable weekly sheet.</p>
+    </a>
+    <a href="#movement-tracker" class="tracker-card reveal">
+      <div class="tracker-icon">📊</div>
+      <div class="tracker-title">MOVEMENT TRACKER</div>
+      <p class="tracker-desc">Joint restriction notes and mobility practice consistency, tracked monthly.</p>
+    </a>
+    <a href="#nutrition-tracker" class="tracker-card reveal">
+      <div class="tracker-icon">🍽️</div>
+      <div class="tracker-title">NUTRITION TRACKER</div>
+      <p class="tracker-desc">Plant diversity logging — 30 species weekly, no calorie counting required.</p>
+    </a>
+    <a href="#" class="tracker-card reveal">
+      <div class="tracker-icon">🌙</div>
+      <div class="tracker-title">RECOVERY TRACKER</div>
+      <p class="tracker-desc">Sleep quality, training load, and subjective recovery markers in one weekly view.</p>
+    </a>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter" aria-labelledby="nl-heading">
+  <div class="newsletter-inner">
+    <div class="kicker" style="justify-content:center;">Never Miss a New Guide</div>
+    <h2 class="display-h reveal" id="nl-heading">NEW GUIDES<br /><em>WEEKLY.</em></h2>
+    <p class="editorial reveal" style="margin-top: 16px;">Join the weekly letter to get notified the moment a new guide drops — plus the rest of our long-form education.</p>
+    <div class="nl-form">
+      <input type="email" placeholder="Your email address" aria-label="Email address" />
+      <button type="button">Join</button>
+    </div>
+    <p class="nl-note">No spam. No product pushes. Unsubscribe any time.</p>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-mark">THE IRON <span>LEAF</span></div>
+      <p>Grounded in Nature.<br />Forged in Grit.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Learn</div>
+      <ul class="footer-links">
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="strength.html">Strength</a></li>
+        <li><a href="mobility.html">Mobility</a></li>
+        <li><a href="learn.html">All Pillars</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Resources</div>
+      <ul class="footer-links">
+        <li><a href="guides.html" aria-current="page">Free Guides</a></li>
+        <li><a href="research.html">Research Library</a></li>
+        <li><a href="frameworks.html">The Frameworks</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Work Together</div>
+      <ul class="footer-links">
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 The Iron Leaf · All rights reserved</p>
+    <span class="footer-tagline">Grounded in Nature. Forged in Grit.</span>
+    <p><a href="privacy.html" style="color:var(--moss)">Privacy</a> · <a href="terms.html" style="color:var(--moss)">Terms</a></p>
+  </div>
+</footer>
+
+<script>
+const revealEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((el, i) => {
+    if (el.isIntersecting) { setTimeout(() => el.target.classList.add('visible'), (i % 5) * 60); obs.unobserve(el.target); }
+  });
+}, { threshold: 0.05 });
+revealEls.forEach(el => obs.observe(el));
+
+// Filtering
+const chips = document.querySelectorAll('.filter-chip');
+const cards = document.querySelectorAll('.guide-card');
+const countEl = document.getElementById('guidesCount');
+const searchInput = document.getElementById('guideSearch');
+let activeFilter = 'all';
+
+function applyFilters() {
+  const query = searchInput.value.trim().toLowerCase();
+  let visible = 0;
+  cards.forEach(card => {
+    const matchesFilter = activeFilter === 'all' || card.dataset.category === activeFilter;
+    const text = card.textContent.toLowerCase();
+    const matchesSearch = query === '' || text.includes(query);
+    const show = matchesFilter && matchesSearch;
+    card.classList.toggle('hidden', !show);
+    if (show) visible++;
+  });
+  countEl.textContent = visible === 19 ? 'Showing all 19 guides' : `Showing ${visible} of 19 guides`;
+}
+
+chips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    chips.forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    activeFilter = chip.dataset.filter;
+    applyFilters();
+  });
+});
+searchInput.addEventListener('input', applyFilters);
+
+// Newsletter
+const nlForm = document.querySelector('.nl-form');
+if (nlForm) {
+  const btn = nlForm.querySelector('button');
+  const input = nlForm.querySelector('input');
+  btn.addEventListener('click', () => {
+    if (input.value && input.value.includes('@')) {
+      btn.textContent = 'Welcome.';
+      btn.style.background = 'var(--moss)';
+      input.disabled = true;
+    } else {
+      input.style.outline = '1px solid var(--amber)';
+      setTimeout(() => { input.style.outline = ''; }, 1800);
+    }
+  });
+}
+
+const hamburger = document.querySelector('.nav-hamburger');
+if (hamburger) hamburger.addEventListener('click', () => {
+  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+  hamburger.setAttribute('aria-expanded', !expanded);
+});
+</script>
+
+</body>
+</html>
