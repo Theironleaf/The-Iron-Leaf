@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — The Iron Leaf | Our Story, Mission & Philosophy</title>
+<meta name="description" content="The story behind The Iron Leaf — our mission, philosophy, methodology, and the team building a modern educational platform for sustainable human performance." />
+<meta property="og:title" content="About — The Iron Leaf" />
+<meta property="og:description" content="Grounded in Nature. Forged in Grit. The story, mission, and people behind The Iron Leaf." />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://theironleaf.com/about" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About The Iron Leaf",
+  "description": "The story, mission, philosophy, and methodology behind The Iron Leaf educational platform.",
+  "url": "https://theironleaf.com/about"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+<style>
+:root {
+  --iron: #1a1a18; --bark: #2c2a24; --moss: #4a5240; --leaf: #7a8c5e; --sage: #a8b89a;
+  --cream: #f4f1eb; --gold: #c9a84c; --amber: #d4882a; --white: #fafaf8;
+  --serif: 'Cormorant Garamond', Georgia, serif; --mono: 'DM Mono', monospace;
+  --display: 'Bebas Neue', sans-serif; --body: 'DM Sans', sans-serif;
+  --nav-h: 68px; --gutter: clamp(24px, 6vw, 96px); --section-pad: clamp(80px, 10vw, 130px);
+  --col-read: 720px;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 var(--gutter); background: rgba(26,26,24,0.92); border-bottom: 1px solid rgba(122,140,94,0.14); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+@media (max-width: 768px) { .nav-links, .nav-cta { display: none; } .nav-hamburger { display: flex; } }
+
+.breadcrumb { padding: calc(var(--nav-h) + 20px) var(--gutter) 0; background: var(--bark); display: flex; align-items: center; gap: 10px; }
+
+.kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--leaf); margin-bottom: 16px; display: flex; align-items: center; gap: 14px; }
+.display-h { font-family: var(--display); font-size: clamp(36px, 6vw, 72px); line-height: 0.92; letter-spacing: 0.03em; color: var(--cream); }
+.display-h em { color: var(--leaf); font-style: normal; }
+.btn-primary { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 13px 30px; transition: background 0.2s; display: inline-block; }
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+/* HERO */
+.hero { background: var(--bark); position: relative; overflow: hidden; padding: clamp(48px, 7vw, 80px) var(--gutter) clamp(64px, 8vw, 96px); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(122,140,94,0.3), transparent); }
+.hero::before { content: ''; position: absolute; top: -10%; right: -5%; width: 55%; height: 130%; background: radial-gradient(ellipse at 70% 50%, rgba(122,140,94,0.08) 0%, transparent 62%); pointer-events: none; }
+.hero-inner { max-width: 900px; position: relative; z-index: 1; }
+.hero-title { font-family: var(--display); font-size: clamp(56px, 10vw, 130px); line-height: 0.86; letter-spacing: 0.02em; color: var(--cream); margin: 24px 0 28px; }
+.hero-title em { color: var(--leaf); font-style: normal; }
+.hero-lead { font-family: var(--serif); font-style: italic; font-size: clamp(17px, 2vw, 23px); color: var(--sage); font-weight: 300; line-height: 1.6; max-width: 600px; }
+
+/* STORY SECTION — magazine-style */
+.story { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.story-grid { display: grid; grid-template-columns: var(--col-read) 1fr; gap: clamp(48px, 6vw, 80px); }
+.story-sidebar { padding-top: 60px; }
+.sidebar-card { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.16); padding: 28px 24px; margin-bottom: 2px; }
+.sidebar-card-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--leaf); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(122,140,94,0.18); }
+.sidebar-fact { padding: 12px 0; border-bottom: 1px solid rgba(122,140,94,0.08); }
+.sidebar-fact:last-child { border-bottom: none; }
+.sf-label { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin-bottom: 4px; }
+.sf-value { font-size: 13px; font-weight: 300; color: var(--cream); }
+@media (max-width: 1100px) { .story-grid { grid-template-columns: 1fr; } .story-sidebar { padding-top: 0; } }
+
+/* MISSION / VISION / PHILOSOPHY tabs */
+.pillars-section { padding: var(--section-pad) var(--gutter); background: var(--bark); }
+.pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; }
+.pillar-card { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.14); padding: 40px 32px; transition: border-color 0.22s; }
+.pillar-card:hover { border-color: rgba(122,140,94,0.3); }
+.pillar-icon { font-size: 26px; margin-bottom: 20px; }
+.pillar-title { font-family: var(--display); font-size: 26px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 16px; }
+.pillar-body { font-size: 13.5px; font-weight: 300; color: var(--sage); line-height: 1.75; }
+@media (max-width: 900px) { .pillars-grid { grid-template-columns: 1fr; } }
+
+/* BELIEFS LIST — what the brand believes */
+.beliefs { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.beliefs-intro { max-width: var(--col-read); margin-bottom: 52px; }
+.beliefs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+.belief-item { padding: 22px 26px; border: 1px solid rgba(122,140,94,0.1); display: flex; align-items: flex-start; gap: 16px; transition: border-color 0.2s, background 0.2s; }
+.belief-item:hover { border-color: rgba(122,140,94,0.26); background: rgba(122,140,94,0.04); }
+.belief-mark { color: var(--leaf); font-family: var(--display); font-size: 18px; flex-shrink: 0; }
+.belief-text { font-size: 13.5px; font-weight: 300; color: var(--cream); line-height: 1.65; }
+@media (max-width: 700px) { .beliefs-grid { grid-template-columns: 1fr; } }
+
+/* METHODOLOGY / TIMELINE */
+.methodology { padding: var(--section-pad) var(--gutter); background: var(--bark); }
+.method-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 6vw, 80px); align-items: start; }
+.method-timeline { position: relative; padding-left: 28px; }
+.method-timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: rgba(122,140,94,0.2); }
+.mt-item { position: relative; margin-bottom: 32px; }
+.mt-item::before { content: ''; position: absolute; left: -32px; top: 6px; width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--leaf); background: var(--iron); }
+.mt-step { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.mt-title { font-family: var(--display); font-size: 20px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 8px; }
+.mt-body { font-size: 13px; font-weight: 300; color: var(--sage); line-height: 1.68; }
+@media (max-width: 900px) { .method-layout { grid-template-columns: 1fr; } }
+
+/* CREDENTIALS / SCIENTIFIC APPROACH */
+.credentials { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.cred-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 48px; }
+.cred-card { padding: 28px 24px; border: 1px solid rgba(122,140,94,0.1); text-align: center; transition: border-color 0.2s, background 0.2s; }
+.cred-card:hover { border-color: rgba(122,140,94,0.26); background: rgba(122,140,94,0.04); }
+.cred-icon { font-size: 24px; margin-bottom: 14px; }
+.cred-title { font-family: var(--display); font-size: 17px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 8px; }
+.cred-desc { font-size: 12px; font-weight: 300; color: var(--sage); line-height: 1.6; }
+@media (max-width: 900px) { .cred-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .cred-grid { grid-template-columns: 1fr; } }
+
+/* TESTIMONIALS */
+.testimonials { padding: var(--section-pad) var(--gutter); background: var(--bark); }
+.testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; }
+.testimonial-card { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.14); padding: 32px 28px; display: flex; flex-direction: column; gap: 20px; }
+.testimonial-quote { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--cream); line-height: 1.7; flex: 1; }
+.testimonial-author { display: flex; flex-direction: column; gap: 2px; padding-top: 16px; border-top: 1px solid rgba(122,140,94,0.12); }
+.ta-name { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: var(--leaf); }
+.ta-role { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; color: var(--moss); }
+@media (max-width: 900px) { .testimonial-grid { grid-template-columns: 1fr; } }
+
+/* FAQ */
+.section-faq { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.faq-layout { display: grid; grid-template-columns: 320px 1fr; gap: 80px; align-items: start; }
+@media (max-width: 900px) { .faq-layout { grid-template-columns: 1fr; } .faq-left { position: static; } }
+
+/* CONTACT */
+.contact { padding: var(--section-pad) var(--gutter); background: var(--bark); position: relative; overflow: hidden; }
+.contact::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(122,140,94,0.07) 0%, transparent 65%); pointer-events: none; }
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 100px); align-items: start; position: relative; z-index: 1; }
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: flex; flex-direction: column; gap: 8px; }
+.form-row label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--leaf); }
+.form-row input, .form-row textarea, .form-row select {
+  background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.22); color: var(--cream);
+  font-family: var(--body); font-size: 14px; font-weight: 300; padding: 14px 16px; outline: none; transition: border-color 0.2s;
+}
+.form-row input:focus, .form-row textarea:focus, .form-row select:focus { border-color: rgba(122,140,94,0.5); }
+.form-row textarea { resize: vertical; min-height: 120px; font-family: var(--body); }
+.form-submit {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--iron); background: var(--leaf); padding: 14px 32px; transition: background 0.2s; margin-top: 8px; align-self: flex-start;
+}
+.form-submit:hover { background: var(--sage); }
+.contact-info { padding-top: 8px; }
+.ci-item { padding: 20px 0; border-bottom: 1px solid rgba(122,140,94,0.1); }
+.ci-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.ci-value { font-size: 14px; font-weight: 300; color: var(--cream); line-height: 1.6; }
+@media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; gap: 48px; } }
+
+/* FOOTER */
+.footer { background: var(--iron); padding: 72px var(--gutter) 40px; border-top: 1px solid rgba(122,140,94,0.14); }
+@media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="The Iron Leaf home">
+    <div class="nav-logo-mark">THE IRON <span>LEAF</span></div>
+    <div class="nav-logo-sub">Sustainable Human Performance</div>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="learn.html">Learn</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="about.html" class="active" aria-current="page">About</a></li>
+  </ul>
+  <a href="get-started.html" class="nav-cta">Get Started</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span class="sep" aria-hidden="true">·</span>
+  <span class="current" aria-current="page">About</span>
+</nav>
+
+<header class="hero" role="banner">
+  <div class="hero-inner">
+    <div class="kicker">Our Story</div>
+    <h1 class="hero-title">GROUNDED IN<br /><em>NATURE.</em><br />FORGED IN<br /><em>GRIT.</em></h1>
+    <p class="hero-lead">The Iron Leaf began as a frustration with an industry that profits from confusion. It became a commitment to building something different — education that respects the intelligence of the people reading it.</p>
+  </div>
+</header>
+
+<!-- STORY -->
+<section class="story" aria-labelledby="story-heading">
+  <div class="story-grid">
+    <div>
+      <div class="kicker">How It Started</div>
+      <h2 class="display-h reveal" id="story-heading">THE<br /><em>BEGINNING.</em></h2>
+      <p class="body-text reveal" style="margin: 28px 0 20px;">The fitness and nutrition industry has a trust problem. Influencers contradict each other daily. Supplement companies fund the studies that sell their products. Six-week transformation programmes promise results that don't last because they were never built to.</p>
+      <p class="body-text reveal" style="margin-bottom: 20px;">The Iron Leaf exists because we believe people deserve better — education built on evidence rather than engagement metrics, systems built for decades rather than seasons, and a relationship with movement and food that doesn't require constant external validation to sustain.</p>
+      <p class="body-text reveal" style="margin-bottom: 20px;">The name reflects the philosophy directly. Iron — for strength, for the resistance training that builds lasting capability, for the discipline required to show up consistently. Leaf — for the whole-food, plant-based nutrition at the foundation of everything, for growth, for the natural world we are training to move through, not away from.</p>
+      <div class="callout reveal">
+        <div class="callout-kicker">Why We Exist</div>
+        <p>Modern humans are becoming physically inactive, metabolically unhealthy, disconnected from movement, and overwhelmed by misinformation. The Iron Leaf exists to rebuild resilient humans — one piece of honest education at a time.</p>
+      </div>
+    </div>
+    <div class="story-sidebar">
+      <div class="sidebar-card reveal">
+        <div class="sidebar-card-title">Quick Facts</div>
+        <div class="sidebar-fact"><div class="sf-label">Founded</div><div class="sf-value">Built on a 20-year time horizon</div></div>
+        <div class="sidebar-fact"><div class="sf-label">Focus</div><div class="sf-value">Sustainable Human Performance</div></div>
+        <div class="sidebar-fact"><div class="sf-label">Approach</div><div class="sf-value">Evidence-informed, education-first</div></div>
+        <div class="sidebar-fact"><div class="sf-label">Frameworks</div><div class="sf-value">10 proprietary educational systems</div></div>
+        <div class="sidebar-fact"><div class="sf-label">Free Resources</div><div class="sf-value">19 guides, fully open access</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION / VISION / PHILOSOPHY -->
+<section class="pillars-section" aria-labelledby="pillars-heading">
+  <div class="kicker">What We Stand For</div>
+  <h2 class="display-h reveal" id="pillars-heading">MISSION.<br /><em>VISION.</em> PHILOSOPHY.</h2>
+
+  <div class="pillars-grid">
+    <div class="pillar-card reveal">
+      <div class="pillar-icon">🎯</div>
+      <div class="pillar-title">MISSION</div>
+      <p class="pillar-body">To help people become stronger, healthier, more resilient, more physically literate, and more nutritionally literate — through evidence-informed education rather than dependency-creating coaching.</p>
+    </div>
+    <div class="pillar-card reveal">
+      <div class="pillar-icon">🔭</div>
+      <div class="pillar-title">VISION</div>
+      <p class="pillar-body">To become one of the world's most trusted resources for sustainable human performance — a platform that remains relevant and valuable for decades, not seasons, built on principles rather than trends.</p>
+    </div>
+    <div class="pillar-card reveal">
+      <div class="pillar-icon">🌿</div>
+      <div class="pillar-title">PHILOSOPHY</div>
+      <p class="pillar-body">Strength can coexist with compassion. Performance can coexist with sustainability. Education beats marketing. Evidence beats opinion. Consistency beats perfection. Nature and modern science should work together.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BELIEFS -->
+<section class="beliefs" aria-labelledby="beliefs-heading">
+  <div class="beliefs-intro">
+    <div class="kicker">What The Brand Believes</div>
+    <h2 class="display-h reveal" id="beliefs-heading">OUR<br /><em>BELIEFS.</em></h2>
+    <p class="editorial reveal" style="margin-top: 20px;">The convictions that shape every piece of content, every programme, and every decision at The Iron Leaf.</p>
+  </div>
+  <div class="beliefs-grid">
+    <div class="belief-item reveal"><span class="belief-mark">·</span><span class="belief-text">Strength can coexist with compassion.</span></div>
+    <div class="belief-item reveal"><span class="belief-mark">·</span><span class="belief-text">Performance can coexist with sustainability.</span></div>
+    <div class="belief-item reveal"><span class="belief-mark">·</span><span class="belief-text">Athleticism does not require animal products.</span></div>
+    <div class="belief-item reveal"><span class="belief-mark">·</span><span class="belief-text">Mobility matters as much as strength.</span></div>
+    <div class="belief-item reveal"><span class="belief-mark">·</span><span class="belief-text">Recovery is training.</span></div>
+    <div class="belief-item reveal"><span class="belief-mark">·</span><span class="belief-text">Movement is medicine.</span></div>
+    <div class="belief-item reveal"><span class="belief-mark">·</span><span class="belief-text">Capability matters more than appearance.</span></div>
+    <div class="belief-item reveal"><span class="belief-mark">·</span><span class="belief-text">Long-term health matters more than short-term aesthetics.</span></div>
+    <div class="belief-item reveal"><span class="belief-mark">·</span><span class="belief-text">Consistency beats perfection.</span></div>
+    <div class="belief-item reveal"><span class="belief-mark">·</span><span class="belief-text">Education beats marketing.</span></div>
+    <div class="belief-item reveal"><span class="belief-mark">·</span><span class="belief-text">Evidence beats opinion.</span></div>
+    <div class="belief-item reveal"><span class="belief-mark">·</span><span class="belief-text">Systems beat hacks.</span></div>
+    <div class="belief-item reveal"><span class="belief-mark">·</span><span class="belief-text">Nature and modern science should work together — not compete.</span></div>
+    <div class="belief-item reveal"><span class="belief-mark">·</span><span class="belief-text">We teach people how to think, not what to think.</span></div>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="methodology" aria-labelledby="method-heading">
+  <div class="method-layout">
+    <div>
+      <div class="kicker">How We Work</div>
+      <h2 class="display-h reveal" id="method-heading">OUR<br /><em>METHODOLOGY.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">Every piece of content follows the same disciplined process — from research to publication — to ensure consistency, accuracy, and genuine educational value.</p>
+      <p class="body-text reveal">We do not publish content simply to increase traffic. We do not create clickbait. We do not chase trends at the expense of quality. Every article, guide, and resource is built to the same editorial and scientific standard, regardless of how niche or evergreen the topic.</p>
+    </div>
+    <div>
+      <div class="kicker" style="margin-bottom: 28px;">The Content Process</div>
+      <div class="method-timeline reveal">
+        <div class="mt-item">
+          <div class="mt-step">Step 01</div>
+          <div class="mt-title">RESEARCH & EVIDENCE GATHERING</div>
+          <p class="mt-body">Systematic reviews and meta-analyses prioritised. Single studies are never used to support broad conclusions.</p>
+        </div>
+        <div class="mt-item">
+          <div class="mt-step">Step 02</div>
+          <div class="mt-title">EVIDENCE GRADING</div>
+          <p class="mt-body">Every claim is classified using our five-tier evidence hierarchy, from strong evidence to emerging research.</p>
+        </div>
+        <div class="mt-item">
+          <div class="mt-step">Step 03</div>
+          <div class="mt-title">WRITING & SIMPLIFICATION</div>
+          <p class="mt-body">Complex science translated into clear, accessible language without losing accuracy or nuance.</p>
+        </div>
+        <div class="mt-item">
+          <div class="mt-step">Step 04</div>
+          <div class="mt-title">REVIEW CHECKLIST</div>
+          <p class="mt-body">Every piece evaluated against our ten-point content checklist before publication — accuracy, practicality, and alignment with our philosophy.</p>
+        </div>
+        <div class="mt-item">
+          <div class="mt-step">Step 05</div>
+          <div class="mt-title">INTERNAL LINKING & INTEGRATION</div>
+          <p class="mt-body">Connected to related articles, downloads, research, and programmes so learning compounds naturally.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCIENTIFIC APPROACH / CREDENTIALS -->
+<section class="credentials" aria-labelledby="cred-heading">
+  <div class="kicker">Our Scientific Approach</div>
+  <h2 class="display-h reveal" id="cred-heading">EVIDENCE<br /><em>STANDARDS.</em></h2>
+  <p class="editorial reveal" style="margin: 20px 0 0; max-width: 600px;">The principles governing how we evaluate, present, and apply scientific evidence across every piece of content.</p>
+
+  <div class="cred-grid">
+    <div class="cred-card reveal">
+      <div class="cred-icon">📊</div>
+      <div class="cred-title">FIVE-TIER GRADING</div>
+      <p class="cred-desc">Every health claim classified by evidence strength — from systematic reviews to emerging hypotheses.</p>
+    </div>
+    <div class="cred-card reveal">
+      <div class="cred-icon">🔍</div>
+      <div class="cred-title">PEER-REVIEWED FIRST</div>
+      <p class="cred-desc">We prioritise systematic reviews and meta-analyses over single studies or anecdotal claims.</p>
+    </div>
+    <div class="cred-card reveal">
+      <div class="cred-icon">⚖️</div>
+      <div class="cred-title">UNCERTAINTY ACKNOWLEDGED</div>
+      <p class="cred-desc">We distinguish clearly between strong consensus and emerging, unconfirmed research.</p>
+    </div>
+    <div class="cred-card reveal">
+      <div class="cred-icon">🔄</div>
+      <div class="cred-title">UPDATED AS EVIDENCE CHANGES</div>
+      <p class="cred-desc">Our recommendations evolve when the evidence does — we are not attached to being right, only to being accurate.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" aria-labelledby="testimonials-heading">
+  <div class="kicker">What People Say</div>
+  <h2 class="display-h reveal" id="testimonials-heading">FROM THE<br /><em>COMMUNITY.</em></h2>
+
+  <div class="testimonial-grid">
+    <div class="testimonial-card reveal">
+      <p class="testimonial-quote">"I've read a hundred nutrition articles that told me what to eat. This is the first platform that actually explained why — and now I don't need anyone to tell me anymore."</p>
+      <div class="testimonial-author"><span class="ta-name">Member, Plant-Based Performance Course</span><span class="ta-role">Mumbai, India</span></div>
+    </div>
+    <div class="testimonial-card reveal">
+      <p class="testimonial-quote">"The Iron Root System changed how I think about training entirely. I stopped chasing programmes and started building a practice. Three years in and still progressing."</p>
+      <div class="testimonial-author"><span class="ta-name">1:1 Coaching Client</span><span class="ta-role">Bengaluru, India</span></div>
+    </div>
+    <div class="testimonial-card reveal">
+      <p class="testimonial-quote">"What stood out was the honesty. They told me a free guide would solve my problem instead of upselling me into coaching. That's when I trusted them enough to eventually join anyway."</p>
+      <div class="testimonial-author"><span class="ta-name">Membership Subscriber</span><span class="ta-role">Pune, India</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-faq" aria-labelledby="faq-heading">
+  <div class="faq-layout">
+    <div class="faq-left">
+      <div class="kicker">Common Questions</div>
+      <h2 class="display-h reveal" id="faq-heading">FREQUENTLY<br /><em>ASKED.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 0;">What people ask about who we are and how we work.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Is The Iron Leaf a vegan advocacy platform?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>No. We follow the evidence, and the evidence consistently supports whole-food, plant-predominant eating patterns for health and performance — but we do not advocate for veganism as an ideology, and we never moralise about food choices. Our position is grounded in nutritional science, not ethics-based activism.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Who writes and reviews your content?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Content is developed using our editorial and scientific standards manual — every piece is researched against peer-reviewed literature, graded by evidence strength, and reviewed against a ten-point checklist before publication. We cite our sources and clearly distinguish between strong consensus and emerging research throughout.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Do you accept sponsorships or affiliate partnerships?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>We are extremely selective. Our credibility depends on being free from the conflicts of interest that compromise most fitness and nutrition media. Any partnership is disclosed transparently and never influences our evidence-based recommendations.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">How is The Iron Leaf different from other fitness platforms?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Most platforms optimise for engagement and transformation marketing. We optimise for genuine literacy — building people who no longer need to ask us for answers. We grade our evidence transparently, acknowledge uncertainty, and measure success by independence, not retention.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" aria-labelledby="contact-heading">
+  <div class="contact-layout">
+    <div>
+      <div class="kicker">Get In Touch</div>
+      <h2 class="display-h reveal" id="contact-heading">LET'S<br /><em>TALK.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 32px;">Questions about programmes, corporate wellness, speaking, or anything else — we read every message personally.</p>
+      <form class="contact-form reveal" onsubmit="return false;">
+        <div class="form-row">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" name="name" required />
+        </div>
+        <div class="form-row">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" required />
+        </div>
+        <div class="form-row">
+          <label for="contact-topic">Topic</label>
+          <select id="contact-topic" name="topic">
+            <option>General Enquiry</option>
+            <option>1:1 Coaching</option>
+            <option>Group Coaching</option>
+            <option>Corporate Wellness</option>
+            <option>Speaking</option>
+            <option>Media / Press</option>
+            <option>Partnership</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="contactSubmit">Send Message</button>
+      </form>
+    </div>
+    <div class="contact-info">
+      <div class="ci-item">
+        <div class="ci-label">Email</div>
+        <div class="ci-value">hello@theironleaf.com</div>
+      </div>
+      <div class="ci-item">
+        <div class="ci-label">Response Time</div>
+        <div class="ci-value">Within 2 business days for general enquiries; same-day for coaching applications.</div>
+      </div>
+      <div class="ci-item">
+        <div class="ci-label">Media & Press</div>
+        <div class="ci-value">press@theironleaf.com — interview requests, speaking enquiries, and partnership proposals.</div>
+      </div>
+      <div class="ci-item">
+        <div class="ci-label">Before You Write</div>
+        <div class="ci-value">Many questions are answered in our <a href="learn.html" style="color: var(--leaf); text-decoration: underline;">free library</a> or our <a href="programs.html#faq" style="color: var(--leaf); text-decoration: underline;">programmes FAQ</a> — check there first if you're in a hurry.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-mark">THE IRON <span>LEAF</span></div>
+      <p>Grounded in Nature.<br />Forged in Grit.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Learn</div>
+      <ul class="footer-links">
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="strength.html">Strength</a></li>
+        <li><a href="mobility.html">Mobility</a></li>
+        <li><a href="recovery.html">Recovery</a></li>
+        <li><a href="longevity.html">Longevity</a></li>
+        <li><a href="trail-running.html">Trail Running</a></li>
+        <li><a href="plant-based.html">Plant-Based Living</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Resources</div>
+      <ul class="footer-links">
+        <li><a href="guides.html">Free Guides</a></li>
+        <li><a href="research.html">Research Library</a></li>
+        <li><a href="frameworks.html">The Frameworks</a></li>
+        <li><a href="library.html#panel-books">Books</a></li>
+        <li><a href="library.html#panel-experts">Experts</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Work Together</div>
+      <ul class="footer-links">
+        <li><a href="programs.html#coaching">1:1 Coaching</a></li>
+        <li><a href="programs.html#group">Group Coaching</a></li>
+        <li><a href="programs.html#corporate">Corporate Wellness</a></li>
+        <li><a href="programs.html#courses">Courses</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 The Iron Leaf · All rights reserved</p>
+    <span class="footer-tagline">Grounded in Nature. Forged in Grit.</span>
+    <p><a href="privacy.html" style="color:var(--moss)">Privacy</a> · <a href="terms.html" style="color:var(--moss)">Terms</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+const revealEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((el, i) => {
+    if (el.isIntersecting) { setTimeout(() => el.target.classList.add('visible'), (i % 4) * 80); obs.unobserve(el.target); }
+  });
+}, { threshold: 0.07 });
+revealEls.forEach(el => obs.observe(el));
+
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+  });
+});
+
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('contactSubmit');
+    const nameVal = document.getElementById('contact-name').value;
+    const emailVal = document.getElementById('contact-email').value;
+    if (nameVal && emailVal && emailVal.includes('@')) {
+      btn.textContent = 'Message Sent';
+      btn.style.background = 'var(--moss)';
+      contactForm.querySelectorAll('input, textarea, select').forEach(el => el.disabled = true);
+    }
+  });
+}
+
+const hamburger = document.querySelector('.nav-hamburger');
+if (hamburger) hamburger.addEventListener('click', () => {
+  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+  hamburger.setAttribute('aria-expanded', !expanded);
+});
+</script>
+
+</body>
+</html>

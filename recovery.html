@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Recovery — The Iron Leaf | Sleep, Training Load & Tissue Repair Science</title>
+<meta name="description" content="Evidence-informed recovery education — sleep science, training load management, tissue repair, and stress recovery. The Recovery Triad, free of gadget-theatre and biohacking hype." />
+<meta property="og:title" content="Recovery — The Iron Leaf" />
+<meta property="og:description" content="Recovery is training. The adaptation happens in the rest, not the rep." />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://theironleaf.com/recovery" />
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "EducationalOrganization", "name": "The Iron Leaf — Recovery", "description": "Evidence-informed recovery education covering sleep science, training load, and tissue repair.", "url": "https://theironleaf.com/recovery" }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+<style>
+:root {
+  --iron: #1a1a18; --bark: #2c2a24; --moss: #4a5240; --leaf: #7a8c5e; --sage: #a8b89a;
+  --cream: #f4f1eb; --gold: #c9a84c; --amber: #d4882a; --white: #fafaf8; --rust: #b85c3a;
+  --serif: 'Cormorant Garamond', Georgia, serif; --mono: 'DM Mono', monospace;
+  --display: 'Bebas Neue', sans-serif; --body: 'DM Sans', sans-serif;
+  --nav-h: 68px; --gutter: clamp(24px, 6vw, 96px); --section-pad: clamp(80px, 10vw, 130px); --col-read: 720px;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 var(--gutter); background: rgba(26,26,24,0.92); border-bottom: 1px solid rgba(122,140,94,0.14); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+@media (max-width: 768px) { .nav-links, .nav-cta { display: none; } .nav-hamburger { display: flex; } }
+
+.breadcrumb { padding: calc(var(--nav-h) + 20px) var(--gutter) 0; background: var(--bark); display: flex; align-items: center; gap: 10px; }
+
+.hero { background: var(--bark); position: relative; overflow: hidden; padding: clamp(48px, 7vw, 80px) var(--gutter) 0; }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(122,140,94,0.3), transparent); }
+.hero-deco { position: absolute; top: 0; right: 0; width: 45%; height: 100%; pointer-events: none; overflow: hidden; }
+.hero-deco svg { width: 100%; height: 100%; opacity: 0.05; }
+.hero-inner { display: grid; grid-template-columns: 1fr 360px; gap: clamp(48px, 6vw, 80px); align-items: end; padding-bottom: clamp(48px, 7vw, 80px); position: relative; z-index: 1; }
+.hero-kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--leaf); margin-bottom: 20px; display: flex; align-items: center; gap: 14px; }
+.hero-kicker::before { content: ''; display: block; width: 28px; height: 1px; background: var(--leaf); }
+.hero-title { font-family: var(--display); font-size: clamp(72px, 12.5vw, 175px); line-height: 0.84; letter-spacing: 0.01em; color: var(--cream); margin-bottom: 32px; }
+.hero-title em { color: var(--leaf); font-style: normal; }
+.hero-lead { font-family: var(--serif); font-style: italic; font-size: clamp(17px, 2vw, 24px); color: var(--sage); font-weight: 300; line-height: 1.6; max-width: 560px; border-left: 2px solid var(--gold); padding-left: 24px; }
+.hero-panel { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.16); padding: 36px 28px; display: flex; flex-direction: column; gap: 28px; align-self: start; margin-top: 20px; }
+.hero-panel-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--leaf); padding-bottom: 14px; border-bottom: 1px solid rgba(122,140,94,0.18); }
+.panel-stat-num { font-family: var(--display); font-size: 38px; letter-spacing: 0.03em; color: var(--cream); line-height: 1; margin-bottom: 4px; }
+.panel-stat-num span { color: var(--leaf); }
+.panel-stat-label { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); margin-bottom: 4px; }
+.panel-stat-note { font-size: 11.5px; font-weight: 300; color: var(--sage); line-height: 1.5; }
+.panel-cta { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 12px 20px; text-align: center; transition: background 0.2s; display: block; margin-top: 8px; }
+.panel-cta:hover { background: var(--sage); }
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } .hero-panel { display: none; } }
+
+.pillar-nav { position: sticky; top: var(--nav-h); z-index: 100; background: rgba(26,26,24,0.95); border-bottom: 1px solid rgba(122,140,94,0.14); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 0 var(--gutter); overflow-x: auto; }
+
+.kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--leaf); margin-bottom: 16px; display: flex; align-items: center; gap: 14px; }
+.display-h { font-family: var(--display); font-size: clamp(36px, 6vw, 72px); line-height: 0.92; letter-spacing: 0.03em; color: var(--cream); }
+.display-h em { color: var(--leaf); font-style: normal; }
+.btn-primary { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 13px 30px; transition: background 0.2s; display: inline-block; }
+.evidence-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); padding: 4px 10px; }
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+.intro { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 100px); align-items: start; }
+.intro-right .body-text { margin-bottom: 24px; }
+.intro-pillars { display: flex; flex-direction: column; gap: 2px; margin-top: 40px; }
+.intro-pillar { display: flex; align-items: center; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(122,140,94,0.1); cursor: pointer; }
+.ip-num { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; color: var(--moss); flex-shrink: 0; width: 28px; }
+.ip-name { font-family: var(--display); font-size: 18px; letter-spacing: 0.05em; color: var(--cream); flex: 1; }
+.ip-arrow { font-size: 13px; color: var(--leaf); opacity: 0.5; transition: opacity 0.2s, transform 0.2s; }
+.intro-pillar:hover .ip-arrow { opacity: 1; transform: translateX(4px); }
+.intro-pillar:hover .ip-name { color: var(--sage); }
+@media (max-width: 800px) { .intro-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+.section-sleep { padding: var(--section-pad) var(--gutter); background: var(--bark); position: relative; overflow: hidden; }
+.section-sleep::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: radial-gradient(ellipse at 70% 50%, rgba(122,140,94,0.07) 0%, transparent 65%); pointer-events: none; }
+.section-layout { display: grid; grid-template-columns: var(--col-read) 1fr; gap: clamp(48px, 6vw, 80px); position: relative; z-index: 1; }
+.section-sidebar { padding-top: 60px; }
+.sidebar-card { background: rgba(26,26,24,0.5); border: 1px solid rgba(122,140,94,0.16); padding: 28px 24px; margin-bottom: 2px; display: block; text-decoration: none; color: inherit; }
+.sidebar-card-title { font-family: var(--display); font-size: 18px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 10px; }
+.sidebar-card-title span { color: var(--leaf); }
+.sidebar-card p { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.65; margin-bottom: 16px; }
+.sidebar-link { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--leaf); display: flex; align-items: center; gap: 6px; transition: gap 0.18s; }
+.sidebar-link:hover { gap: 12px; }
+.sidebar-link::after { content: '→'; }
+@media (max-width: 1100px) { .section-layout { grid-template-columns: 1fr; } .section-sidebar { padding-top: 0; } }
+
+.sleep-chart { margin: 44px 0; background: rgba(26,26,24,0.4); border: 1px solid rgba(122,140,94,0.14); padding: 32px 28px; }
+.sleep-chart-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+.cycle-row { display: flex; gap: 4px; margin-bottom: 20px; height: 60px; align-items: flex-end; }
+.cycle-bar { flex: 1; background: var(--leaf); opacity: 0.25; border-radius: 1px 1px 0 0; transition: height 1s cubic-bezier(0.4,0,0.2,1), opacity 0.3s; height: 0; position: relative; }
+.cycle-bar.deep { opacity: 0.85; }
+.cycle-bar.rem { opacity: 0.5; background: var(--gold); }
+.cycle-legend { display: flex; gap: 20px; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--moss); }
+.legend-dot { width: 10px; height: 10px; border-radius: 1px; }
+
+.myth-box { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 48px 0; }
+@media (max-width: 600px) { .myth-box { grid-template-columns: 1fr; } }
+
+.section-load { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.load-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 6vw, 80px); align-items: start; }
+.data-table { width: 100%; border-collapse: collapse; margin: 36px 0; font-size: 13.5px; }
+
+.signal-grid { display: flex; flex-direction: column; gap: 2px; }
+.signal-card { background: rgba(26,26,24,0.4); border: 1px solid rgba(122,140,94,0.12); padding: 22px 24px; transition: border-color 0.2s, background 0.2s; }
+.signal-card:hover { border-color: rgba(122,140,94,0.3); background: rgba(122,140,94,0.06); }
+.signal-name { font-family: var(--display); font-size: 17px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 6px; }
+.signal-desc { font-size: 12px; font-weight: 300; color: var(--sage); line-height: 1.55; }
+@media (max-width: 900px) { .load-layout { grid-template-columns: 1fr; } }
+
+.section-tissue { padding: var(--section-pad) var(--gutter); background: var(--bark); }
+.tissue-intro { max-width: var(--col-read); margin-bottom: 52px; }
+.tissue-timeline { position: relative; padding-left: 28px; max-width: var(--col-read); }
+.tissue-timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: rgba(122,140,94,0.2); }
+.timeline-item { position: relative; margin-bottom: 32px; }
+.timeline-item::before { content: ''; position: absolute; left: -32px; top: 6px; width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--leaf); background: var(--iron); }
+.tl-time { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.tl-title { font-family: var(--display); font-size: 20px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 8px; }
+.tl-body { font-size: 13px; font-weight: 300; color: var(--sage); line-height: 1.68; }
+
+.section-stress { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.stress-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; }
+.stress-card { background: rgba(122,140,94,0.04); border: 1px solid rgba(122,140,94,0.12); padding: 32px 26px; transition: border-color 0.22s, background 0.22s; }
+.stress-card:hover { border-color: rgba(122,140,94,0.3); background: rgba(122,140,94,0.07); }
+.stress-icon { font-size: 24px; margin-bottom: 16px; }
+.stress-title { font-family: var(--display); font-size: 20px; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 10px; }
+.stress-desc { font-size: 12.5px; font-weight: 300; color: var(--sage); line-height: 1.65; }
+@media (max-width: 800px) { .stress-grid { grid-template-columns: 1fr; } }
+
+.framework-cta { padding: var(--section-pad) var(--gutter); background: var(--bark); position: relative; overflow: hidden; }
+.framework-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(122,140,94,0.08) 0%, transparent 65%); pointer-events: none; }
+.fw-cta-inner { max-width: 800px; position: relative; z-index: 1; }
+.fw-cta-buttons { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 40px; }
+
+.section-faq { padding: var(--section-pad) var(--gutter); background: var(--iron); }
+.faq-layout { display: grid; grid-template-columns: 320px 1fr; gap: 80px; align-items: start; }
+@media (max-width: 900px) { .faq-layout { grid-template-columns: 1fr; } .faq-left { position: static; } }
+
+.download-band { padding: clamp(64px, 8vw, 96px) var(--gutter); background: var(--bark); border-top: 1px solid rgba(122,140,94,0.12); }
+@media (max-width: 800px) { .download-grid { grid-template-columns: 1fr; } }
+
+.related { padding: var(--section-pad) var(--gutter); background: var(--iron); border-top: 1px solid rgba(122,140,94,0.1); }
+@media (max-width: 900px) { .related-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .related-grid { grid-template-columns: 1fr; } }
+
+.newsletter { padding: clamp(72px, 9vw, 112px) var(--gutter); background: var(--bark); border-top: 1px solid rgba(122,140,94,0.12); }
+.newsletter-inner .kicker { justify-content: center; }
+.newsletter-inner .kicker::after { display: none; }
+.nl-form { display: flex; border: 1px solid rgba(122,140,94,0.22); background: rgba(26,26,24,0.5); margin-top: 36px; transition: border-color 0.2s; }
+.nl-form:focus-within { border-color: rgba(122,140,94,0.5); }
+.nl-form input { flex: 1; background: none; border: none; outline: none; color: var(--cream); font-family: var(--body); font-size: 14px; font-weight: 300; padding: 15px 20px; }
+.nl-form input::placeholder { color: var(--moss); }
+.nl-form button { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iron); background: var(--leaf); padding: 0 26px; transition: background 0.2s; flex-shrink: 0; }
+.nl-form button:hover { background: var(--sage); }
+.nl-note { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin-top: 14px; }
+
+.footer { background: var(--iron); padding: 72px var(--gutter) 40px; border-top: 1px solid rgba(122,140,94,0.14); }
+@media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="The Iron Leaf home">
+    <div class="nav-logo-mark">THE IRON <span>LEAF</span></div>
+    <div class="nav-logo-sub">Sustainable Human Performance</div>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="learn.html" class="active" aria-current="page">Learn</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="get-started.html" class="nav-cta">Get Started</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span class="sep" aria-hidden="true">·</span>
+  <a href="learn.html">Learn</a><span class="sep" aria-hidden="true">·</span>
+  <span class="current" aria-current="page">Recovery</span>
+</nav>
+
+<header class="hero" role="banner">
+  <div class="hero-deco" aria-hidden="true">
+    <svg viewBox="0 0 500 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 400 Q 175 300 250 400 T 400 400" stroke="#7a8c5e" stroke-width="1.5" fill="none"/>
+      <path d="M100 300 Q 175 200 250 300 T 400 300" stroke="#7a8c5e" stroke-width="1" fill="none"/>
+      <path d="M100 500 Q 175 600 250 500 T 400 500" stroke="#7a8c5e" stroke-width="1" fill="none"/>
+      <circle cx="250" cy="400" r="3" fill="#7a8c5e"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-kicker">Pillar 04 · Regeneration</div>
+      <h1 class="hero-title">RECO<br /><em>VERY.</em></h1>
+      <p class="hero-lead">Recovery is training. The adaptation happens in the rest, not the rep. Sleep, nutrition, and load management — evidence-based, free of gadget theatre.</p>
+    </div>
+    <div class="hero-panel" aria-label="Key recovery facts">
+      <div class="hero-panel-title">At a Glance</div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">7<span>–9</span></div>
+        <div class="panel-stat-label">Hours of sleep per night</div>
+        <div class="panel-stat-note">The evidence-supported range for adults to support recovery, cognition, and hormonal health.</div>
+      </div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">1<span>:4</span></div>
+        <div class="panel-stat-label">Deload weeks to training weeks</div>
+        <div class="panel-stat-note">A common, evidence-informed ratio for managing accumulated training fatigue.</div>
+      </div>
+      <div class="panel-stat">
+        <div class="panel-stat-num">★★★★★</div>
+        <div class="panel-stat-label">Evidence level: Sleep and performance</div>
+        <div class="panel-stat-note">One of the most robust relationships in all of exercise and recovery science.</div>
+      </div>
+      <a href="guides.html#recovery" class="panel-cta">Download Recovery Blueprint</a>
+    </div>
+  </div>
+</header>
+
+<nav class="pillar-nav" aria-label="Recovery sections">
+  <div class="pillar-nav-inner">
+    <a href="#intro" class="pillar-nav-link active" data-section="intro">Overview</a>
+    <a href="#sleep" class="pillar-nav-link" data-section="sleep">Sleep Science</a>
+    <a href="#load" class="pillar-nav-link" data-section="load">Training Load</a>
+    <a href="#tissue" class="pillar-nav-link" data-section="tissue">Tissue Repair</a>
+    <a href="#stress" class="pillar-nav-link" data-section="stress">Stress Recovery</a>
+    <a href="#faq" class="pillar-nav-link" data-section="faq">FAQ</a>
+  </div>
+</nav>
+
+<section class="intro" id="intro" aria-labelledby="intro-heading">
+  <div class="intro-grid">
+    <div>
+      <div class="kicker">Where to Begin</div>
+      <h2 class="display-h reveal" id="intro-heading">REST IS<br />A <em>SKILL.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 32px;">Not laziness. Not an afterthought. A deliberate, programmed component of performance — as intentional as the training itself.</p>
+      <div class="callout reveal">
+        <div class="callout-kicker">The Iron Leaf Position</div>
+        <p>Recovery is not the absence of training. It is the presence of the conditions that allow adaptation to occur — sleep, nutrition, and appropriately managed training stress, working together.</p>
+      </div>
+    </div>
+    <div class="intro-right">
+      <p class="body-text reveal">Recovery culture has been hijacked by expensive gadget theatre — cold plunges, compression boots, infrared saunas, continuous biometric tracking. These tools are not without merit, but they are not where the largest recovery gains live.</p>
+      <p class="body-text reveal">The largest gains live in sleep, nutrition, and training load management — three free, evidence-dense levers that most people under-prioritise while chasing the latest recovery gadget.</p>
+      <p class="body-text reveal">This section covers the Recovery Triad in full — sleep architecture, training load and fatigue management, tissue repair mechanisms, and the often-overlooked role of stress recovery.</p>
+      <div class="intro-pillars reveal" role="navigation" aria-label="Recovery topics">
+        <a href="#sleep" class="intro-pillar"><span class="ip-num">01</span><span class="ip-name">SLEEP SCIENCE</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#load" class="intro-pillar"><span class="ip-num">02</span><span class="ip-name">TRAINING LOAD MANAGEMENT</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#tissue" class="intro-pillar"><span class="ip-num">03</span><span class="ip-name">TISSUE REPAIR</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+        <a href="#stress" class="intro-pillar"><span class="ip-num">04</span><span class="ip-name">STRESS RECOVERY</span><span class="ip-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sleep" id="sleep" aria-labelledby="sleep-heading">
+  <div class="section-layout">
+    <div class="section-main">
+      <div class="kicker">Topic 01</div>
+      <h2 class="display-h reveal" id="sleep-heading">SLEEP<br /><em>SCIENCE.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">The single most powerful, free, and underused recovery tool available — affecting hormonal regulation, cognitive function, muscle repair, and injury risk simultaneously.</p>
+      <div class="evidence-badge reveal" style="margin-bottom: 28px;"><span class="stars">★★★★★</span><span>Strong Evidence — Extensive sleep research literature</span></div>
+      <p class="body-text reveal">Sleep occurs in roughly 90-minute cycles alternating between non-REM and REM stages. Deep non-REM sleep, concentrated in the first half of the night, is when growth hormone release peaks and the majority of physical tissue repair occurs. REM sleep, concentrated in the latter half, governs memory consolidation and cognitive recovery.</p>
+      <p class="body-text reveal" style="margin-top: 20px;">Cutting sleep short — even by an hour or two — disproportionately reduces REM sleep, since the body prioritises deep sleep first. This is why insufficient sleep duration impairs cognitive performance and motor skill learning more than it impairs raw physical capacity in the short term, though both decline with chronic restriction.</p>
+
+      <div class="sleep-chart reveal" role="img" aria-label="Sleep cycle architecture across the night">
+        <div class="sleep-chart-title">A Typical Night — Sleep Stage Distribution Across 8 Hours</div>
+        <div class="cycle-row" id="cycleRow">
+          <div class="cycle-bar deep" data-height="85" title="Cycle 1: Deep-dominant"></div>
+          <div class="cycle-bar deep" data-height="70" title="Cycle 2: Deep-dominant"></div>
+          <div class="cycle-bar" data-height="50" title="Cycle 3: Balanced"></div>
+          <div class="cycle-bar rem" data-height="55" title="Cycle 4: REM-dominant"></div>
+          <div class="cycle-bar rem" data-height="65" title="Cycle 5: REM-dominant"></div>
+        </div>
+        <div class="cycle-legend">
+          <div class="legend-item"><div class="legend-dot" style="background: var(--leaf); opacity: 0.85;"></div>Deep Sleep (Tissue Repair)</div>
+          <div class="legend-item"><div class="legend-dot" style="background: var(--gold); opacity: 0.5;"></div>REM Sleep (Cognitive Recovery)</div>
+        </div>
+      </div>
+
+      <div class="myth-box reveal" role="complementary" aria-label="Myth versus fact">
+        <div class="myth-side">
+          <div class="myth-label">The Myth</div>
+          <p class="myth-text">"I can train my body to function well on 5–6 hours of sleep."</p>
+        </div>
+        <div class="fact-side">
+          <div class="fact-label">The Evidence</div>
+          <p class="fact-text">Studies show that perceived adaptation to chronic sleep restriction occurs, but objective cognitive and physical performance measures continue to decline. Fewer than 1% of the population carries a genuine short-sleeper gene variant.</p>
+        </div>
+      </div>
+
+      <div class="callout reveal">
+        <div class="callout-kicker">The Iron Leaf Recommendation</div>
+        <p>Protect 7–9 hours of sleep opportunity nightly. Keep a consistent sleep and wake time, even on weekends. Dim light exposure in the two hours before bed. Keep the bedroom cool and dark. This single paragraph does more for performance than any supplement stack.</p>
+      </div>
+    </div>
+
+    <div class="section-sidebar">
+      <a href="guides.html#recovery" class="sidebar-card reveal">
+        <div class="sidebar-card-title">RECOVERY<br /><span>BLUEPRINT™</span></div>
+        <p>The complete Recovery Triad guide — sleep, nutrition, and training load management. Free download.</p>
+        <span class="sidebar-link">Download Free</span>
+      </a>
+      <a href="library.html" class="sidebar-card reveal">
+        <div class="sidebar-card-title">WHY WE<br /><span>SLEEP</span></div>
+        <p>Matthew Walker's foundational text on sleep science — the research base behind our recommendations.</p>
+        <span class="sidebar-link">View in Library</span>
+      </a>
+      <a href="strength.html" class="sidebar-card reveal">
+        <div class="sidebar-card-title">THE IRON ROOT<br /><span>SYSTEM™</span></div>
+        <p>How recovery integrates into the broader strength training framework as a programmed variable.</p>
+        <span class="sidebar-link">Explore Strength</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section-load" id="load" aria-labelledby="load-heading">
+  <div class="load-layout">
+    <div>
+      <div class="kicker">Topic 02</div>
+      <h2 class="display-h reveal" id="load-heading">TRAINING LOAD<br /><em>MANAGEMENT.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 28px;">Fatigue accumulates whether you track it or not. The question is whether you manage it deliberately or discover it through injury and burnout.</p>
+      <p class="body-text reveal">Training load is the cumulative stress your body absorbs over time — not just a single session, but the rolling sum of volume, intensity, and frequency across weeks and months. Without periodic dissipation through deload periods, this accumulated fatigue eventually exceeds your recovery capacity.</p>
+      <p class="body-text reveal" style="margin-top: 20px;">A structured deload — a deliberate reduction in volume and intensity, typically every 4–6 weeks — allows full dissipation of accumulated fatigue while largely preserving the fitness adaptations built during the preceding training block.</p>
+
+      <div style="overflow-x: auto; margin-top: 36px;" class="reveal">
+        <table class="data-table" role="table" aria-label="Deload protocol comparison">
+          <thead><tr><th scope="col">Approach</th><th scope="col">Volume</th><th scope="col">Intensity</th><th scope="col">Frequency</th></tr></thead>
+          <tbody>
+            <tr class="highlight"><td>Standard Deload</td><td>50–60% reduction</td><td>Maintained or slightly reduced</td><td>Every 4–6 weeks</td></tr>
+            <tr><td>Active Recovery Week</td><td>70–80% reduction</td><td>Significantly reduced</td><td>Every 6–8 weeks</td></tr>
+            <tr><td>Complete Rest</td><td>No structured training</td><td>N/A</td><td>1–2 times yearly</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <div class="kicker" style="margin-bottom: 24px;">Signs You Need a Deload</div>
+      <div class="signal-grid">
+        <div class="signal-card reveal"><div class="signal-name">PERFORMANCE PLATEAU OR DECLINE</div><p class="signal-desc">Stalling or regressing on lifts that were previously progressing steadily, despite consistent effort.</p></div>
+        <div class="signal-card reveal"><div class="signal-name">ELEVATED RESTING HEART RATE</div><p class="signal-desc">A consistently higher resting heart rate than your established baseline, measured first thing in the morning.</p></div>
+        <div class="signal-card reveal"><div class="signal-name">PERSISTENT SORENESS</div><p class="signal-desc">Muscle soreness that doesn't resolve within the usual 24–72 hour window after similar training stimuli.</p></div>
+        <div class="signal-card reveal"><div class="signal-name">SLEEP DISRUPTION</div><p class="signal-desc">Difficulty falling asleep or staying asleep despite normal sleep hygiene — often a sign of nervous system overload.</p></div>
+        <div class="signal-card reveal"><div class="signal-name">MOTIVATION DROP</div><p class="signal-desc">A noticeable decline in enthusiasm for training that previously felt energising rather than depleting.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tissue" id="tissue" aria-labelledby="tissue-heading">
+  <div class="tissue-intro">
+    <div class="kicker">Topic 03</div>
+    <h2 class="display-h reveal" id="tissue-heading">TISSUE<br /><em>REPAIR.</em></h2>
+    <p class="editorial reveal" style="margin: 20px 0 0;">What actually happens between training sessions — the biological process that turns stress into adaptation.</p>
+  </div>
+  <div class="tissue-timeline reveal">
+    <div class="timeline-item">
+      <div class="tl-time">0–24 hours</div>
+      <div class="tl-title">INFLAMMATORY RESPONSE</div>
+      <p class="tl-body">Microscopic muscle damage from training triggers an acute inflammatory response — the necessary first step of the repair process, not something to be suppressed entirely.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-time">24–48 hours</div>
+      <div class="tl-title">PROTEIN SYNTHESIS PEAK</div>
+      <p class="tl-body">Muscle protein synthesis rates peak in this window, provided adequate protein and total energy intake support the rebuilding process.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-time">48–72 hours</div>
+      <div class="tl-title">STRUCTURAL REMODELLING</div>
+      <p class="tl-body">Damaged tissue is rebuilt slightly stronger than before — the supercompensation principle underlying all progressive training.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-time">72+ hours</div>
+      <div class="tl-title">FULL ADAPTATION</div>
+      <p class="tl-body">Complete recovery and adaptation, readying the tissue for the next training stimulus — timing that informs how frequently a muscle group can be trained.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-stress" id="stress" aria-labelledby="stress-heading">
+  <div class="kicker">Topic 04</div>
+  <h2 class="display-h reveal" id="stress-heading">STRESS<br /><em>RECOVERY.</em></h2>
+  <p class="editorial reveal" style="margin: 20px 0 0; max-width: 600px;">Training stress does not exist in isolation. Work stress, emotional stress, and life stress all draw from the same recovery capacity — and the nervous system does not distinguish neatly between them.</p>
+  <div class="stress-grid">
+    <div class="stress-card reveal">
+      <div class="stress-icon">🧠</div>
+      <div class="stress-title">TOTAL STRESS LOAD</div>
+      <p class="stress-desc">Your body's recovery capacity is a shared resource across physical, emotional, and cognitive stressors — not separate buckets.</p>
+    </div>
+    <div class="stress-card reveal">
+      <div class="stress-icon">🌬️</div>
+      <div class="stress-title">PARASYMPATHETIC ACTIVATION</div>
+      <p class="stress-desc">Deliberate downregulation practices — slow breathing, time in nature, social connection — actively shift the body toward recovery mode.</p>
+    </div>
+    <div class="stress-card reveal">
+      <div class="stress-icon">📵</div>
+      <div class="stress-title">COGNITIVE OFFLOADING</div>
+      <p class="stress-desc">Periods of genuine mental rest — away from screens, decisions, and stimulation — support nervous system recovery as much as physical rest.</p>
+    </div>
+  </div>
+</section>
+
+<section class="framework-cta" aria-labelledby="fw-cta-heading">
+  <div class="fw-cta-inner">
+    <div class="kicker">The Recovery Triad™</div>
+    <h2 class="display-h reveal" id="fw-cta-heading">THE<br /><em>FRAMEWORK.</em></h2>
+    <p class="editorial reveal" style="margin: 20px 0 20px;">Everything on this page is governed by The Recovery Triad™ — sleep, nutrition, and training load management as the three non-negotiable pillars of sustainable performance.</p>
+    <p class="body-text reveal">No amount of training optimisation compensates for chronically poor recovery. The Recovery Triad ensures these three pillars receive the same deliberate attention as your training programme.</p>
+    <div class="fw-cta-buttons reveal">
+      <a href="frameworks.html#recovery-triad" class="btn-primary">Explore The Recovery Triad™</a>
+      <a href="programs.html" class="btn-ghost">Work With Iron Leaf</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-faq" id="faq" aria-labelledby="faq-heading">
+  <div class="faq-layout">
+    <div class="faq-left">
+      <div class="kicker">Common Questions</div>
+      <h2 class="display-h reveal" id="faq-heading">FREQUENTLY<br /><em>ASKED.</em></h2>
+      <p class="editorial reveal" style="margin: 20px 0 0;">What people ask about sleep, recovery, and managing training fatigue.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Are recovery gadgets — cold plunges, compression boots — worth it?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Evidence for these tools is mixed and generally modest in effect size — far smaller than the impact of sleep, nutrition, or training load management. They are not without merit (cold exposure shows some evidence for perceived recovery and mood, for instance) but should be treated as marginal additions, not foundational recovery strategies. We recommend mastering the free fundamentals first.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">How do I know if I'm overtraining versus just tired?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Genuine overtraining is relatively rare and develops over months of inadequate recovery. More common is "overreaching" — accumulated fatigue from a few weeks of high training stress, which resolves with a structured deload. Watch for the signal cluster: performance plateau, elevated resting heart rate, sleep disruption, and motivation drop occurring together, not just general tiredness after a hard session.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Should I take complete rest days or active recovery?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Both have a place. Light active recovery — walking, easy mobility work, gentle movement — can enhance blood flow and may aid recovery without adding meaningful training stress. Complete rest is appropriate when fatigue is significant or during structured deload periods. Listen to your body's signals rather than rigidly following one approach.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span class="faq-q-text">Does napping help recovery?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Yes, with caveats. Short naps (20–30 minutes) can improve alertness and performance without disrupting nighttime sleep. Longer naps, or naps too close to bedtime, can interfere with nighttime sleep quality and duration — which matters more for recovery overall. Use naps to supplement, not replace, adequate nighttime sleep.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="download-band" aria-labelledby="downloads-heading">
+  <div class="kicker">Free Downloads</div>
+  <h2 class="display-h reveal" id="downloads-heading" style="margin-bottom: 44px;">TAKE THESE<br /><em>WITH YOU.</em></h2>
+  <div class="download-grid">
+    <a href="guides.html#recovery" class="dl-card reveal">
+      <div class="dl-icon">🌙</div>
+      <div class="dl-cat">Foundational Guide</div>
+      <div class="dl-title">RECOVERY BLUEPRINT</div>
+      <p class="dl-desc">Sleep, training load, and tissue repair — the complete recovery system. 30 pages.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+    <a href="guides.html" class="dl-card reveal">
+      <div class="dl-icon">🌙</div>
+      <div class="dl-cat">Tracker</div>
+      <div class="dl-title">RECOVERY TRACKER</div>
+      <p class="dl-desc">A printable weekly tracker for sleep quality, training load, and subjective recovery markers.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+    <a href="guides.html#transformation" class="dl-card reveal">
+      <div class="dl-icon">📅</div>
+      <div class="dl-cat">Programme</div>
+      <div class="dl-title">10-WEEK TRANSFORMATION GUIDE</div>
+      <p class="dl-desc">Including a complete recovery and deload structure built into the 10-week training arc.</p>
+      <span class="dl-cta">Download Free</span>
+    </a>
+  </div>
+</section>
+
+<section class="related" aria-labelledby="related-heading">
+  <div class="kicker">Keep Learning</div>
+  <h2 class="display-h reveal" id="related-heading" style="margin-bottom: 0;">WHERE TO<br /><em>GO NEXT.</em></h2>
+  <div class="related-grid">
+    <a href="mobility.html" class="related-card reveal"><div class="related-type">Pillar 03 · Movement</div><div class="related-title">MOBILITY & MOVEMENT</div><p class="related-desc">Daily practice that supports tissue health alongside structured recovery.</p><span class="related-link">Explore Mobility</span></a>
+    <a href="strength.html" class="related-card reveal"><div class="related-type">Pillar 02 · Movement</div><div class="related-title">STRENGTH & CONDITIONING</div><p class="related-desc">How periodisation and programmed deloads integrate into a strength training system.</p><span class="related-link">Explore Strength</span></a>
+    <a href="longevity.html" class="related-card reveal"><div class="related-type">Pillar 05 · Longevity</div><div class="related-title">LONGEVITY & HEALTHSPAN</div><p class="related-desc">Why sleep quality is among the strongest predictors of healthy ageing and cognitive longevity.</p><span class="related-link">Explore Longevity</span></a>
+    <a href="nutrition.html" class="related-card reveal"><div class="related-type">Pillar 01 · Foundation</div><div class="related-title">NUTRITION & FOOD SCIENCE</div><p class="related-desc">Recovery nutrition — anti-inflammatory whole foods and adequate intake to support repair.</p><span class="related-link">Explore Nutrition</span></a>
+  </div>
+</section>
+
+<section class="newsletter" aria-labelledby="nl-heading">
+  <div class="newsletter-inner">
+    <div class="kicker" style="justify-content:center;">The Weekly Letter</div>
+    <h2 class="display-h reveal" id="nl-heading">EVIDENCE.<br /><em>PRACTICE.</em><br />DEPTH.</h2>
+    <p class="editorial reveal" style="margin-top: 16px;">One email per week. Recovery science, training insights, and long-form thinking.</p>
+    <div class="nl-form"><input type="email" placeholder="Your email address" aria-label="Email address" /><button type="button">Join</button></div>
+    <p class="nl-note">No spam. No product pushes. Unsubscribe any time.</p>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-mark">THE IRON <span>LEAF</span></div>
+      <p>Grounded in Nature.<br />Forged in Grit.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Learn</div>
+      <ul class="footer-links">
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="strength.html">Strength</a></li>
+        <li><a href="mobility.html">Mobility</a></li>
+        <li><a href="recovery.html" aria-current="page">Recovery</a></li>
+        <li><a href="longevity.html">Longevity</a></li>
+        <li><a href="trail-running.html">Trail Running</a></li>
+        <li><a href="plant-based.html">Plant-Based Living</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Resources</div>
+      <ul class="footer-links">
+        <li><a href="guides.html">Free Guides</a></li>
+        <li><a href="research.html">Research Library</a></li>
+        <li><a href="frameworks.html">The Frameworks</a></li>
+        <li><a href="library.html#panel-books">Books</a></li>
+        <li><a href="library.html#panel-experts">Experts</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Work Together</div>
+      <ul class="footer-links">
+        <li><a href="programs.html#coaching">1:1 Coaching</a></li>
+        <li><a href="programs.html#group">Group Coaching</a></li>
+        <li><a href="programs.html#corporate">Corporate Wellness</a></li>
+        <li><a href="programs.html#courses">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 The Iron Leaf · All rights reserved</p>
+    <span class="footer-tagline">Grounded in Nature. Forged in Grit.</span>
+    <p><a href="privacy.html" style="color:var(--moss)">Privacy</a> · <a href="terms.html" style="color:var(--moss)">Terms</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+const revealEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((el, i) => { if (el.isIntersecting) { setTimeout(() => el.target.classList.add('visible'), (i % 4) * 80); obs.unobserve(el.target); } });
+}, { threshold: 0.07 });
+revealEls.forEach(el => obs.observe(el));
+
+const barObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.cycle-bar').forEach(bar => {
+        const h = bar.dataset.height;
+        setTimeout(() => { bar.style.height = h + '%'; }, 200);
+      });
+      barObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.sleep-chart').forEach(el => barObs.observe(el));
+
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.pillar-nav-link');
+const sectionObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) navLinks.forEach(link => link.classList.toggle('active', link.dataset.section === entry.target.id)); });
+}, { rootMargin: `-${68 + 44}px 0px -60% 0px` });
+sections.forEach(s => sectionObs.observe(s));
+
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+  });
+});
+
+const nlForm = document.querySelector('.nl-form');
+if (nlForm) {
+  const btn = nlForm.querySelector('button');
+  const input = nlForm.querySelector('input');
+  btn.addEventListener('click', () => {
+    if (input.value && input.value.includes('@')) { btn.textContent = 'Welcome.'; btn.style.background = 'var(--moss)'; input.disabled = true; }
+    else { input.style.outline = '1px solid var(--amber)'; setTimeout(() => { input.style.outline = ''; }, 1800); }
+  });
+}
+
+const hamburger = document.querySelector('.nav-hamburger');
+if (hamburger) hamburger.addEventListener('click', () => {
+  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+  hamburger.setAttribute('aria-expanded', !expanded);
+});
+</script>
+
+</body>
+</html>
